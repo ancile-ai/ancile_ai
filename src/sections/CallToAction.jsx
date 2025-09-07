@@ -202,7 +202,7 @@ const CallToAction = () => {
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
             Ready to Transform
             <br />
             <span className="relative bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 bg-clip-text text-transparent">
@@ -309,7 +309,7 @@ const CallToAction = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <div className="p-2">
-                    <img src="/images/logo/ancileai_logo.svg" alt="Logo" width={24} height={24} className="brightness-0 invert" />
+                    <img src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg" alt="Logo" width={24} height={24} className="brightness-0 invert" />
                   </div>
                   <h3 className="text-xl font-bold">Book Your Consultation</h3>
                 </div>

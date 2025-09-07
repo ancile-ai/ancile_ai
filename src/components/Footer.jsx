@@ -30,24 +30,16 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center space-x-3 mb-6 group">
+          <div className="lg:col-span-2 -mt-16">
+            <div className="flex items-start space-x-3 group">
               <div className="p-1">
                 <Image
-                  src="/images/logo/ancileai_logo.svg"
+                  src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg"
                   alt="Ancile AI Logo"
-                  width={32}
+                  width={184}
                   height={32}
                   className="group-hover:scale-105 transition-transform duration-300"
                 />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold bg-gradient-to-r from-burnt-orange-900 to-burnt-orange-600 bg-clip-text text-transparent">
-                  Ancile AI
-                </h3>
-                <p className="text-sm text-burnt-orange-500 font-medium">
-                  Mission-Critical AI Solutions
-                </p>
               </div>
             </div>
 

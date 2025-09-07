@@ -158,15 +158,11 @@ const Header = () => {
   return (
     <header className="bg-white shadow-lg border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 group">
             <div className="p-1">
-              <Image src="/images/logo/ancileai_logo.svg" alt="Ancile AI Logo" width={40} height={40} className="group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-burnt-orange-900 to-burnt-orange-600 bg-clip-text text-transparent">Ancile AI</h1>
-              <p className="text-xs text-burnt-orange-500 font-medium tracking-wide">Consulting & Solutions</p>
+              <Image src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg" alt="Ancile AI Logo" width={156} height={32} className="group-hover:scale-105 transition-transform duration-300" />
             </div>
           </Link>
 
@@ -229,7 +225,7 @@ const Header = () => {
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <div className="p-2">
-                    <Image src="/images/logo/ancileai_logo.svg" alt="Logo" width={24} height={24} className="brightness-0 invert" />
+                    <Image src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg" alt="Logo" width={100} height={32} className="brightness-0 invert" />
                   </div>
                   <h3 className="text-xl font-bold">Partner With Us</h3>
                 </div>

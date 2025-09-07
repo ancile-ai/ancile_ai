@@ -7,7 +7,9 @@ export const metadata = {
   title: 'Ancile AI - Consulting & Solutions',
   description: 'Veteran-founded AI consulting firm specializing in advanced logistics solutions, generative AI planning, and government-focused AI implementations.',
   icons: {
-    icon: '/images/logo/ancileai_logo.svg',
+    icon: [
+      { url: '/images/logo/ancile_logo_orange_white_circle_transparent.png', sizes: '180x180' }
+    ],
   },
 }
 

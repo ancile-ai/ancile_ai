@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Shield,
-  Award,
-  Target,
-  Users,
-  Sparkles,
-} from "lucide-react";
+import { Shield, Award, Target, Users, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 const reasons = [
@@ -73,7 +67,7 @@ const WhyChooseUs = () => {
   return (
     <section
       id="about"
-      className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden"
+      className="py-32 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0">
@@ -88,20 +82,21 @@ const WhyChooseUs = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
+          <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-8">
             <Sparkles className="h-5 w-5 text-burnt-orange-700" />
             <span className="text-sm font-medium text-slate-700">
               About Ancile AI
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent mb-8">
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
             Why Ancile?
           </h2>
 
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-            We don't adapt commercial products for government—we build tailored AI solutions
-            specifically for mission-critical challenges in environments where others can't operate
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto my-auto leading-relaxed">
+            We don't adapt commercial products for government—we build tailored
+            AI solutions specifically for mission-critical challenges in
+            environments where others can't operate
           </p>
         </div>
 
@@ -156,7 +151,6 @@ const WhyChooseUs = () => {
                     </div>
                   ))}
                 </div>
-
               </div>
             </div>
           ))}
@@ -190,16 +184,21 @@ const WhyChooseUs = () => {
               <div className="flex items-center space-x-4 text-sm">
                 <div className="flex items-center space-x-2 text-burnt-orange-700">
                   <Shield className="h-4 w-4" />
-                  <span className="font-medium">Trusted by Intelligence Community</span>
+                  <span className="font-medium">
+                    Trusted by Intelligence Community
+                  </span>
                 </div>
                 <div className="w-px h-4 bg-slate-300"></div>
                 <div className="flex items-center space-x-2 text-burnt-orange-700">
                   <Target className="h-4 w-4" />
-                  <span className="font-medium">Supporting Global Operations</span>
+                  <span className="font-medium">
+                    Supporting Global Operations
+                  </span>
                 </div>
               </div>
               <p className="text-xs text-gray-600 mt-3 max-w-md">
-                Join agencies who rely on Ancile AI for mission-critical capabilities
+                Join agencies who rely on Ancile AI for mission-critical
+                capabilities
               </p>
             </div>
           </div>

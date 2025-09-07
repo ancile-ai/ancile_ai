@@ -80,7 +80,7 @@ const Hero = () => {
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
             AI Solutions Built
             <br />
             <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
