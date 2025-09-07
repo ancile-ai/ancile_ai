@@ -152,25 +152,25 @@ const Process = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 right-10 w-96 h-96 bg-burnt-orange-100/30 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 left-20 w-80 h-80 bg-amber-100/20 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-amber-100/20 rounded-full blur-3xl" />
+        <div className="absolute top-10 right-10 w-96 h-96 bg-burnt-orange-600/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-burnt-orange-600/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-burnt-orange-600/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-8">
-            <Clock className="h-5 w-5 text-burnt-orange-700" />
+            <Clock className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-700">
               Our Proven Process
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
             From Vision to Mission Impact
           </h2>
 
@@ -187,7 +187,7 @@ const Process = () => {
           <div className="hidden lg:block">
             <div className="relative">
               {/* Connection Lines */}
-              <div className="absolute top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-burnt-orange-400 via-burnt-orange-500 to-burnt-orange-600" />
+              <div className="absolute top-8 left-0 right-0 h-0.5 bg-burnt-orange-600" />
 
               <div className="flex justify-between items-start px-4">
                 {processSteps.map((step, index) => {
@@ -203,7 +203,7 @@ const Process = () => {
                       <div
                         className={`relative w-16 h-16 mx-auto mb-4 rounded-full border-2 cursor-pointer transition-all duration-500 flex items-center justify-center ${
                           isActive
-                            ? "bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-900 border-white shadow-lg shadow-burnt-orange-500/25"
+                            ? "bg-burnt-orange-600 border-white shadow-lg shadow-burnt-orange-600/25"
                             : "bg-white border-slate-300"
                         }`}
                         onClick={() => setActiveStep(index)}
@@ -217,7 +217,7 @@ const Process = () => {
 
                       {/* Step Content */}
                       <div className="text-center">
-                        <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
+                        <h3 className="text-lg font-bold text-gray-900 mb-1 group-hover:text-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                           {step.title}
                         </h3>
                         <p className="text-sm text-gray-600 mb-2 group-hover:text-slate-700 transition-colors">
@@ -241,15 +241,15 @@ const Process = () => {
               {processSteps.map((step, index) => {
                 const isActive = index === activeStep;
                 return (
-                  <button
-                    key={index}
-                    onClick={() => setActiveStep(index)}
-                    className={`p-3 rounded-xl transition-all duration-300 ${
-                      isActive
-                        ? "bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-900 shadow-lg"
-                        : "bg-white border border-slate-200 hover:border-slate-300"
-                    }`}
-                  >
+                      <button
+                        key={index}
+                        onClick={() => setActiveStep(index)}
+                        className={`p-3 rounded-xl transition-all duration-300 ${
+                          isActive
+                            ? "bg-burnt-orange-600 shadow-lg"
+                            : "bg-white border border-slate-200 hover:border-slate-300"
+                        }`}
+                      >
                     <step.icon
                       className={`h-5 w-5 mx-auto ${
                         isActive ? "text-white" : "text-gray-600"
@@ -285,8 +285,8 @@ const Process = () => {
                 {processSteps[activeStep].description}
               </p>
 
-              <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
-                <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide">
+              <div className="bg-burnt-orange-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
+                <h4 className="font-semibold text-burnt-orange-600 mb-2 text-sm uppercase tracking-wide">
                   Why This Matters
                 </h4>
                 <p className="text-gray-700 text-sm leading-relaxed">
@@ -303,8 +303,8 @@ const Process = () => {
 
               <div className="space-y-6">
                 {/* Success Metrics */}
-                <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
-                  <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center">
+                <div className="bg-burnt-orange-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
+                  <h4 className="font-semibold text-burnt-orange-600 mb-2 text-sm uppercase tracking-wide flex items-center">
                     <TrendingUp className="h-4 w-4 mr-2" />
                     Mission Success Criteria
                   </h4>
@@ -321,8 +321,8 @@ const Process = () => {
                 </div>
 
                 {/* Risk Mitigation */}
-                <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
-                  <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide flex items-center">
+                <div className="bg-burnt-orange-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
+                  <h4 className="font-semibold text-burnt-orange-600 mb-2 text-sm uppercase tracking-wide flex items-center">
                     <Shield className="h-4 w-4 mr-2" />
                     Risk Mitigation
                   </h4>
@@ -332,8 +332,8 @@ const Process = () => {
                 </div>
 
                 {/* What Makes This Different */}
-                <div className="bg-gradient-to-r from-burnt-orange-50 to-amber-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
-                  <h4 className="font-semibold text-burnt-orange-900 mb-2 text-sm uppercase tracking-wide">
+                <div className="bg-burnt-orange-50 p-4 rounded-lg mb-6 border border-burnt-orange-100">
+                  <h4 className="font-semibold text-burnt-orange-600 mb-2 text-sm uppercase tracking-wide">
                     What Makes This Different
                   </h4>
                   <p className="text-gray-700 text-sm leading-relaxed">
@@ -348,7 +348,7 @@ const Process = () => {
                   {processSteps[activeStep].deliverables.map(
                     (deliverable, index) => (
                       <div key={index} className="flex items-center space-x-3">
-                        <div className="w-1.5 h-1.5 bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-900 rounded-full"></div>
+                        <div className="w-1.5 h-1.5 bg-burnt-orange-600 rounded-full"></div>
                         <span className="text-gray-700 text-sm">
                           {deliverable}
                         </span>
@@ -363,7 +363,7 @@ const Process = () => {
                 <button
                   onClick={() => setActiveStep(Math.max(0, activeStep - 1))}
                   disabled={activeStep === 0}
-                  className="px-4 py-2 bg-gradient-to-r from-gray-100 to-slate-100 hover:from-gray-200 hover:to-slate-200 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
+                  className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
                 >
                   <ArrowLeft className="h-4 w-4" />
                   <span>Previous</span>
@@ -372,14 +372,14 @@ const Process = () => {
                 <div className="flex-1">
                   <div className="flex space-x-2">
                     {processSteps.map((_, index) => (
-                      <div
-                        key={index}
-                        className={`flex-1 h-2 rounded-full transition-all duration-300 ${
-                          index <= activeStep
-                            ? "bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900"
-                            : "bg-gray-200"
-                        }`}
-                      />
+                        <div
+                          key={index}
+                          className={`flex-1 h-2 rounded-full transition-all duration-300 ${
+                            index <= activeStep
+                              ? "bg-burnt-orange-600"
+                              : "bg-gray-200"
+                          }`}
+                        />
                     ))}
                   </div>
                   <p className="text-xs text-center text-gray-600 mt-2">
@@ -394,7 +394,7 @@ const Process = () => {
                     )
                   }
                   disabled={activeStep === processSteps.length - 1}
-                  className="px-4 py-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white rounded-lg hover:from-burnt-orange-800 hover:to-burnt-orange-900 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
+                  className="px-4 py-2 bg-burnt-orange-600 text-white rounded-lg hover:bg-burnt-orange-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center space-x-2"
                 >
                   <span>Next</span>
                   <ArrowRight className="h-4 w-4" />
@@ -456,7 +456,7 @@ const Process = () => {
         </div>
 
         {/* Timeline Comparison Box */}
-        <div className="mt-16 bg-gradient-to-r from-slate-100 to-gray-100 rounded-2xl p-8 border border-slate-200 shadow-lg">
+        <div className="mt-16 bg-slate-100 rounded-2xl p-8 border border-slate-200 shadow-lg">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               How We Accelerate Mission Success
@@ -468,7 +468,7 @@ const Process = () => {
 
           <div className="overflow-x-auto">
             <table className="w-full border-collapse bg-white rounded-lg overflow-hidden shadow-sm">
-              <thead className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white">
+              <thead className="bg-burnt-orange-600 text-white">
                 <tr>
                   <th className="p-4 text-left font-semibold">Phase</th>
                   <th className="p-4 text-center font-semibold">Traditional Contractors</th>
@@ -480,7 +480,7 @@ const Process = () => {
                   <tr key={index} className="border-b border-slate-200 hover:bg-slate-50 transition-colors">
                     <td className="p-4 font-medium text-gray-900">{phase.name}</td>
                     <td className="p-4 text-center text-red-600 font-medium">{phase.traditional}</td>
-                    <td className="p-4 text-center text-burnt-orange-700 font-semibold bg-gradient-to-r from-burnt-orange-50 to-burnt-orange-100 rounded-lg mx-2">{phase.ancileAI}</td>
+                    <td className="p-4 text-center text-burnt-orange-600 font-semibold bg-burnt-orange-50 rounded-lg mx-2">{phase.ancileAI}</td>
                   </tr>
                 ))}
               </tbody>

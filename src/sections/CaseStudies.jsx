@@ -28,8 +28,8 @@ const caseStudies = [
       improvement: "73%",
       label: "Faster Processing",
     },
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "from-burnt-orange-60 to-amber-60",
   },
   {
     icon: Search,
@@ -45,8 +45,8 @@ const caseStudies = [
       improvement: "85%",
       label: "Analysis Time Reduction",
     },
-    gradient: "from-burnt-orange-700 to-burnt-orange-600",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "from-burnt-orange-60 to-amber-60",
   },
   {
     icon: Target,
@@ -62,8 +62,8 @@ const caseStudies = [
       improvement: "60%",
       label: "Faster Threat ID",
     },
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "from-burnt-orange-60 to-amber-60",
   },
 ];
 
@@ -86,7 +86,7 @@ const CaseStudies = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <BarChart3 className="h-5 w-5 text-burnt-orange-700" />
+            <BarChart3 className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-700">
               Proven Results
             </span>
@@ -95,7 +95,7 @@ const CaseStudies = () => {
           <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent">
             Government AI Solutions
             <br />
-            <span className="bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
+            <span className="text-burnt-orange-600 font-medium">
               That Deliver Real Impact
             </span>
           </h2>
@@ -140,7 +140,7 @@ const CaseStudies = () => {
 
                   {/* Metrics Highlight */}
                   <div className="text-right">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-1">
+                    <div className="text-4xl font-bold text-burnt-orange-600 mb-1">
                       {study.metrics.improvement}
                     </div>
                     <div className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
@@ -202,25 +202,25 @@ const CaseStudies = () => {
             <h3 className="text-2xl font-bold text-gray-900 mb-8">Cross-Cutting Impact</h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-burnt-orange-600 mb-2">
                   78%
                 </div>
                 <div className="text-sm text-gray-600">Average Performance Improvement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-burnt-orange-600 mb-2">
                   100%
                 </div>
                 <div className="text-sm text-gray-600">Legal/Court Acceptance Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-burnt-orange-600 mb-2">
                   $15M+
                 </div>
                 <div className="text-sm text-gray-600">Total Cost Savings</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2">
+                <div className="text-3xl font-bold text-burnt-orange-600 mb-2">
                   150+
                 </div>
                 <div className="text-sm text-gray-600">Classified Engagements</div>

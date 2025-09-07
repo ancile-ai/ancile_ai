@@ -17,12 +17,12 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-slate-50 via-gray-50 to-white text-gray-900 relative overflow-hidden border-t border-slate-200">
+    <footer className="bg-slate-50 text-gray-900 relative overflow-hidden border-t border-slate-200">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 bg-burnt-orange-500/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute top-20 left-20 w-32 h-32 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse" />
         <div
-          className="absolute bottom-20 right-20 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl animate-pulse"
+          className="absolute bottom-20 right-20 w-24 h-24 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
       </div>
@@ -52,7 +52,7 @@ const Footer = () => {
 
           {/* SBA Certifications */}
           <div>
-            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+            <h4 className="text-xl font-bold mb-6 text-gray-900">
               SBA Certifications
             </h4>
             <div className="space-y-3">
@@ -65,7 +65,7 @@ const Footer = () => {
 
           {/* Contracting Resources */}
           <div>
-            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+            <h4 className="text-xl font-bold mb-6 text-gray-900">
               Contracting Resources
             </h4>
             <div className="space-y-3">
@@ -100,7 +100,7 @@ const Footer = () => {
 
           {/* Contact & Social */}
           <div>
-            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+            <h4 className="text-xl font-bold mb-6 text-gray-900">
               Contact & Social
             </h4>
             <div>
@@ -122,13 +122,13 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/ancile-ai/"
                   className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
                 >
-                  <Linkedin className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
+                    <Linkedin className="h-5 w-5 text-burnt-orange-600 group-hover:text-slate-800 transition-colors" />
                 </a>
                 <a
                   href="mailto:sales@ancile.io"
                   className="bg-slate-100 p-3 rounded-xl hover:bg-slate-200 border border-slate-300 hover:border-slate-400 transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-xl group"
                 >
-                  <Mail className="h-5 w-5 text-burnt-orange-700 group-hover:text-slate-800 transition-colors" />
+                    <Mail className="h-5 w-5 text-burnt-orange-600 group-hover:text-slate-800 transition-colors" />
                 </a>
               </div>
             </div>
@@ -136,7 +136,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent">
+            <h4 className="text-xl font-bold mb-6 text-gray-900">
               Quick Links
             </h4>
             <div className="space-y-3">
@@ -183,7 +183,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white border border-slate-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-burnt-orange-600 focus:border-burnt-orange-600"
               />
-              <button className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+              <button className="bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 px-6 py-3 rounded-xl font-semibold text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
                 Subscribe
               </button>
             </div>

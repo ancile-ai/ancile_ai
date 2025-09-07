@@ -18,8 +18,8 @@ const industries = [
     title: "Real-Time ISR Analysis",
     description:
       "AI-powered intelligence, surveillance, and reconnaissance with automated threat detection and pattern recognition for enhanced situational awareness",
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-900",
+    gradient: "bg-burnt-orange-600",
+    hoverColor: "hover:bg-burnt-orange-600",
     features: [
       "Automated Threat Detection",
       "Pattern Recognition",
@@ -32,8 +32,8 @@ const industries = [
     title: "Multi-Domain Battle Management",
     description:
       "Integrated AI command and control systems for land, sea, air, space, and cyber domains with real-time battlefield decision support",
-    gradient: "from-burnt-orange-700 to-burnt-orange-600",
-    hoverColor: "hover:from-burnt-orange-800 hover:to-burnt-orange-700",
+    gradient: "bg-burnt-orange-600",
+    hoverColor: "hover:bg-burnt-orange-600",
     features: [
       "Cross-Domain Integration",
       "Real-Time Decision Support",
@@ -46,8 +46,8 @@ const industries = [
     title: "Predictive Logistics Optimization",
     description:
       "AI-driven supply chain management and predictive maintenance systems that optimize inventory, reduce costs, and prevent equipment failures",
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    hoverColor: "hover:from-burnt-orange-700 hover:to-burnt-orange-800",
+    gradient: "bg-burnt-orange-600",
+    hoverColor: "hover:bg-burnt-orange-600",
     features: [
       "Supply Chain Forecasting",
       "Predictive Maintenance",
@@ -61,17 +61,17 @@ const Industries = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Pulsing orbs */}
-        <div className="absolute top-20 left-20 w-40 h-40 bg-burnt-orange-500/10 rounded-full blur-2xl animate-pulse" />
+        <div className="absolute top-20 left-20 w-40 h-40 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse" />
         <div
-          className="absolute top-40 right-32 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl animate-pulse"
+          className="absolute top-40 right-32 w-32 h-32 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
         <div
-          className="absolute bottom-32 left-1/2 w-48 h-48 bg-amber-500/10 rounded-full blur-2xl animate-pulse"
+          className="absolute bottom-32 left-1/2 w-48 h-48 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
 
@@ -85,13 +85,13 @@ const Industries = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Target className="h-5 w-5 text-burnt-orange-700" />
+            <Target className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-700">
               Mission Areas
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
             Critical Government Sectors
           </h2>
 
@@ -114,18 +114,18 @@ const Industries = () => {
             >
               {/* Hover Glow Effect */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl`}
+                className={`absolute inset-0 bg-burnt-orange-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl`}
               />
 
               {/* Icon */}
               <div
-                className={`relative mb-6 mx-auto w-fit p-4 bg-gradient-to-br ${industry.gradient} ${industry.hoverColor} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
+                className={`relative mb-6 mx-auto w-fit p-4 bg-burnt-orange-600 hover:bg-burnt-orange-600 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
               >
                 <industry.icon className="h-8 w-8 text-white" />
               </div>
 
               {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                 {industry.title}
               </h3>
 
@@ -141,9 +141,7 @@ const Industries = () => {
                     key={featureIndex}
                     className="flex items-center justify-center space-x-2"
                   >
-                    <div
-                      className={`w-1.5 h-1.5 bg-gradient-to-r ${industry.gradient} rounded-full`}
-                    />
+                    <div className={`w-1.5 h-1.5 bg-burnt-orange-600 rounded-full`}></div>
                     <span className="text-xs text-gray-600">{feature}</span>
                   </div>
                 ))}

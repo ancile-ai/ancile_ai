@@ -21,7 +21,7 @@ export function generateCustomerConfirmationEmail(
                 
                 <!-- Header -->
                 <tr>
-                  <td style="background-color: #e86c25; padding: 40px 30px; text-align: center;">
+                  <td style="background-color: #d75519; padding: 40px 30px; text-align: center;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td style="text-align: center;">
@@ -48,7 +48,7 @@ export function generateCustomerConfirmationEmail(
                     </p>
                     
                     <!-- What Happens Next Section -->
-                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f8fafc; border-left: 4px solid #e86c25; margin: 25px 0;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f8fafc; border-left: 4px solid #d75519; margin: 25px 0;">
                       <tr>
                         <td style="padding: 25px;">
                           <h3 style="color: #1f2937; font-size: 18px; font-weight: 600; margin: 0 0 18px 0; font-family: Arial, sans-serif;">Next Steps</h3>
@@ -107,7 +107,7 @@ export function generateCustomerConfirmationEmail(
                     
                     <!-- Closing Message -->
                     <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 25px 0 0 0; font-family: Arial, sans-serif;">
-                      If you have questions before then, just drop us a line at <a href="mailto:sales@ancile.io" style="color: #e86c25; text-decoration: none; font-weight: 500;">sales@ancile.io</a>. — we’re here to help.
+                      If you have questions before then, just drop us a line at <a href="mailto:sales@ancile.io" style="color: #d75519; text-decoration: none; font-weight: 500;">sales@ancile.io</a>. — we’re here to help.
                     </p>
                     
                   </td>
@@ -120,7 +120,7 @@ export function generateCustomerConfirmationEmail(
                     <!-- Signature -->
                     <p style="color: #374151; font-size: 16px; margin: 0 0 12px 0; font-family: Arial, sans-serif;">
                       Sincerely,<br>
-                      <strong style="color: #e86c25; font-size: 16px;">The Ancile AI Team</strong>
+                      <strong style="color: #d75519; font-size: 16px;">The Ancile AI Team</strong>
                     </p>
                     
                     <!-- Divider -->
@@ -128,7 +128,7 @@ export function generateCustomerConfirmationEmail(
                     
                     <!-- Contact Info -->
                     <p style="color: #6b7280; font-size: 13px; margin: 0; line-height: 1.5; font-family: Arial, sans-serif;">
-                      <a href="mailto:sales@ancile.io" style="color: #e86c25; text-decoration: none;">sales@ancile.io</a> | <a href="https://ancile.io" style="color: #e86c25; text-decoration: none;">ancile.io</a><br>
+                      <a href="mailto:sales@ancile.io" style="color: #d75519; text-decoration: none;">sales@ancile.io</a> | <a href="https://ancile.io" style="color: #d75519; text-decoration: none;">ancile.io</a><br>
                       This email was sent in response to your inquiry on our website.
                     </p>
                     
@@ -183,7 +183,7 @@ export function generateContactEmail(
                 
                 <!-- Header -->
                 <tr>
-                  <td style="background-color: #e86c25; padding: 30px; text-align: center;">
+                  <td style="background-color: #d75519; padding: 30px; text-align: center;">
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td style="text-align: center;">
@@ -205,7 +205,7 @@ export function generateContactEmail(
                     <!-- Contact Information Section -->
                     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 6px; margin-bottom: 20px;">
                       <tr>
-                        <td style="padding: 20px; border-left: 4px solid #e86c25;">
+                        <td style="padding: 20px; border-left: 4px solid #d75519;">
                           <h2 style="color: #1f2937; font-size: 18px; font-weight: 600; margin: 0 0 15px 0; padding-bottom: 8px; border-bottom: 1px solid #f3f4f6; font-family: Arial, sans-serif;">Contact Information</h2>
                           
                           <!-- Name -->
@@ -220,7 +220,7 @@ export function generateContactEmail(
                           <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 10px;">
                             <tr>
                               <td width="100" style="color: #4b5563; font-weight: 600; font-size: 14px; vertical-align: top; font-family: Arial, sans-serif;">Email:</td>
-                              <td style="color: #e86c25; font-size: 14px; font-weight: 600; font-family: Arial, sans-serif;"><a href="mailto:${email}" style="color: #e86c25; text-decoration: none;">${email}</a></td>
+                              <td style="color: #d75519; font-size: 14px; font-weight: 600; font-family: Arial, sans-serif;"><a href="mailto:${email}" style="color: #d75519; text-decoration: none;">${email}</a></td>
                             </tr>
                           </table>
                           
@@ -241,7 +241,7 @@ export function generateContactEmail(
                           <table border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tr>
                               <td width="100" style="color: #4b5563; font-weight: 600; font-size: 14px; vertical-align: top; font-family: Arial, sans-serif;">Phone:</td>
-                              <td style="color: #e86c25; font-size: 14px; font-weight: 600; font-family: Arial, sans-serif;"><a href="tel:${phone}" style="color: #e86c25; text-decoration: none;">${phone}</a></td>
+                              <td style="color: #d75519; font-size: 14px; font-weight: 600; font-family: Arial, sans-serif;"><a href="tel:${phone}" style="color: #d75519; text-decoration: none;">${phone}</a></td>
                             </tr>
                           </table>
                           `
@@ -274,7 +274,7 @@ export function generateContactEmail(
                           <!-- Reply Button -->
                           <table border="0" cellpadding="0" cellspacing="0" style="display: inline-block; margin-right: 8px;">
                             <tr>
-                              <td style="background-color: #e86c25; border-radius: 4px;">
+                              <td style="background-color: #d75519; border-radius: 4px;">
                                 <a href="mailto:${email}" style="display: inline-block; padding: 10px 20px; color: #ffffff; text-decoration: none; font-weight: 600; font-size: 14px; font-family: Arial, sans-serif;">Reply to Prospect</a>
                               </td>
                             </tr>

@@ -10,7 +10,7 @@ const AboutPage = () => {
           {/* Page Header */}
           <div className="text-center mb-20">
             <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-              <div className="w-2 h-2 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 rounded-full"></div>
+              <div className="w-2 h-2 bg-burnt-orange-600 rounded-full"></div>
               <span className="text-sm font-medium text-slate-700">
                 About Us
               </span>
@@ -48,7 +48,7 @@ const AboutPage = () => {
 
               <div className="grid md:grid-cols-3 gap-8 mb-12">
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -74,7 +74,7 @@ const AboutPage = () => {
                 </div>
 
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -100,7 +100,7 @@ const AboutPage = () => {
                 </div>
 
                 <div className="text-center">
-                  <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -147,7 +147,7 @@ const AboutPage = () => {
             <div className="grid md:grid-cols-3 gap-8 items-stretch">
               <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
                 <div className="flex-grow">
-                  <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -165,7 +165,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Security First
                   </h3>
-                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
+                  <h4 className="text-lg font-semibold text-burnt-orange-600 mb-3">
                     Mission Assurance Through Security-by-Design
                   </h4>
                   <p className="text-gray-700 mb-4">
@@ -197,7 +197,7 @@ const AboutPage = () => {
 
               <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
                 <div className="flex-grow">
-                  <div className="bg-gradient-to-br from-burnt-orange-700 to-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -215,7 +215,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Innovation with Reliability
                   </h3>
-                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
+                  <h4 className="text-lg font-semibold text-burnt-orange-600 mb-3">
                     Cutting-Edge Technology, Military-Grade Dependability
                   </h4>
                   <p className="text-gray-700 mb-4">
@@ -251,7 +251,7 @@ const AboutPage = () => {
 
               <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
                 <div className="flex-grow">
-                  <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <div className="bg-burnt-orange-600 w-16 h-16 rounded-xl flex items-center justify-center mx-auto mb-6">
                     <svg
                       className="w-8 h-8 text-white"
                       fill="none"
@@ -269,7 +269,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Customer-Centric
                   </h3>
-                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-3">
+                  <h4 className="text-lg font-semibold text-burnt-orange-600 mb-3">
                     Mission-First Partners, Purpose-Built Solutions
                   </h4>
                   <p className="text-gray-700 mb-4">
@@ -315,7 +315,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Founded by Mission Veterans
                   </h3>
-                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-4">
+                  <h4 className="text-lg font-semibold text-burnt-orange-600 mb-4">
                     From the Field to the Future
                   </h4>
                   <p className="text-gray-700 mb-4">
@@ -340,7 +340,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     Mission-Driven Growth
                   </h3>
-                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-4">
+                  <h4 className="text-lg font-semibold text-burnt-orange-600 mb-4">
                     Every Client Engagement Advances National Security
                   </h4>
                   <p className="text-gray-700 mb-4">
@@ -430,7 +430,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">
                     The Shield of Mars
                   </h3>
-                  <h4 className="text-lg font-semibold text-burnt-orange-700 mb-4">
+                  <h4 className="text-lg font-semibold text-burnt-orange-600 mb-4">
                     Protection Through Advanced Preparation
                   </h4>
                   <p className="text-gray-700 mb-6">

@@ -170,13 +170,13 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-6">
             <Link
               href="/about"
-              className="relative text-gray-700 hover:text-burnt-orange-600 font-medium transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-gradient-to-r before:from-burnt-orange-600 before:to-slate-700 before:transition-all before:duration-300 hover:before:w-full"
+              className="relative text-gray-700 hover:text-burnt-orange-600 font-medium transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-burnt-orange-600 before:transition-all before:duration-300 hover:before:w-full"
             >
               About
             </Link>
             <button
               onClick={openModal}
-              className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white px-6 py-3 rounded-lg font-semibold hover:from-burnt-orange-800 hover:to-burnt-orange-900 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
+              className="bg-burnt-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burnt-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
             >
               Partner With Us
             </button>
@@ -208,7 +208,7 @@ const Header = () => {
             </Link>
             <button
               onClick={openModal}
-              className="w-full bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white px-6 py-3 rounded-lg font-semibold hover:from-burnt-orange-800 hover:to-burnt-orange-900 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="w-full bg-burnt-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burnt-orange-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               Partner With Us
             </button>
@@ -221,7 +221,7 @@ const Header = () => {
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4 animate-in fade-in duration-300">
           <div className="bg-white/95 backdrop-blur-xl rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-white/20 animate-in zoom-in-95 duration-300">
             {/* Header */}
-            <div className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white p-6 rounded-t-2xl">
+            <div className="bg-burnt-orange-600 text-white p-6 rounded-t-2xl">
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <div className="p-2">
@@ -397,7 +397,7 @@ const Header = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white py-3 px-6 rounded-xl hover:from-burnt-orange-800 hover:to-burnt-orange-900 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+                  className="flex-1 bg-burnt-orange-600 text-white py-3 px-6 rounded-xl hover:bg-burnt-orange-600 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>

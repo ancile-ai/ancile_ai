@@ -15,21 +15,21 @@ const metrics = [
     value: "<50ms",
     label: "Response Time",
     description: "Real-time decision support when seconds matter",
-    color: "text-burnt-orange-700",
+    color: "text-burnt-orange-600",
   },
   {
     icon: Award,
     value: "100%",
     label: "NIST Compliance",
     description: "Full adherence to 2025 federal AI frameworks",
-    color: "text-burnt-orange-800",
+    color: "text-burnt-orange-600",
   },
   {
     icon: Target,
     value: "24/7",
     label: "CONUS Support",
     description: "Cleared personnel available around the clock",
-    color: "text-burnt-orange-500",
+    color: "text-burnt-orange-600",
   },
 ];
 
@@ -44,13 +44,13 @@ const achievements = [
 
 const Metrics = () => {
   return (
-    <section className="py-24 bg-gradient-to-br from-white via-slate-50 to-gray-50 relative overflow-hidden">
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Static gradient orbs */}
-        <div className="absolute top-20 left-20 w-64 h-64 bg-burnt-orange-500/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-32 right-32 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-burnt-orange-300/10 rounded-full blur-2xl" />
+        <div className="absolute top-20 left-20 w-64 h-64 bg-burnt-orange-600/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-32 right-32 w-48 h-48 bg-burnt-orange-600/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-burnt-orange-600/5 rounded-full blur-2xl" />
 
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -68,13 +68,13 @@ const Metrics = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white/90 backdrop-blur-lg px-4 py-2 rounded-full border border-slate-200 mb-8">
-            <Award className="h-5 w-5 text-burnt-orange-700" />
+            <Award className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-700">
               Trust & Performance
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
             Established Excellence
           </h2>
 
@@ -92,16 +92,16 @@ const Metrics = () => {
               className="group bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2"
             >
               <div
-                className={`relative mb-4 mx-auto w-fit p-3 bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 ${metric.color}`}
+                className={`relative mb-4 mx-auto w-fit p-3 bg-burnt-orange-600 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110 ${metric.color}`}
               >
                 <metric.icon className="h-6 w-6 text-white" />
               </div>
 
-              <div className="text-3xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-slate-800 bg-clip-text text-transparent group-hover:from-burnt-orange-800 group-hover:to-slate-700 group-hover:scale-105 transition-all duration-300">
+              <div className="text-3xl font-bold mb-2 text-gray-900 group-hover:text-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                 {metric.value}
               </div>
 
-              <div className="text-sm text-gray-900 font-semibold mb-1 group-hover:text-burnt-orange-800 transition-colors">
+              <div className="text-sm text-gray-900 font-semibold mb-1 group-hover:text-burnt-orange-600 transition-colors">
                 {metric.label}
               </div>
 
@@ -118,7 +118,7 @@ const Metrics = () => {
           <div className="space-y-4">
             {achievements.slice(0, 3).map((achievement, index) => (
               <div key={index} className="flex items-start space-x-4 group">
-                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="flex-shrink-0 w-2 h-2 bg-burnt-orange-600 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
                 <p className="text-gray-700 group-hover:text-slate-800 transition-colors duration-300 leading-relaxed">
                   {achievement}
                 </p>
@@ -130,7 +130,7 @@ const Metrics = () => {
           <div className="space-y-4">
             {achievements.slice(3).map((achievement, index) => (
               <div key={index} className="flex items-start space-x-4 group">
-                <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-600 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
+                <div className="flex-shrink-0 w-2 h-2 bg-burnt-orange-600 rounded-full mt-2 group-hover:scale-125 transition-transform duration-300"></div>
                 <p className="text-gray-700 group-hover:text-slate-800 transition-colors duration-300 leading-relaxed">
                   {achievement}
                 </p>
@@ -143,14 +143,14 @@ const Metrics = () => {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center space-x-4 bg-white/60 backdrop-blur-xl rounded-full px-8 py-4 border border-slate-200 shadow-lg">
             <div className="flex items-center space-x-2">
-              <Shield className="h-5 w-5 text-burnt-orange-700" />
+              <Shield className="h-5 w-5 text-burnt-orange-600" />
               <span className="text-sm text-gray-700">
                 Trusted by Government Leaders
               </span>
             </div>
             <div className="text-2xl">•</div>
             <div className="flex items-center space-x-2">
-              <Target className="h-5 w-5 text-burnt-orange-700" />
+              <Target className="h-5 w-5 text-burnt-orange-600" />
               <span className="text-sm text-gray-700">
                 Mission-Critical Results
               </span>

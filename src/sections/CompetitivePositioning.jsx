@@ -49,7 +49,7 @@ const CompetitivePositioning = () => {
           }`}
         >
           <div className="inline-flex items-center space-x-2 bg-white px-6 py-3 rounded-full border border-slate-200 shadow-lg mb-8">
-            <Award className="h-5 w-5 text-burnt-orange-700" />
+            <Award className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-800">
               Not Your Typical AI Consultant
             </span>
@@ -70,23 +70,23 @@ const CompetitivePositioning = () => {
 
         {/* Social Proof Bar */}
         <div className="flex flex-wrap justify-center items-center gap-6 mb-16 text-sm">
-          <div className="flex items-center space-x-2 text-burnt-orange-700">
+          <div className="flex items-center space-x-2 text-burnt-orange-600">
             <CheckCircle className="h-4 w-4" />
             <span className="font-medium">SEWP Certified</span>
           </div>
-          <div className="flex items-center space-x-2 text-burnt-orange-700">
+          <div className="flex items-center space-x-2 text-burnt-orange-600">
             <CheckCircle className="h-4 w-4" />
             <span className="font-medium">CIO-SP3 Vendor</span>
           </div>
-          <div className="flex items-center space-x-2 text-burnt-orange-700">
+          <div className="flex items-center space-x-2 text-burnt-orange-600">
             <CheckCircle className="h-4 w-4" />
             <span className="font-medium">GSA Schedule Holder</span>
           </div>
-          <div className="flex items-center space-x-2 text-burnt-orange-700">
+          <div className="flex items-center space-x-2 text-burnt-orange-600">
             <CheckCircle className="h-4 w-4" />
             <span className="font-medium">CMMI Level 3</span>
           </div>
-          <div className="flex items-center space-x-2 text-burnt-orange-700">
+          <div className="flex items-center space-x-2 text-burnt-orange-600">
             <CheckCircle className="h-4 w-4" />
             <span className="font-medium">ISO 27001 Certified</span>
           </div>
@@ -105,14 +105,14 @@ const CompetitivePositioning = () => {
           <div className="overflow-x-auto">
             <table className="w-full border-collapse">
               <thead>
-                <tr className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900">
-                  <th className="p-6 text-left font-semibold text-white border-b-2 border-burnt-orange-800">
+                <tr className="bg-burnt-orange-600">
+                  <th className="p-6 text-left font-semibold text-white border-b-2 border-burnt-orange-600">
                     What Others Do
                   </th>
-                  <th className="p-6 text-left font-semibold text-white border-b-2 border-burnt-orange-800">
+                  <th className="p-6 text-left font-semibold text-white border-b-2 border-burnt-orange-600">
                     What Ancile AI Delivers
                   </th>
-                  <th className="p-6 text-center font-semibold text-white border-b-2 border-burnt-orange-800">
+                  <th className="p-6 text-center font-semibold text-white border-b-2 border-burnt-orange-600">
                     Mission Impact
                   </th>
                 </tr>
@@ -233,7 +233,7 @@ const CompetitivePositioning = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/60 backdrop-blur-xl rounded-xl p-4 shadow-lg">
-              <h4 className="font-semibold text-burnt-orange-800 text-sm mb-2">
+              <h4 className="font-semibold text-burnt-orange-600 text-sm mb-2">
                 Platform Integrations
               </h4>
               <div className="flex flex-wrap gap-2 text-xs">
@@ -243,7 +243,7 @@ const CompetitivePositioning = () => {
               </div>
             </div>
             <div className="bg-white/60 backdrop-blur-xl rounded-xl p-4 shadow-lg">
-              <h4 className="font-semibold text-burnt-orange-800 text-sm mb-2">
+              <h4 className="font-semibold text-burnt-orange-600 text-sm mb-2">
                 Contract Vehicles
               </h4>
               <div className="flex flex-wrap gap-2 text-xs">
@@ -253,7 +253,7 @@ const CompetitivePositioning = () => {
               </div>
             </div>
             <div className="bg-white/60 backdrop-blur-xl rounded-xl p-4 shadow-lg">
-              <h4 className="font-semibold text-burnt-orange-800 text-sm mb-2">
+              <h4 className="font-semibold text-burnt-orange-600 text-sm mb-2">
                 Certifications
               </h4>
               <div className="flex flex-wrap gap-2 text-xs">

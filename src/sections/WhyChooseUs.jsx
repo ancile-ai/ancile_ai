@@ -15,8 +15,8 @@ const reasons = [
       "Regulatory compliance embedded in code, not workarounds",
       "Multi-classification environment ready (IL2-IL6)",
     ],
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "bg-burnt-orange-50",
   },
   {
     icon: Users,
@@ -29,8 +29,8 @@ const reasons = [
       "Mission success prioritized above all other metrics",
       "Combined multi-uniformed service brings unparalleled insight",
     ],
-    gradient: "from-burnt-orange-700 to-burnt-orange-600",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "bg-burnt-orange-50",
   },
   {
     icon: Target,
@@ -43,8 +43,8 @@ const reasons = [
       "Pre-certified for FedRAMP High and DoD IL-5 requirements",
       "Built to the latest 2025 federal AI standards from day one",
     ],
-    gradient: "from-burnt-orange-600 to-burnt-orange-700",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "bg-burnt-orange-50",
   },
   {
     icon: Award,
@@ -56,8 +56,8 @@ const reasons = [
       "The Boeing Company: Multiple prototype integration efforts across efforts totaling $50M in awarded contracts",
       "U.S. Central Command: Advanced multi-domain awareness capabilities through $1M in subcontracts DoD Adoption",
     ],
-    gradient: "from-burnt-orange-700 to-burnt-orange-600",
-    bgColor: "from-burnt-orange-50 to-amber-50",
+    gradient: "bg-burnt-orange-600",
+    bgColor: "bg-burnt-orange-50",
   },
 ];
 
@@ -67,14 +67,14 @@ const WhyChooseUs = () => {
   return (
     <section
       id="about"
-      className="py-32 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative"
+      className="py-32 bg-slate-50 relative"
     >
       {/* Background Pattern */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-white/30 backdrop-blur-[100px]" />
-        <div className="absolute top-20 right-20 w-32 h-32 bg-purple-200/20 rounded-full blur-xl animate-pulse" />
+        <div className="absolute top-20 right-20 w-32 h-32 bg-burnt-orange-600/10 rounded-full blur-xl animate-pulse" />
         <div
-          className="absolute bottom-32 left-20 w-40 h-40 bg-orange-200/20 rounded-full blur-xl animate-pulse"
+          className="absolute bottom-32 left-20 w-40 h-40 bg-burnt-orange-600/10 rounded-full blur-xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
       </div>
@@ -83,13 +83,13 @@ const WhyChooseUs = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-8">
-            <Sparkles className="h-5 w-5 text-burnt-orange-700" />
+            <Sparkles className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-700">
               About Ancile AI
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
             Why Ancile?
           </h2>
 
@@ -113,21 +113,21 @@ const WhyChooseUs = () => {
             >
               {/* Animated Background */}
               <div
-                className={`absolute inset-0 bg-gradient-to-br ${reason.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
+                className={`absolute inset-0 ${reason.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
               />
 
               {/* Content Wrapper for Z-Index */}
               <div className="relative z-10">
                 {/* Icon */}
                 <div
-                  className={`relative mb-6 inline-flex p-4 bg-gradient-to-br ${reason.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
+                  className={`relative mb-6 inline-flex p-4 ${reason.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
                 >
                   <reason.icon className="h-8 w-8 text-white" />
                 </div>
 
                 {/* Title */}
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-800 group-hover:scale-105 transition-all duration-300">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
                     {reason.title}
                   </h3>
                   <p className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
@@ -143,7 +143,7 @@ const WhyChooseUs = () => {
                       className="flex items-start space-x-3 group/item"
                     >
                       <div
-                        className={`w-2 h-2 bg-gradient-to-r ${reason.gradient} rounded-full mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200`}
+                        className={`w-2 h-2 ${reason.gradient.replace('bg-', 'bg-')} rounded-full mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200`}
                       ></div>
                       <p className="text-gray-700 leading-relaxed text-sm group-hover/item:text-slate-800 transition-colors">
                         {feature}
@@ -167,7 +167,7 @@ const WhyChooseUs = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2">
-                  <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-2 group-hover:from-burnt-orange-900 group-hover:to-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
+                  <div className="text-3xl md:text-4xl font-bold text-burnt-orange-600 mb-2 group-hover:scale-105 transition-all duration-300">
                     {stat.number}
                   </div>
                   <div className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
@@ -180,16 +180,16 @@ const WhyChooseUs = () => {
 
           {/* Social Proof Addendum */}
           <div className="mt-12 text-center">
-            <div className="inline-flex flex-col items-center space-y-2 bg-gradient-to-r from-slate-50 to-gray-50 backdrop-blur-sm rounded-2xl px-8 py-6 border border-slate-200 shadow-lg">
+            <div className="inline-flex flex-col items-center space-y-2 bg-slate-50 backdrop-blur-sm rounded-2xl px-8 py-6 border border-slate-200 shadow-lg">
               <div className="flex items-center space-x-4 text-sm">
-                <div className="flex items-center space-x-2 text-burnt-orange-700">
+                <div className="flex items-center space-x-2 text-burnt-orange-600">
                   <Shield className="h-4 w-4" />
                   <span className="font-medium">
                     Trusted by Intelligence Community
                   </span>
                 </div>
                 <div className="w-px h-4 bg-slate-300"></div>
-                <div className="flex items-center space-x-2 text-burnt-orange-700">
+                <div className="flex items-center space-x-2 text-burnt-orange-600">
                   <Target className="h-4 w-4" />
                   <span className="font-medium">
                     Supporting Global Operations

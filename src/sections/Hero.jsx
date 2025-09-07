@@ -47,16 +47,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-br from-slate-50 via-gray-50 to-white text-gray-900 overflow-hidden py-24 min-h-screen flex items-center">
+    <section className="relative bg-slate-50 text-gray-900 overflow-hidden py-24 min-h-screen flex items-center">
       {/* Professional Background */}
       <div className="absolute inset-0">
         {/* Subtle pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23111111%22 fill-opacity=%220.02%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
 
         {/* Professional gradient orbs */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-burnt-orange-100/30 rounded-full blur-2xl" />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-burnt-orange-600/10 rounded-full blur-2xl" />
         <div className="absolute bottom-20 right-20 w-48 h-48 bg-slate-200/20 rounded-full blur-2xl" />
-        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-amber-100/20 rounded-full blur-xl" />
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-burnt-orange-600/10 rounded-full blur-xl" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 w-full">
@@ -67,7 +67,7 @@ const Hero = () => {
           }`}
         >
           <div className="inline-flex items-center space-x-2 bg-slate-100 px-6 py-3 rounded-full border border-slate-300 shadow-lg">
-            <Shield className="h-5 w-5 text-burnt-orange-700" />
+            <Shield className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-800">
               SDVOSB • Veteran-Owned • Mission-Focused
             </span>
@@ -80,10 +80,10 @@ const Hero = () => {
             isLoaded ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
             AI Solutions Built
             <br />
-            <span className="relative bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-600 bg-clip-text text-transparent">
+            <span className="relative text-burnt-orange-600 font-bold">
               For Government Operations
             </span>
           </h1>
@@ -108,7 +108,7 @@ const Hero = () => {
         >
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <Shield className="h-8 w-8 text-burnt-orange-600 mx-auto mb-3" />
               <h3 className="text-sm font-bold text-slate-800 mb-2">
                 NIST AI RMF Compliant
               </h3>
@@ -117,7 +117,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <Shield className="h-8 w-8 text-burnt-orange-600 mx-auto mb-3" />
               <h3 className="text-sm font-bold text-slate-800 mb-2">
                 Mission-Critical Reliability
               </h3>
@@ -126,7 +126,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <Shield className="h-8 w-8 text-burnt-orange-600 mx-auto mb-3" />
               <h3 className="text-sm font-bold text-slate-800 mb-2">
                 Veteran-Led Expertise
               </h3>
@@ -136,7 +136,7 @@ const Hero = () => {
               </p>
             </div>
             <div className="bg-white/80 backdrop-blur-sm rounded-xl p-4 border border-slate-200 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Shield className="h-8 w-8 text-burnt-orange-700 mx-auto mb-3" />
+              <Shield className="h-8 w-8 text-burnt-orange-600 mx-auto mb-3" />
               <h3 className="text-sm font-bold text-slate-800 mb-2">
                 Security-First Design
               </h3>
@@ -179,7 +179,7 @@ const Hero = () => {
                     id="name"
                     name="name"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-500 focus:border-burnt-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-600 focus:border-burnt-orange-600"
                   />
                 </div>
 
@@ -190,7 +190,7 @@ const Hero = () => {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-500 focus:border-burnt-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-600 focus:border-burnt-orange-600"
                   />
                 </div>
 
@@ -200,7 +200,7 @@ const Hero = () => {
                     type="text"
                     id="company"
                     name="company"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-500 focus:border-burnt-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-600 focus:border-burnt-orange-600"
                   />
                 </div>
 
@@ -210,7 +210,7 @@ const Hero = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-500 focus:border-burnt-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-600 focus:border-burnt-orange-600"
                   />
                 </div>
 
@@ -221,13 +221,13 @@ const Hero = () => {
                     name="message"
                     required
                     rows="4"
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-500 focus:border-burnt-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-burnt-orange-600 focus:border-burnt-orange-600"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full bg-burnt-orange-600 hover:bg-burnt-orange-600 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Send className="h-5 w-5" />
                   <span>Send Message</span>

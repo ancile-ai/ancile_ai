@@ -163,7 +163,7 @@ const CallToAction = () => {
   }, []);
 
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-50 via-gray-50 to-white relative overflow-hidden">
+    <section className="py-24 bg-slate-50 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         {/* Floating particles */}
@@ -181,13 +181,13 @@ const CallToAction = () => {
         ))}
 
         {/* Gradient orbs */}
-        <div className="absolute top-20 left-20 w-64 h-64 bg-burnt-orange-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-20 left-20 w-64 h-64 bg-burnt-orange-600/5 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-20 right-20 w-64 h-64 bg-amber-500/5 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-20 right-20 w-64 h-64 bg-burnt-orange-600/5 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "2s" }}
         />
         <div
-          className="absolute top-1/2 left-1/3 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl animate-pulse"
+          className="absolute top-1/2 left-1/3 w-32 h-32 bg-burnt-orange-600/5 rounded-full blur-2xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
       </div>
@@ -196,16 +196,16 @@ const CallToAction = () => {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Sparkles className="h-5 w-5 text-burnt-orange-700" />
+            <Sparkles className="h-5 w-5 text-burnt-orange-600" />
             <span className="text-sm font-medium text-slate-700">
               Get Started Today
             </span>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-gray-900 via-slate-800 to-gray-900 bg-clip-text text-transparent pb-2" style={{ paddingBottom: '4px' }}>
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
             Ready to Transform
             <br />
-            <span className="relative bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 bg-clip-text text-transparent">
+            <span className="relative text-burnt-orange-600 font-bold">
               Your Mission?
             </span>
           </h2>
@@ -217,31 +217,31 @@ const CallToAction = () => {
           </p>
         </div>
 
-        {/* CTA Cards Grid */}
+          {/* CTA Cards Grid */}
         <div className="grid lg:grid-cols-1 gap-8">
           {/* Primary CTA */}
           <div className="group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 border border-white/20 hover:bg-white/85 transition-all duration-500 hover:shadow-xl hover:-translate-y-1 shadow-lg">
             {/* Softer glow effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-burnt-orange-600/20 to-burnt-orange-800/20 opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-2xl blur-xl" />
+            <div className="absolute inset-0 bg-burnt-orange-600/10 opacity-0 group-hover:opacity-50 transition-opacity duration-500 rounded-2xl blur-xl" />
 
             {/* Subtle decorative elements */}
-            <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-burnt-orange-50 to-amber-50 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500" />
-            <div className="absolute bottom-6 left-6 w-10 h-10 bg-gradient-to-br from-burnt-orange-100 to-amber-100 rounded-full opacity-15 group-hover:opacity-25 transition-opacity duration-500" />
+            <div className="absolute top-4 right-4 w-16 h-16 bg-burnt-orange-50 rounded-full opacity-10 group-hover:opacity-20 transition-opacity duration-500" />
+            <div className="absolute bottom-6 left-6 w-10 h-10 bg-burnt-orange-100 rounded-full opacity-15 group-hover:opacity-25 transition-opacity duration-500" />
 
             <div className="relative">
               {/* Header section */}
               <div className="flex items-center justify-between mb-6">
-                <div className="bg-gradient-to-br from-burnt-orange-600 to-burnt-orange-700 p-4 rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300">
+                <div className="bg-burnt-orange-600 p-4 rounded-xl shadow-lg group-hover:scale-105 transition-all duration-300">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
               </div>
 
               {/* Enhanced title with underline effect */}
               <div className="mb-6">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-900 transition-colors duration-500">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-600 transition-colors duration-500">
                   Schedule Secure Consultation
                 </h3>
-                <div className="w-0 group-hover:w-24 h-1 bg-gradient-to-r from-burnt-orange-600 to-burnt-orange-700 transition-all duration-700" />
+                <div className="w-0 group-hover:w-24 h-1 bg-burnt-orange-600 transition-all duration-700" />
               </div>
 
               {/* Enhanced description with better spacing */}
@@ -257,7 +257,7 @@ const CallToAction = () => {
               <div className="space-y-4">
                 <button
                   onClick={openModal}
-                  className="group/btn w-full bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-800 hover:from-burnt-orange-800 hover:to-burnt-orange-900 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-102 transform flex items-center justify-center space-x-2"
+                  className="group/btn w-full bg-burnt-orange-600 hover:bg-burnt-orange-600 text-white px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-102 transform flex items-center justify-center space-x-2"
                 >
                   <Calendar className="h-5 w-5" />
                   <span>Book Your Consultation</span>
@@ -288,7 +288,7 @@ const CallToAction = () => {
                 key={index}
                 className="group bg-white/60 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 hover:bg-white/80"
               >
-                <div className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-burnt-orange-800 to-burnt-orange-700 bg-clip-text text-transparent mb-1 group-hover:from-burnt-orange-900 group-hover:to-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
+                <div className="text-2xl md:text-3xl font-bold text-burnt-orange-600 mb-1 group-hover:scale-105 transition-all duration-300">
                   {stat.number}
                 </div>
                 <div className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
@@ -305,7 +305,7 @@ const CallToAction = () => {
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4 animate-in fade-in duration-300">
           <div className="bg-white/95 backdrop-blur-xl rounded-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-white/20 animate-in zoom-in-95 duration-300">
             {/* Header */}
-            <div className="bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white p-6 rounded-t-2xl">
+            <div className="bg-burnt-orange-600 text-white p-6 rounded-t-2xl">
               <div className="flex justify-between items-center">
                 <div className="flex items-center space-x-3">
                   <div className="p-2">
@@ -481,7 +481,7 @@ const CallToAction = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="flex-1 bg-gradient-to-r from-burnt-orange-700 to-burnt-orange-900 text-white py-3 px-6 rounded-xl hover:from-burnt-orange-800 hover:to-burnt-orange-900 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
+                  className="flex-1 bg-burnt-orange-600 text-white py-3 px-6 rounded-xl hover:bg-burnt-orange-600 transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 flex items-center justify-center"
                 >
                   {isSubmitting ? (
                     <>
