@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import '../index.css'
+import { ContactModalProvider } from '../context/ContactModalContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ContactModalProvider>
+          {children}
+        </ContactModalProvider>
+      </body>
     </html>
   )
 }
