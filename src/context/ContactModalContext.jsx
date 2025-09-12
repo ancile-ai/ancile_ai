@@ -190,7 +190,7 @@ export const ContactModalProvider = ({ children }) => {
               >
                 <X className="h-6 w-6" />
               </button>
-              <h3 className="text-xl font-bold text-left">Partner With Us</h3>
+              <h3 className="text-xl font-bold text-left">Contact Us</h3>
               <p className="mt-3 text-white/90 text-sm leading-relaxed">
                 Let's discuss how Ancile AI can help transform your organization with AI solutions.
               </p>

@@ -39,7 +39,7 @@ const Header = () => {
               onClick={openModal}
               className="bg-burnt-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burnt-orange-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform"
             >
-              Partner With Us
+              Contact Us
             </button>
           </nav>
 
@@ -69,9 +69,9 @@ const Header = () => {
             </Link>
             <button
               onClick={openModal}
-              className="w-full bg-burnt-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burnt-orange-600 transition-all duration-200 shadow-lg hover:shadow-xl"
+              className="w-full bg-burnt-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burnt-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
-              Partner With Us
+              Contact Us
             </button>
           </div>
         )}

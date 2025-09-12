@@ -68,7 +68,7 @@ const CallToAction = () => {
           </h2>
 
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-12">
-            Partner with professionals who understand your operational
+            Connect with professionals who understand your operational
             environment. Schedule a consultation to evaluate your organization's
             AI initiatives.
           </p>
@@ -103,7 +103,7 @@ const CallToAction = () => {
 
               {/* Enhanced description with better spacing */}
               <p className="text-lg text-gray-700 mb-10 leading-relaxed text-justify">
-                Partner with veteran-founded Ancile AI to secure your agency's
+                Work with veteran-founded Ancile AI to secure your agency's
                 AI advantage. Our security-cleared team understands your
                 mission's unique requirements and the strategic importance of
                 reliable AI implementation. Let's discuss your vision and craft
