@@ -1,207 +1,72 @@
-"use client";
+import { Blocks, ShieldCheck, Users, Waypoints } from "lucide-react";
 
-import { Shield, Award, Target, Users, Sparkles } from "lucide-react";
-import { useState } from "react";
-
-const reasons = [
+const proofCards = [
   {
-    icon: Shield,
-    title: "Built for the Warfighter",
-    subtitle: "Purpose-built solutions from day one",
-    features: [
-      "Security and compliance integrated design, not patched-solutions",
-      "Government operations as primary use case, not secondary consideration",
-      "Zero-trust architecture as foundational, not bolted-on",
-      "Regulatory compliance embedded in code, not workarounds",
-      "Multi-classification environment ready (IL2-IL6)",
-    ],
-    gradient: "bg-burnt-orange-600",
-    bgColor: "bg-burnt-orange-50",
+    icon: Blocks,
+    title: "Defined Scope",
+    copy: "Engagements work best when the technical package is clearly defined across software, integration, and operational outcomes.",
   },
   {
     icon: Users,
-    title: "Mission Operators, Not Just Consultants",
-    subtitle: "Veteran-led understanding of real requirements",
-    features: [
-      "Operator-founded team with firsthand mission experience",
-      "Requirements capture from operational realities, not theoretical models",
-      "Operational constraints understood innately, not learned secondhand",
-      "Mission success prioritized above all other metrics",
-      "Combined multi-uniformed service brings unparalleled insight",
-    ],
-    gradient: "bg-burnt-orange-600",
-    bgColor: "bg-burnt-orange-50",
+    title: "Prime Teaming Support",
+    copy: "The model fits prime-led public sector and defense programs that need a veteran-owned technical delivery partner.",
   },
   {
-    icon: Target,
-    title: "2025 Compliance Leadership",
-    subtitle: "NIST AI RMF and federal standards from conception",
-    features: [
-      "NIST AI RMF 1.0 Implementation Partner (2023)",
-      "Early adopter of 2025 NIST Cybersecurity-AI integrated guidelines",
-      "CMMC Level2, V2",
-      "Pre-certified for FedRAMP High and DoD IL-5 requirements",
-      "Built to the latest 2025 federal AI standards from day one",
-    ],
-    gradient: "bg-burnt-orange-600",
-    bgColor: "bg-burnt-orange-50",
+    icon: ShieldCheck,
+    title: "Mission Constraints",
+    copy: "The work is framed around low-signature deployment, field operations, auditability, and practical integration paths.",
   },
   {
-    icon: Award,
-    title: "Proven at Scale",
-    subtitle: "Government-specific results and member track records",
-    features: [
-      "U.S.M.C: Digital Counter-IED technology deployed in Afghanistan operations",
-      "U.S.A.F: Delivered enterprise-scale AI-enabled maintenance advisory under a $4.7M prime contract",
-      "The Boeing Company: Multiple prototype integration efforts across efforts totaling $50M in awarded contracts",
-      "U.S. Central Command: Advanced multi-domain awareness capabilities through $1M in subcontracts DoD Adoption",
-    ],
-    gradient: "bg-burnt-orange-600",
-    bgColor: "bg-burnt-orange-50",
+    icon: Waypoints,
+    title: "Transition Awareness",
+    copy: "Work is structured to move from prototype through validation, partner handoff, and operational use.",
   },
 ];
 
 const WhyChooseUs = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
-
   return (
-    <section
-      id="about"
-      className="py-32 bg-slate-50 relative"
-    >
-      {/* Background Pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-white/30 backdrop-blur-[100px]" />
-        <div className="absolute top-20 right-20 w-32 h-32 bg-burnt-orange-600/10 rounded-full blur-xl animate-pulse" />
-        <div
-          className="absolute bottom-32 left-20 w-40 h-40 bg-burnt-orange-600/10 rounded-full blur-xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-8">
-            <Sparkles className="h-5 w-5 text-burnt-orange-600" />
-            <span className="text-sm font-medium text-slate-700">
-              About Ancile AI
-            </span>
-          </div>
-
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
-            Why Ancile?
+    <section className="border-b border-slate-200 bg-[#f8f5ef] py-24">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+        <div>
+          <p className="section-eyebrow">Why Ancile</p>
+          <h2 className="section-title mt-5 text-4xl sm:text-5xl">
+            A delivery model built for defined mission programs.
           </h2>
-
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto my-auto leading-relaxed">
-            We don't adapt commercial products for government—we build tailored
-            AI solutions specifically for mission-critical challenges in
-            environments where others can't operate
+          <p className="section-copy mt-5 max-w-xl text-lg">
+            Ancile AI combines GhostPost product software, mission integration,
+            and prime subcontract support in a delivery model suited to public
+            sector and defense programs.
           </p>
+
+          <div className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+              What You Get
+            </p>
+            <p className="mt-3 font-display text-2xl font-semibold text-slate-900">
+              Focused scope. Clear fit. Measurable delivery.
+            </p>
+            <p className="mt-3 text-sm leading-7 text-slate-600">
+              We engage where software, integration, and mission execution
+              requirements are clearly defined and outcomes matter.
+            </p>
+          </div>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid lg:grid-cols-2 gap-8">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 ${
-                hoveredCard === index ? "scale-105" : ""
-              }`}
-              onMouseEnter={() => setHoveredCard(index)}
-              onMouseLeave={() => setHoveredCard(null)}
+        <div className="grid gap-5 sm:grid-cols-2">
+          {proofCards.map((card) => (
+            <article
+              key={card.title}
+              className="lift-card rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm"
             >
-              {/* Animated Background */}
-              <div
-                className={`absolute inset-0 ${reason.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`}
-              />
-
-              {/* Content Wrapper for Z-Index */}
-              <div className="relative z-10">
-                {/* Icon */}
-                <div
-                  className={`relative mb-6 inline-flex p-4 ${reason.gradient} rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
-                >
-                  <reason.icon className="h-8 w-8 text-white" />
-                </div>
-
-                {/* Title */}
-                <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
-                    {reason.title}
-                  </h3>
-                  <p className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
-                    {reason.subtitle}
-                  </p>
-                </div>
-
-                {/* Features */}
-                <div className="space-y-3">
-                  {reason.features.map((feature, featureIndex) => (
-                    <div
-                      key={featureIndex}
-                      className="flex items-start space-x-3 group/item"
-                    >
-                      <div
-                        className={`w-2 h-2 ${reason.gradient.replace('bg-', 'bg-')} rounded-full mt-2 flex-shrink-0 group-hover/item:scale-125 transition-transform duration-200`}
-                      ></div>
-                      <p className="text-gray-700 leading-relaxed text-sm group-hover/item:text-slate-800 transition-colors">
-                        {feature}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+              <div className="inline-flex rounded-2xl bg-burnt-orange-50 p-3 text-burnt-orange-700">
+                <card.icon className="h-5 w-5" />
               </div>
-            </div>
+              <h3 className="font-display mt-4 text-xl font-semibold text-slate-900">
+                {card.title}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">{card.copy}</p>
+            </article>
           ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="mt-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { number: "91%", label: "Downrange RCIED threat reduction" },
-              { number: "$3.2M+", label: "Cost Avoidance through AI" },
-              { number: "<50ms", label: "Real-Time Anomaly Detection" },
-              { number: "45+", label: "Classified Engagements" },
-            ].map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="bg-white/60 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 shadow-lg transform hover:-translate-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-burnt-orange-600 mb-2 group-hover:scale-105 transition-all duration-300">
-                    {stat.number}
-                  </div>
-                  <div className="text-sm text-gray-600 font-medium group-hover:text-slate-700 transition-colors">
-                    {stat.label}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Social Proof Addendum */}
-          <div className="mt-12 text-center">
-            <div className="inline-flex flex-col items-center space-y-2 bg-slate-50 backdrop-blur-sm rounded-2xl px-8 py-6 border border-slate-200 shadow-lg">
-              <div className="flex items-center space-x-4 text-sm">
-                <div className="flex items-center space-x-2 text-burnt-orange-600">
-                  <Shield className="h-4 w-4" />
-                  <span className="font-medium">
-                    Trusted by Intelligence Community
-                  </span>
-                </div>
-                <div className="w-px h-4 bg-slate-300"></div>
-                <div className="flex items-center space-x-2 text-burnt-orange-600">
-                  <Target className="h-4 w-4" />
-                  <span className="font-medium">
-                    Supporting Global Operations
-                  </span>
-                </div>
-              </div>
-              <p className="text-xs text-gray-600 mt-3 max-w-md">
-                Join agencies who rely on Ancile AI for mission-critical
-                capabilities
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
