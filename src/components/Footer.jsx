@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ExternalLink, Linkedin, Mail } from "lucide-react";
+import { ExternalLink, Mail } from "lucide-react";
 
 const capabilityLinks = [
   { href: "/overview", label: "Overview" },
@@ -36,7 +36,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
               >
-                <Linkedin className="h-4 w-4 text-burnt-orange-600" />
+                <ExternalLink className="h-4 w-4 text-burnt-orange-600" />
                 LinkedIn
               </a>
               <a

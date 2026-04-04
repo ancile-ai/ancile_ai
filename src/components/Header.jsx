@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -27,10 +27,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCapabilitiesOpen, setIsCapabilitiesOpen] = useState(false);
   const closeTimerRef = useRef(null);
-
-  useEffect(() => {
+  const closeNavigationMenus = useEffectEvent(() => {
     setIsMenuOpen(false);
     setIsCapabilitiesOpen(false);
+  });
+
+  useEffect(() => {
+    closeNavigationMenus();
   }, [pathname]);
 
   useEffect(() => {
