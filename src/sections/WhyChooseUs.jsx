@@ -30,10 +30,10 @@ const WhyChooseUs = () => {
         <div>
           <p className="section-eyebrow">Why Ancile</p>
           <h2 className="section-title mt-5 text-4xl sm:text-5xl">
-            A delivery model built for defined mission programs.
+            A delivery model built for defined operational programs.
           </h2>
           <p className="section-copy mt-5 max-w-xl text-lg">
-            Ancile AI combines GhostPost product software, mission integration,
+            Ancile AI combines passive C-sUAS product software, operational integration,
             and prime subcontract support in a delivery model suited to public
             sector and defense programs.
           </p>
@@ -46,7 +46,7 @@ const WhyChooseUs = () => {
               Focused scope. Clear fit. Measurable delivery.
             </p>
             <p className="mt-3 text-sm leading-7 text-slate-600">
-              We engage where software, integration, and mission execution
+              We engage where software, integration, and operational execution
               requirements are clearly defined and outcomes matter.
             </p>
           </div>

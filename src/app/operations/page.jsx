@@ -20,7 +20,7 @@ const areas = [
   {
     icon: Settings,
     title: "Configuration and Change Control",
-    desc: "Controlled updates, interface changes, and release practices aligned to mission needs.",
+    desc: "Controlled updates, interface changes, and release practices aligned to operational needs.",
   },
   {
     icon: Shield,
@@ -67,7 +67,7 @@ export default function Operations() {
       <Header />
       <PageHero
         eyebrow="Operations"
-        title="Operational support for mission software and deployed systems."
+        title="Operational support for operational software and deployed systems."
         description="We support customers and partners who need software sustainment, deployment discipline, and operational visibility after delivery."
       />
 
@@ -76,7 +76,7 @@ export default function Operations() {
           <div className="mb-10 max-w-3xl">
             <p className="section-eyebrow">Core Areas</p>
             <h2 className="font-display mt-5 text-3xl text-slate-900 sm:text-4xl">
-              Operations support built around field use and mission continuity.
+              Operations support built around field use and operational continuity.
             </h2>
           </div>
 

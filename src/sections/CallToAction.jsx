@@ -24,8 +24,8 @@ const CallToAction = () => {
                   If the scope is real, the next step should be a technical conversation.
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-                  Use the contact flow to discuss GhostPost adoption, prime
-                  subcontract support, or mission-focused software delivery.
+                  Use the contact flow to discuss passive C-sUAS adoption, prime
+                  subcontract support, or opperational-focused software delivery.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -58,7 +58,7 @@ const CallToAction = () => {
                       <p className="font-display text-lg font-semibold">Best fit</p>
                       <p className="mt-2 text-sm leading-7 text-slate-300">
                         Teams that need a focused software partner for product,
-                        integration, or mission-delivery work.
+                        integration, or opperational-delivery work.
                       </p>
                     </div>
                   </div>

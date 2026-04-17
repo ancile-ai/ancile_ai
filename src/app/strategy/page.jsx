@@ -15,7 +15,7 @@ const planningAreas = [
   {
     icon: ClipboardList,
     title: "Capability Assessment",
-    desc: "Assess the mission need, current systems, data availability, and operational constraints before committing to a technical path.",
+    desc: "Assess the operational need, current systems, data availability, and operational constraints before committing to a technical path.",
   },
   {
     icon: Route,
@@ -38,7 +38,7 @@ const engagements = [
   {
     title: "Program Scoping",
     bullets: [
-      "Mission need and use-case definition",
+      "operational need and use-case definition",
       "Data, integration, and deployment assessment",
       "Workstream boundaries and ownership",
     ],
@@ -67,7 +67,7 @@ export default function Strategy() {
       <Header />
       <PageHero
         eyebrow="Strategy"
-        title="Technical strategy for mission software programs."
+        title="Technical strategy for operational software programs."
         description="We help customers and prime teams define scope, sequence technical work, and plan for deployment in environments where integration, security, and operational fit matter."
       />
 

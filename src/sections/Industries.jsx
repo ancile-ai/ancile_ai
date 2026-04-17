@@ -4,15 +4,15 @@ import { ArrowRight, Cpu, LineChart, Shield } from "lucide-react";
 const offerings = [
   {
     icon: Shield,
-    title: "GhostPost Product Software",
-    copy: "Passive counter-small UAS software centered on detection, localization, classification, and low-signature deployment.",
+    title: "Passive sUAS Detection",
+    copy: "Passive small UAS software centered on detection, localization, classification, and low-signature deployment.",
     bullets: ["Passive workflows", "COTS baseline", "Upgrade-ready architecture"],
     href: "/engineering",
   },
   {
     icon: Cpu,
     title: "Software Delivery for Prime Teams",
-    copy: "Subcontract engineering and integration support for Texas public sector and mission-driven defense workstreams.",
+    copy: "Subcontract engineering and integration support for Texas public sector and opperational-driven defense workstreams.",
     bullets: ["Veteran-owned participation", "Integration support", "Rapid staffing"],
     href: "/overview",
   },
@@ -33,11 +33,11 @@ const Industries = () => {
           <div className="max-w-3xl">
             <p className="section-eyebrow">Offerings</p>
             <h2 className="section-title mt-5 text-4xl sm:text-5xl">
-              Capability areas aligned to mission needs.
+              Capability areas aligned to operational needs.
             </h2>
             <p className="section-copy mt-4 text-lg">
               Ancile AI supports customers across three complementary lanes:
-              GhostPost product software, subcontract engineering support, and
+              passive sUAS Detection, subcontract engineering support, and
               applied AI and R&D execution.
             </p>
           </div>

@@ -5,8 +5,8 @@ import CallToAction from "@/sections/CallToAction";
 import { CheckCircle, Shield, Users, Workflow } from "lucide-react";
 
 const companyPoints = [
-  "Veteran-owned company with a focused mission software scope",
-  "Support for GhostPost product software and related integration work",
+  "Veteran-owned company with a focused operational software scope",
+  "Support for passive C-sUAS product software and related integration work",
   "Subcontract engineering support for prime-led public sector and defense programs",
   "Program execution shaped by deployment constraints, validation needs, and transition planning",
 ];
@@ -14,7 +14,7 @@ const companyPoints = [
 const values = [
   {
     title: "Clear Scope",
-    desc: "We work best when the mission need, interfaces, and delivery responsibilities are defined.",
+    desc: "We work best when the operational need, interfaces, and delivery responsibilities are defined.",
   },
   {
     title: "Operational Fit",
@@ -27,7 +27,7 @@ const values = [
 ];
 
 const teamPoints = [
-  "Backgrounds across defense, software engineering, and mission-oriented technical delivery",
+  "Backgrounds across defense, software engineering, and opperational-oriented technical delivery",
   "Experience with security-conscious systems and operationally constrained environments",
   "Focus on building software that can be integrated, fielded, and sustained",
 ];
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Ancile AI"
         title="Mission software company built for focused delivery."
-        description="Ancile AI is a veteran-owned company supporting GhostPost product software, mission integration, and subcontract engineering for public sector and defense work."
+        description="Ancile AI is a veteran-owned company supporting passive C-sUAS product software, operational integration, and subcontract engineering for public sector and defense work."
       />
 
       <main className="mx-auto max-w-7xl space-y-20 px-4 py-16 sm:px-6 lg:px-8 lg:space-y-24 lg:py-24">
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 Why the company exists
               </h2>
               <p className="mt-5 text-lg leading-8 text-slate-300">
-                The company was built to support software efforts where mission
+                The company was built to support software efforts where opperational
                 constraints, deployment realities, and execution discipline
                 matter as much as the code itself.
               </p>
@@ -127,12 +127,12 @@ export default function AboutPage() {
               </h2>
               <p className="mt-5 text-sm leading-7 text-slate-700">
                 The name references the Roman shield associated with protection.
-                For us, it reflects software built to support mission
+                For us, it reflects software built to support opperational
                 awareness, decision-making, and operational resilience.
               </p>
               <p className="mt-4 text-sm leading-7 text-slate-700">
                 The point is not symbolism for its own sake. It is a reminder
-                that software should strengthen the mission it supports.
+                that software should strengthen the operational it supports.
               </p>
             </article>
           </div>

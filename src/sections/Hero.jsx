@@ -6,13 +6,13 @@ import { useContactModal } from "../context/ContactModalContext";
 
 const proofPoints = [
   {
-    title: "GhostPost Product",
-    copy: "Passive C-sUAS software built around multi-modal sensor fusion and deployment realities.",
+    title: "Passive sUAS Detection",
+    copy: "Researched and developed C-sUAS software built around multi-modal sensor fusion with field-testing scheduled Q3FY26. In partnerhsip with a Tier-1 defense contractor.",
     icon: Radar,
   },
   {
     title: "Subcontract Execution",
-    copy: "Veteran-owned engineering support for prime-led public sector and defense work.",
+    copy: "Veteran-owned AI engineering support for prime-led public sector, energy, and defense work.",
     icon: Wrench,
   },
   {
@@ -35,17 +35,16 @@ const Hero = () => {
         <div className="fade-up">
           <p className="section-eyebrow">
             <Shield className="h-4 w-4" />
-            SDVOSB • Mission Software
+            SDVOSB • AI Consulting and Solutions
           </p>
 
           <h1 className="section-title mt-6 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
-            Product software and subcontract engineering for mission programs.
+            Applied AI & software engineering for operational program support.
           </h1>
 
           <p className="section-copy mt-6 max-w-2xl text-lg sm:text-xl">
-            Ancile AI delivers GhostPost product software for passive
-            counter-small UAS operations, along with mission software delivery
-            and integration support for public sector and defense programs.
+            Ancile AI provides operational software
+            and integration support for public sector, energy, and defense programs.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -53,7 +52,7 @@ const Hero = () => {
               href="/engineering"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
-              Explore Engineering
+              Explore Engineering Capabilities
               <ArrowRight className="h-4 w-4" />
             </Link>
             <button
@@ -67,7 +66,7 @@ const Hero = () => {
 
           <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[
-              { label: "Primary Product", value: "GhostPost" },
+              { label: "Primary Focus", value: "Applied Research & Development" },
               { label: "Delivery Model", value: "Product + Services" },
               { label: "Contracting Fit", value: "Prime Teaming" },
             ].map((item) => (
@@ -86,7 +85,7 @@ const Hero = () => {
                 Capability Profile
               </p>
               <h2 className="font-display mt-3 text-3xl font-semibold">
-                Focused delivery for defined mission needs.
+                Focused delivery for defined operational needs.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-300">
                 Ancile supports programs that need product software, integration

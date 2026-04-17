@@ -4,7 +4,7 @@ const steps = [
   {
     icon: ClipboardCheck,
     title: "Assess fit",
-    copy: "We align on mission need, constraints, and whether the work belongs in product software, subcontract delivery, or applied R&D.",
+    copy: "We align on operational need, constraints, and whether the work belongs in product software, subcontract delivery, or applied R&D.",
   },
   {
     icon: DraftingCompass,
@@ -31,10 +31,10 @@ const Process = () => {
           <div>
             <p className="section-eyebrow">Operating Model</p>
             <h2 className="section-title mt-5 text-4xl sm:text-5xl">
-              A straightforward operating model for mission delivery.
+              A straightforward operating model for operational delivery.
             </h2>
             <p className="section-copy mt-5 text-lg">
-              We align on the mission need, define the technical package,
+              We align on the operational need, define the technical package,
               execute against clear workstreams, and prepare outputs for
               operational use.
             </p>

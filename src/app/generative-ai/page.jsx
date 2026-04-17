@@ -19,7 +19,7 @@ const capabilities = [
   {
     icon: FileText,
     title: "RAG and Knowledge Systems",
-    desc: "Connect models to internal documents, manuals, policies, and mission data with controlled retrieval.",
+    desc: "Connect models to internal documents, manuals, policies, and operational data with controlled retrieval.",
   },
   {
     icon: MessageSquare,
@@ -137,7 +137,7 @@ export default function GenerativeAI() {
           <div className="mb-10 max-w-3xl">
             <p className="section-eyebrow">Solution Areas</p>
             <h2 className="font-display mt-5 text-3xl text-slate-900 sm:text-4xl">
-              Typical ways generative AI is applied in mission environments.
+              Typical ways generative AI is applied in operational environments.
             </h2>
           </div>
 

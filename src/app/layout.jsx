@@ -15,9 +15,9 @@ const bodyFont = Manrope({
 });
 
 export const metadata = {
-  title: "Ancile AI - Mission Software",
+  title: "Ancile AI - AI Consulting and Applied Solutions",
   description:
-    "Veteran-owned mission software company focused on GhostPost counter-small UAS fusion software and subcontract engineering support for public sector and defense programs.",
+    "Veteran-owned ai consulting and applied solutions company focused on passive C-sUAS small UAS fusion software and subcontract engineering support for public sector and defense programs.",
   icons: {
     icon: [
       {

@@ -5,7 +5,7 @@ import CallToAction from "../../sections/CallToAction";
 import { Cpu, Settings, CheckCircle, Shield, Code, Workflow } from "lucide-react";
 
 export default function Engineering() {
-  const ghostPostFeatures = [
+  const passiveCsUASFeatures = [
     "Passive digital LP/OP operation with no active emissions",
     "AI-enabled multi-modal sensor fusion for detection, localization, and classification",
     "COTS hardware baseline to support affordability, sustainment, and rapid fielding",
@@ -17,7 +17,7 @@ export default function Engineering() {
     {
       icon: Cpu,
       title: "Ancile AI Software Package",
-      desc: "AI-enabled fusion software, detection and classification models, data architecture, and mission integration workflows.",
+      desc: "AI-enabled fusion software, detection and classification models, data architecture, and operational integration workflows.",
       color: "bg-sky-50 text-sky-700 border-sky-100",
     },
     {
@@ -57,7 +57,7 @@ export default function Engineering() {
     },
     {
       icon: Cpu,
-      title: "Counter-Drone and Applied AI R&D",
+      title: "Drone and Applied AI R&D",
       bullets: [
         "Prototype development for C-sUAS sensing, fusion, and alerting workflows",
         "Applied AI model development and evaluation in operationally relevant conditions",
@@ -68,7 +68,7 @@ export default function Engineering() {
   ];
 
   const quickStats = [
-    { label: "Primary Product", value: "GhostPost" },
+    { label: "Primary Focus", value: "Applied Research & Development" },
     { label: "Delivery Modes", value: "Product + Services" },
     { label: "Mission Focus", value: "C-sUAS + Applied AI" },
   ];
@@ -78,8 +78,8 @@ export default function Engineering() {
       <Header />
       <PageHero
         eyebrow="Engineering Capability"
-        title="Focused product and services for mission-ready C-sUAS operations."
-        description="Ancile AI delivers GhostPost software for passive counter-small UAS awareness, along with subcontract software delivery and integration support for mission work."
+        title="Focused product and services for opperational-ready C-sUAS operations."
+        description="Ancile AI delivers passive C-sUAS software for passive small UAS awareness, along with subcontract software delivery and integration support for operational work."
       >
         <div className="fade-up delay-1 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {quickStats.map((stat) => (
@@ -92,7 +92,7 @@ export default function Engineering() {
 
         <div className="fade-up delay-2 mt-8 flex flex-wrap gap-3">
           <a href="#product" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700">
-            GhostPost Product
+            Passive C-sUAS Product
           </a>
           <a href="#services" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700">
             Service Tracks
@@ -108,10 +108,10 @@ export default function Engineering() {
           <div className="mb-10 max-w-4xl">
             <p className="section-eyebrow">Product</p>
             <h2 className="font-display mt-3 text-3xl text-slate-900 sm:text-4xl">
-              GhostPost: Passive Detection, Localization, and Classification
+              Passive C-sUAS: Passive Detection, Localization, and Classification
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-700">
-              GhostPost is a compact passive C-sUAS software stack built around
+              Passive C-sUAS is a compact passive C-sUAS software stack built around
               AI-enabled multi-modal sensor fusion on COTS hardware. The result
               is covert, persistent awareness for forward-deployed and
               perimeter environments.
@@ -125,10 +125,10 @@ export default function Engineering() {
                 The software correlates asynchronous sensor inputs into
                 targeting-grade tracks while staying low-observable and power
                 conscious. It is designed for rapid setup and practical
-                integration into existing mission systems.
+                integration into existing operational systems.
               </p>
               <div className="mt-6 space-y-3">
-                {ghostPostFeatures.map((feature) => (
+                {passiveCsUASFeatures.map((feature) => (
                   <div key={feature} className="flex items-start gap-3">
                     <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-burnt-orange-600" />
                     <p className="text-sm leading-6 text-slate-700">{feature}</p>
@@ -180,7 +180,7 @@ export default function Engineering() {
               <p className="mt-4 text-lg leading-relaxed text-slate-700">
                 We support prime integrators and public sector teams that need
                 trusted technical execution. Service delivery is intentionally
-                scoped to software, integration, and mission AI outcomes.
+                scoped to software, integration, and operational AI outcomes.
               </p>
             </div>
 
@@ -211,7 +211,7 @@ export default function Engineering() {
             <h2 className="font-display mt-5 text-3xl sm:text-4xl">Focused Scope</h2>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
               Engineering work is structured around software ownership, partner
-              interfaces, and transition planning across GhostPost, mission
+              interfaces, and transition planning across passive C-sUAS, opperational
               integration, and applied AI delivery.
             </p>
           </div>

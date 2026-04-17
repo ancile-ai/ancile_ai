@@ -67,7 +67,7 @@ export default function PredictiveAnalytics() {
       <Header />
       <PageHero
         eyebrow="Predictive Analytics"
-        title="Applied analytics for mission planning, system awareness, and risk reduction."
+        title="Applied analytics for operational planning, system awareness, and risk reduction."
         description="We apply forecasting, anomaly detection, and decision-support models to operational data where timing, reliability, and signal quality matter."
       />
 

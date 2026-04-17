@@ -193,14 +193,14 @@ export const ContactModalProvider = ({ children }) => {
                   Discuss program fit and technical scope.
                 </h3>
                 <p className="mt-4 text-sm leading-7 text-slate-300">
-                  Use this form for GhostPost product discussions, subcontract
-                  engineering support, or mission AI delivery requirements.
+                  Use this form for passive C-sUAS product discussions, subcontract
+                  engineering support, or operational AI delivery requirements.
                 </p>
 
                 <div className="mt-8 space-y-3 text-sm text-slate-300">
-                  <p>GhostPost product software</p>
+                  <p>passive C-sUAS product software</p>
                   <p>Prime subcontract support</p>
-                  <p>Applied AI and mission integration</p>
+                  <p>Applied AI and operational integration</p>
                 </div>
               </div>
 

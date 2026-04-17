@@ -24,8 +24,8 @@ const Footer = () => {
               height={36}
             />
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-700">
-              Veteran-owned mission software company focused on GhostPost product
-              software, mission integration, and subcontract engineering support
+              Veteran-owned operational software company focused on passive C-sUAS product
+              software, operational integration, and subcontract engineering support
               for public sector and defense programs.
             </p>
 
