@@ -4,7 +4,7 @@ const steps = [
   {
     icon: ClipboardCheck,
     title: "Assess fit",
-    copy: "We align on operational need, constraints, and whether the work belongs in product software, subcontract delivery, or applied R&D.",
+    copy: "We align on operational need, constraints, and whether the work belongs in software, subcontract delivery, or applied R&D.",
   },
   {
     icon: DraftingCompass,

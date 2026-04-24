@@ -24,7 +24,7 @@ const Footer = () => {
               height={36}
             />
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-700">
-              Veteran-owned operational software company focused on passive C-sUAS product
+              Veteran-owned operational software company focused on passive sUAS
               software, operational integration, and subcontract engineering support
               for public sector and defense programs.
             </p>
@@ -108,7 +108,7 @@ const Footer = () => {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
           <p>© 2025 Ancile AI. All rights reserved.</p>
-          <p>Mission software for C-sUAS, applied AI, and subcontract delivery.</p>
+          <p>Mission software for sUAS, applied AI, and subcontract delivery.</p>
         </div>
       </div>
     </footer>

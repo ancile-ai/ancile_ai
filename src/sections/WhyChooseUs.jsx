@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
             A delivery model built for defined operational programs.
           </h2>
           <p className="section-copy mt-5 max-w-xl text-lg">
-            Ancile AI combines passive C-sUAS product software, operational integration,
+            Ancile AI combines passive sUAS software, operational integration,
             and prime subcontract support in a delivery model suited to public
             sector and defense programs.
           </p>

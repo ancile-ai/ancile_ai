@@ -7,7 +7,7 @@ import { useContactModal } from "../context/ContactModalContext";
 const proofPoints = [
   {
     title: "Passive sUAS Detection",
-    copy: "Researched and developed C-sUAS software built around multi-modal sensor fusion with field-testing scheduled Q3FY26. In partnerhsip with a Tier-1 defense contractor.",
+    copy: "Researched and developed sUAS software built around multi-modal sensor fusion with field-testing scheduled Q3FY26. In partnerhsip with a Tier-1 defense contractor.",
     icon: Radar,
   },
   {
@@ -88,7 +88,7 @@ const Hero = () => {
                 Focused delivery for defined operational needs.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-300">
-                Ancile supports programs that need product software, integration
+                Ancile supports programs that need software, integration
                 support, or applied AI execution shaped by operational
                 constraints.
               </p>

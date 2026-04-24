@@ -9,7 +9,7 @@ import { useContactModal } from "../context/ContactModalContext";
 
 const capabilityLinks = [
   { href: "/overview", label: "Overview", desc: "Capability map and engagement lanes" },
-  { href: "/engineering", label: "Engineering", desc: "passive C-sUAS product and software delivery" },
+  { href: "/engineering", label: "Engineering", desc: "passive sUAS product and software delivery" },
   { href: "/operations", label: "Operations", desc: "Execution model and operational support" },
   { href: "/predictive-analytics", label: "Predictive Analytics", desc: "Applied data and decision support" },
   { href: "/generative-ai", label: "Generative AI", desc: "Workflow automation and knowledge systems" },

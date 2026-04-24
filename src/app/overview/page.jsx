@@ -1,7 +1,14 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import CallToAction from "../../sections/CallToAction";
-import { ArrowRight, CheckCircle, Code, Cpu, Shield, Workflow } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Code,
+  Cpu,
+  Shield,
+  Workflow,
+} from "lucide-react";
 
 const lanes = [
   {
@@ -22,7 +29,7 @@ const lanes = [
       "Agile workstream execution",
       "Texas VetHub sector alignment",
       "SBA-certified SVOSB, VOSB, non-traditional defense contractor",
-      "CMMC-compliant, JCP Certified" 
+      "CMMC-compliant, JCP Certified",
     ],
   },
   {
@@ -40,18 +47,23 @@ const lanes = [
 const partnerModel = [
   {
     icon: Cpu,
-    title: "Ancile AI",
-    desc: "Software package ownership: fusion models, data architecture, and integration workflows.",
+    title: "Applied AI Solutions Experts",
+    desc: "Agentic AI automation development, sensor fusion, and edge inference engineering for operationally relevant detection environments.",
+  },
+  {
+    icon: Code,
+    title: "Digital Transformation Consultants",
+    desc: "Software modernization, workflow automation, and AI integration support for public sector, energy, and defense programs.",
   },
   {
     icon: Shield,
-    title: "Defense Supplier",
-    desc: "Hardware platform engineering, power design, and deployable system interfaces.",
+    title: "Subcontractor",
+    desc: "Software and integration delivery through teaming contracts — agile execution in secure and disconnected environments.",
   },
   {
     icon: Workflow,
     title: "Research Partner",
-    desc: "Flight testing, environmental data capture, and operational validation support.",
+    desc: "Applied research, rapid prototype development, and transition-ready technical baselines.",
   },
 ];
 
@@ -82,13 +94,17 @@ export default function Overview() {
                     {lane.title}
                   </h3>
                 </div>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{lane.copy}</p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {lane.copy}
+                </p>
 
                 <div className="mt-6 space-y-3">
                   {lane.bullets.map((bullet) => (
                     <div key={bullet} className="flex items-start gap-3">
                       <CheckCircle className="mt-1 h-4.5 w-4.5 flex-shrink-0 text-burnt-orange-600" />
-                      <p className="text-sm leading-6 text-slate-700">{bullet}</p>
+                      <p className="text-sm leading-6 text-slate-700">
+                        {bullet}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -105,7 +121,7 @@ export default function Overview() {
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {partnerModel.map((item) => (
               <article
                 key={item.title}
@@ -117,7 +133,9 @@ export default function Overview() {
                 <h3 className="font-display mt-5 text-xl font-semibold text-slate-900">
                   {item.title}
                 </h3>
-                <p className="mt-3 text-sm leading-7 text-slate-600">{item.desc}</p>
+                <p className="mt-3 text-sm leading-7 text-slate-600">
+                  {item.desc}
+                </p>
               </article>
             ))}
           </div>
@@ -134,9 +152,7 @@ export default function Overview() {
                   Focus supports clearer execution.
                 </h2>
                 <p className="mt-4 text-lg leading-8 text-slate-300">
-                  Customers and partners can quickly see where passive C-sUAS,
-                  subcontract delivery, and applied AI support fit within a
-                  program, pursuit, or teaming structure.
+                 The work we support is defined by deployment constraints, integration dependencies, and environments where software has to perform — not just pass a demo. Structured for execution in secure and disconnected conditions.
                 </p>
               </div>
 

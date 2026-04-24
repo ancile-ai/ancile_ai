@@ -59,7 +59,7 @@ export default function Engineering() {
       icon: Cpu,
       title: "Drone and Applied AI R&D",
       bullets: [
-        "Prototype development for C-sUAS sensing, fusion, and alerting workflows",
+        "Prototype development for sUAS sensing, fusion, and alerting workflows",
         "Applied AI model development and evaluation in operationally relevant conditions",
         "R&D support for pilots, demonstrations, and transition-ready technical baselines",
       ],
@@ -70,7 +70,7 @@ export default function Engineering() {
   const quickStats = [
     { label: "Primary Focus", value: "Applied Research & Development" },
     { label: "Delivery Modes", value: "Product + Services" },
-    { label: "Mission Focus", value: "C-sUAS + Applied AI" },
+    { label: "Mission Focus", value: "sUAS + Applied AI" },
   ];
 
   return (
@@ -78,8 +78,8 @@ export default function Engineering() {
       <Header />
       <PageHero
         eyebrow="Engineering Capability"
-        title="Focused product and services for opperational-ready C-sUAS operations."
-        description="Ancile AI delivers passive C-sUAS software for passive small UAS awareness, along with subcontract software delivery and integration support for operational work."
+        title="Focused product and services for opperational-ready sUAS operations."
+        description="Ancile AI delivers passive sUAS software for passive small UAS awareness, along with subcontract software delivery and integration support for operational work."
       >
         <div className="fade-up delay-1 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {quickStats.map((stat) => (
@@ -92,7 +92,7 @@ export default function Engineering() {
 
         <div className="fade-up delay-2 mt-8 flex flex-wrap gap-3">
           <a href="#product" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700">
-            Passive C-sUAS Product
+            Passive sUAS Product
           </a>
           <a href="#services" className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700">
             Service Tracks
@@ -108,10 +108,10 @@ export default function Engineering() {
           <div className="mb-10 max-w-4xl">
             <p className="section-eyebrow">Product</p>
             <h2 className="font-display mt-3 text-3xl text-slate-900 sm:text-4xl">
-              Passive C-sUAS: Passive Detection, Localization, and Classification
+              Passive sUAS: Passive Detection, Localization, and Classification
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-700">
-              Passive C-sUAS is a compact passive C-sUAS software stack built around
+              Passive sUAS is a compact passive sUAS software stack built around
               AI-enabled multi-modal sensor fusion on COTS hardware. The result
               is covert, persistent awareness for forward-deployed and
               perimeter environments.
@@ -211,7 +211,7 @@ export default function Engineering() {
             <h2 className="font-display mt-5 text-3xl sm:text-4xl">Focused Scope</h2>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
               Engineering work is structured around software ownership, partner
-              interfaces, and transition planning across passive C-sUAS, opperational
+              interfaces, and transition planning across passive sUAS, opperational
               integration, and applied AI delivery.
             </p>
           </div>

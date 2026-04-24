@@ -6,7 +6,7 @@ import { CheckCircle, Shield, Users, Workflow } from "lucide-react";
 
 const companyPoints = [
   "Veteran-owned company with a focused operational software scope",
-  "Support for passive C-sUAS product software and related integration work",
+  "Support for passive sUAS product software and related integration work",
   "Subcontract engineering support for prime-led public sector and defense programs",
   "Program execution shaped by deployment constraints, validation needs, and transition planning",
 ];
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Ancile AI"
         title="Mission software company built for focused delivery."
-        description="Ancile AI is a veteran-owned company supporting passive C-sUAS product software, operational integration, and subcontract engineering for public sector and defense work."
+        description="Ancile AI is a veteran-owned company supporting passive sUAS software, operational integration, and subcontract engineering for public sector and defense work."
       />
 
       <main className="mx-auto max-w-7xl space-y-20 px-4 py-16 sm:px-6 lg:px-8 lg:space-y-24 lg:py-24">
