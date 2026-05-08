@@ -3,6 +3,7 @@ import Footer from "../../components/Footer";
 import PageHero from "../../components/PageHero";
 import CallToAction from "../../sections/CallToAction";
 import { Cpu, Settings, CheckCircle, Shield, Code, Workflow } from "lucide-react";
+import Operations from './../operations/page';
 
 export default function Engineering() {
   const passiveCsUASFeatures = [
@@ -28,7 +29,7 @@ export default function Engineering() {
     },
     {
       icon: Workflow,
-      title: "Research Institution",
+      title: "R&D and Flight Test Partner",
       desc: "Flight testing, environmental data collection, and validation support to accelerate prototype maturity and transition.",
       color: "bg-amber-50 text-amber-700 border-amber-100",
     },
@@ -70,7 +71,7 @@ export default function Engineering() {
   const quickStats = [
     { label: "Primary Focus", value: "Applied Research & Development" },
     { label: "Delivery Modes", value: "Product + Services" },
-    { label: "Mission Focus", value: "sUAS + Applied AI" },
+    { label: "Mission Focus", value: "Applied AI" },
   ];
 
   return (
@@ -78,8 +79,8 @@ export default function Engineering() {
       <Header />
       <PageHero
         eyebrow="Engineering Capability"
-        title="Focused product and services for opperational-ready sUAS operations."
-        description="Ancile AI delivers passive sUAS software for passive small UAS awareness, along with subcontract software delivery and integration support for operational work."
+        title="AI focused engineering services for defense, energy, and public sector applications."
+        description="Ancile AI delivers software for a variety of applications, along with subcontract software delivery and integration support for operational work."
       >
         <div className="fade-up delay-1 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {quickStats.map((stat) => (
@@ -108,13 +109,13 @@ export default function Engineering() {
           <div className="mb-10 max-w-4xl">
             <p className="section-eyebrow">Product</p>
             <h2 className="font-display mt-3 text-3xl text-slate-900 sm:text-4xl">
-              Passive sUAS: Passive Detection, Localization, and Classification
+            sUAS: Passive Detection, Localization, and Classification
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-slate-700">
-              Passive sUAS is a compact passive sUAS software stack built around
+              Ancile AI offers a passive sUAS solution, a software stack built around
               AI-enabled multi-modal sensor fusion on COTS hardware. The result
               is covert, persistent awareness for forward-deployed and
-              perimeter environments.
+              perimeter environments, operating at the edge
             </p>
           </div>
 
@@ -211,7 +212,7 @@ export default function Engineering() {
             <h2 className="font-display mt-5 text-3xl sm:text-4xl">Focused Scope</h2>
             <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
               Engineering work is structured around software ownership, partner
-              interfaces, and transition planning across passive sUAS, opperational
+              interfaces, and transition planning across passive sUAS, operational
               integration, and applied AI delivery.
             </p>
           </div>

@@ -12,7 +12,7 @@ const offerings = [
   {
     icon: Cpu,
     title: "Software Delivery for Prime Teams",
-    copy: "Subcontract engineering and integration support for Texas public sector and opperational-driven defense workstreams.",
+    copy: "Subcontract engineering and integration support for Texas public sector and operational-driven defense workstreams.",
     bullets: ["Veteran-owned participation", "Integration support", "Rapid staffing"],
     href: "/overview",
   },

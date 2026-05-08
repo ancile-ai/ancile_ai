@@ -57,7 +57,7 @@ const CallToAction = () => {
                       <p className="font-display text-lg font-semibold">Best fit</p>
                       <p className="mt-2 text-sm leading-7 text-slate-300">
                         Teams that need a focused software partner for product,
-                        integration, or opperational-delivery work.
+                        integration, or operational-delivery work.
                       </p>
                     </div>
                   </div>

@@ -27,7 +27,7 @@ const values = [
 ];
 
 const teamPoints = [
-  "Backgrounds across defense, software engineering, and opperational-oriented technical delivery",
+  "Backgrounds across defense, software engineering, and operational-oriented technical delivery",
   "Experience with security-conscious systems and operationally constrained environments",
   "Focus on building software that can be integrated, fielded, and sustained",
 ];
@@ -68,7 +68,7 @@ export default function AboutPage() {
                 Why the company exists
               </h2>
               <p className="mt-5 text-lg leading-8 text-slate-300">
-                The company was built to support software efforts where opperational
+                The company was built to support software efforts where operational
                 constraints, deployment realities, and execution discipline
                 matter as much as the code itself.
               </p>
@@ -127,7 +127,7 @@ export default function AboutPage() {
               </h2>
               <p className="mt-5 text-sm leading-7 text-slate-700">
                 The name references the Roman shield associated with protection.
-                For us, it reflects software built to support opperational
+                For us, it reflects software built to support operational
                 awareness, decision-making, and operational resilience.
               </p>
               <p className="mt-4 text-sm leading-7 text-slate-700">

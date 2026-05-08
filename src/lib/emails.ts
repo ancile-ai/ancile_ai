@@ -96,7 +96,7 @@ export function generateCustomerConfirmationEmail(
                                 <div style="width: 16px; height: 16px; background-color: #10b981; border-radius: 50%; text-align: center; line-height: 16px; color: #ffffff; font-weight: bold; font-size: 10px;">4</div>
                               </td>
                               <td style="color: #4b5563; font-size: 15px; line-height: 1.5; font-family: Arial, sans-serif; padding-left: 12px;">
-                                You’ll receive a tailored proposal focused on opperational-specific AI solutions.
+                                You’ll receive a tailored proposal focused on operational-specific AI solutions.
                               </td>
                             </tr>
                           </table>
