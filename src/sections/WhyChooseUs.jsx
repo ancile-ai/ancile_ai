@@ -30,12 +30,12 @@ const WhyChooseUs = () => {
         <div>
           <p className="section-eyebrow">Why Ancile</p>
           <h2 className="section-title mt-5 text-4xl sm:text-5xl">
-            A delivery model built for defined operational programs.
+            A delivery model built for defined missions.
           </h2>
           <p className="section-copy mt-5 max-w-xl text-lg">
-            Ancile AI combines passive sUAS software, operational integration,
-            and prime subcontract support in a delivery model suited to public
-            sector and defense programs.
+            Ancile AI combines a passive sUAS detection product, subcontract
+            engineering and integration, and applied AI in one focused model
+            suited to public sector and defense programs.
           </p>
 
           <div className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">

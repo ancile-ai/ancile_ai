@@ -8,12 +8,10 @@ import { usePathname } from "next/navigation";
 import { useContactModal } from "../context/ContactModalContext";
 
 const capabilityLinks = [
-  { href: "/overview", label: "Overview", desc: "Capability map and engagement lanes" },
-  { href: "/engineering", label: "Engineering", desc: "passive sUAS product and software delivery" },
-  { href: "/operations", label: "Operations", desc: "Execution model and operational support" },
-  { href: "/predictive-analytics", label: "Predictive Analytics", desc: "Applied data and decision support" },
-  { href: "/generative-ai", label: "Generative AI", desc: "Workflow automation and knowledge systems" },
-  { href: "/strategy", label: "Strategy", desc: "Positioning, planning, and adoption guidance" },
+  { href: "/overview", label: "Overview", desc: "Capability map and how we engage" },
+  { href: "/engineering", label: "Passive sUAS Detection", desc: "Low-signature small-drone detection software" },
+  { href: "/delivery", label: "Subcontract Delivery", desc: "Engineering, integration, and sustainment for primes" },
+  { href: "/applied-ai", label: "Applied AI & R&D", desc: "Agentic, edge, and physical AI for the mission" },
 ];
 
 const topLinks = [

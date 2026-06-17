@@ -15,9 +15,9 @@ const bodyFont = Manrope({
 });
 
 export const metadata = {
-  title: "Ancile AI - AI Consulting and Applied Solutions",
+  title: "Ancile AI — Passive sUAS Detection, Subcontract Delivery, Applied AI",
   description:
-    "Veteran-owned ai consulting and applied solutions company focused on passive sUAS small UAS fusion software and subcontract engineering support for public sector and defense programs.",
+    "Service-disabled veteran-owned (SDVOSB) software company delivering passive sUAS detection, subcontract engineering and integration, and applied AI for public sector and defense missions.",
   icons: {
     icon: [
       {

@@ -24,7 +24,7 @@ const CallToAction = () => {
                   If the scope is real, the next step should be a technical conversation.
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-                  Reach out if you're interested in pursuing a partnership, or need a CMMC-compliant, veteran-owned subcontract partner with operational software experience.
+                  Reach out if you&apos;re pursuing a partnership, or need a CMMC-compliant, SDVOSB subcontract partner with mission software experience.
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">

@@ -5,10 +5,10 @@ import CallToAction from "@/sections/CallToAction";
 import { CheckCircle, Shield, Users, Workflow } from "lucide-react";
 
 const companyPoints = [
-  "Veteran-owned company with a focused operational software scope",
-  "Support for passive sUAS product software and related integration work",
-  "Subcontract engineering support for prime-led public sector and defense programs",
-  "Program execution shaped by deployment constraints, validation needs, and transition planning",
+  "Service-disabled veteran-owned (SDVOSB) software company with a deliberately focused scope",
+  "A passive sUAS detection product built on multi-modal sensor fusion",
+  "Subcontract engineering, integration, and sustainment for prime-led public sector and defense programs",
+  "Applied AI — agentic, edge, and physical — delivered with governance and evals",
 ];
 
 const values = [
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About Ancile AI"
         title="Mission software company built for focused delivery."
-        description="Ancile AI is a veteran-owned company supporting passive sUAS software, operational integration, and subcontract engineering for public sector and defense work."
+        description="Ancile AI is a service-disabled veteran-owned (SDVOSB) software company working in three lanes: passive sUAS detection, subcontract delivery, and applied AI for public sector and defense missions."
       />
 
       <main className="mx-auto max-w-7xl space-y-20 px-4 py-16 sm:px-6 lg:px-8 lg:space-y-24 lg:py-24">
@@ -127,12 +127,12 @@ export default function AboutPage() {
               </h2>
               <p className="mt-5 text-sm leading-7 text-slate-700">
                 The name references the Roman shield associated with protection.
-                For us, it reflects software built to support operational
-                awareness, decision-making, and operational resilience.
+                For us, it reflects software built to support awareness,
+                decision-making, and resilience in the field.
               </p>
               <p className="mt-4 text-sm leading-7 text-slate-700">
                 The point is not symbolism for its own sake. It is a reminder
-                that software should strengthen the operational it supports.
+                that software should strengthen the mission it supports.
               </p>
             </article>
           </div>

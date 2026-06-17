@@ -4,11 +4,9 @@ import { ExternalLink, Mail } from "lucide-react";
 
 const capabilityLinks = [
   { href: "/overview", label: "Overview" },
-  { href: "/engineering", label: "Engineering" },
-  { href: "/operations", label: "Operations" },
-  { href: "/predictive-analytics", label: "Predictive Analytics" },
-  { href: "/generative-ai", label: "Generative AI" },
-  { href: "/strategy", label: "Strategy" },
+  { href: "/engineering", label: "Passive sUAS Detection" },
+  { href: "/delivery", label: "Subcontract Delivery" },
+  { href: "/applied-ai", label: "Applied AI & R&D" },
 ];
 
 const Footer = () => {
@@ -24,9 +22,9 @@ const Footer = () => {
               height={36}
             />
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-700">
-              Veteran-owned operational software company focused on passive sUAS
-              software, operational integration, and subcontract engineering support
-              for public sector and defense programs.
+              Service-disabled veteran-owned (SDVOSB) software company delivering
+              passive sUAS detection, subcontract engineering and integration, and
+              applied AI for public sector and defense missions.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">
@@ -107,8 +105,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
-          <p>© 2025 Ancile AI. All rights reserved.</p>
-          <p>Mission software for sUAS, applied AI, and subcontract delivery.</p>
+          <p>© 2026 Ancile AI. All rights reserved.</p>
+          <p>Mission software for sUAS detection, applied AI, and subcontract delivery.</p>
         </div>
       </div>
     </footer>

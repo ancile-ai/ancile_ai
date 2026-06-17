@@ -7,17 +7,17 @@ import { useContactModal } from "../context/ContactModalContext";
 const proofPoints = [
   {
     title: "Passive sUAS Detection",
-    copy: "Researched and developed sUAS software built around multi-modal sensor fusion with field-testing scheduled Q3FY26. In partnerhsip with a Tier-1 defense contractor.",
+    copy: "A passive small-drone detection product built on multi-modal sensor fusion, developed with a Tier-1 defense partner and scheduled for field testing in Q3 FY26.",
     icon: Radar,
   },
   {
-    title: "Subcontract Execution",
-    copy: "Veteran-owned AI engineering support for prime-led public sector, energy, and defense work.",
+    title: "Subcontract Delivery",
+    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector and defense programs.",
     icon: Wrench,
   },
   {
-    title: "Applied Mission AI",
-    copy: "Integration, evaluation, and transition support for operationally relevant AI systems.",
+    title: "Applied AI & R&D",
+    copy: "Agentic, edge, and physical AI — integrated, evaluated, and transitioned for the mission.",
     icon: Workflow,
   },
 ];
@@ -35,24 +35,25 @@ const Hero = () => {
         <div className="fade-up">
           <p className="section-eyebrow">
             <Shield className="h-4 w-4" />
-            SDVOSB • AI Consulting and Solutions
+            SDVOSB • Mission Software & Applied AI
           </p>
 
           <h1 className="section-title mt-6 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
-            Applied AI & software engineering for operational program support.
+            Mission software and applied AI for public sector and defense.
           </h1>
 
           <p className="section-copy mt-6 max-w-2xl text-lg sm:text-xl">
-            Ancile AI provides operational software
-            and integration support for public sector, energy, and defense programs.
+            Ancile AI is a service-disabled veteran-owned software company
+            working in three focused lanes: passive sUAS detection, subcontract
+            delivery, and applied AI.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
-              href="/engineering"
+              href="/overview"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
             >
-              Explore Engineering Capabilities
+              Explore Capabilities
               <ArrowRight className="h-4 w-4" />
             </Link>
             <button
@@ -85,11 +86,11 @@ const Hero = () => {
                 Capability Profile
               </p>
               <h2 className="font-display mt-3 text-3xl font-semibold">
-                Focused delivery for defined operational needs.
+                Focused delivery for well-defined needs.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-300">
-                Ancile supports programs that need software, integration
-                support, or applied AI execution shaped by operational
+                We support programs that need a sUAS detection product,
+                subcontract delivery, or applied AI — shaped by real deployment
                 constraints.
               </p>
             </div>

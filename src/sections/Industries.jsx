@@ -5,23 +5,23 @@ const offerings = [
   {
     icon: Shield,
     title: "Passive sUAS Detection",
-    copy: "Passive small UAS software centered on detection, localization, classification, and low-signature deployment.",
-    bullets: ["Passive workflows", "COTS baseline", "Upgrade-ready architecture"],
+    copy: "A passive small-drone detection product — detection, localization, classification, and a low signature.",
+    bullets: ["Fully passive", "COTS baseline", "Upgrade-ready architecture"],
     href: "/engineering",
   },
   {
     icon: Cpu,
-    title: "Software Delivery for Prime Teams",
-    copy: "Subcontract engineering and integration support for Texas public sector and operational-driven defense workstreams.",
-    bullets: ["Veteran-owned participation", "Integration support", "Rapid staffing"],
-    href: "/overview",
+    title: "Subcontract Delivery",
+    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector and defense programs.",
+    bullets: ["Veteran-owned set-aside fit", "Integration support", "Rapid staffing"],
+    href: "/delivery",
   },
   {
     icon: LineChart,
-    title: "Applied AI and R&D Support",
-    copy: "Mission-aligned prototype development, model evaluation, and transition-aware technical execution.",
-    bullets: ["Prototype support", "Operational evaluation", "Transition planning"],
-    href: "/strategy",
+    title: "Applied AI & R&D",
+    copy: "Agentic, edge, and physical AI — prototyped, evaluated, and transitioned for the mission.",
+    bullets: ["Agentic workflows", "Edge inference", "Sensor fusion"],
+    href: "/applied-ai",
   },
 ];
 
@@ -36,9 +36,9 @@ const Industries = () => {
               Capability areas aligned to operational needs.
             </h2>
             <p className="section-copy mt-4 text-lg">
-              Ancile AI supports customers across three complementary lanes:
-              passive sUAS Detection, subcontract engineering support, and
-              applied AI and R&D execution.
+              Ancile AI works in three complementary lanes: a passive sUAS
+              detection product, subcontract engineering and integration
+              delivery, and applied AI and R&D.
             </p>
           </div>
 

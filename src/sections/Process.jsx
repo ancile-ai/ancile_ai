@@ -31,12 +31,11 @@ const Process = () => {
           <div>
             <p className="section-eyebrow">Operating Model</p>
             <h2 className="section-title mt-5 text-4xl sm:text-5xl">
-              A straightforward operating model for operational delivery.
+              A straightforward model for mission delivery.
             </h2>
             <p className="section-copy mt-5 text-lg">
-              We align on the operational need, define the technical package,
-              execute against clear workstreams, and prepare outputs for
-              operational use.
+              We align on the mission need, define the technical package, execute
+              against clear workstreams, and prepare outputs for the field.
             </p>
 
             <div className="mt-8 rounded-[2rem] border border-slate-200 bg-slate-900 p-6 text-white shadow-xl">
