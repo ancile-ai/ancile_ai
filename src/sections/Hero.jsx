@@ -17,8 +17,8 @@ const Hero = () => {
   return (
     <section className="page-shell relative overflow-hidden border-b border-slate-200">
       <div className="absolute inset-0 bg-gradient-to-br from-white via-stone-50 to-[#f5ece4]" />
-      <div className="pointer-events-none absolute -left-20 top-16 h-72 w-72 rounded-full bg-burnt-orange-200/30 blur-3xl" />
-      <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-200/30 blur-3xl" />
+      <div className="aurora-wash pointer-events-none absolute inset-0" />
+      <div className="grain-overlay" />
 
       <div className="relative mx-auto grid min-h-[calc(100vh-5.5rem)] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-20">
         <div className="fade-up">

@@ -118,6 +118,26 @@ body {
   background-size: 30px 30px;
 }
 
+/* Subtle film-grain texture for a premium, organic feel (2026). */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.4;
+  mix-blend-mode: soft-light;
+  background-size: 180px 180px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Soft, Stripe-style gradient wash built from layered radial glows. */
+.aurora-wash {
+  background-image:
+    radial-gradient(40rem 28rem at 12% 8%, rgba(215, 85, 25, 0.12), transparent 60%),
+    radial-gradient(38rem 30rem at 88% 0%, rgba(56, 189, 248, 0.14), transparent 58%),
+    radial-gradient(46rem 34rem at 70% 96%, rgba(215, 85, 25, 0.08), transparent 62%);
+}
+
 .fade-up {
   animation: fadeUp 520ms ease both;
 }
