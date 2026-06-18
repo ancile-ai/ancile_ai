@@ -1,25 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Radar, Shield, Workflow, Wrench } from "lucide-react";
+import { ArrowRight, Radar, Shield } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
 
-const proofPoints = [
-  {
-    title: "Passive sUAS Detection",
-    copy: "A passive small-drone detection product built on multi-modal sensor fusion, developed with a Tier-1 defense partner and scheduled for field testing in Q3 FY26.",
-    icon: Radar,
-  },
-  {
-    title: "Subcontract Delivery",
-    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector, energy, and defense programs.",
-    icon: Wrench,
-  },
-  {
-    title: "Applied AI & R&D",
-    copy: "Agentic, edge, and physical AI — integrated, evaluated, and transitioned for the mission.",
-    icon: Workflow,
-  },
+const credentials = [
+  { label: "Status", value: "SDVOSB" },
+  { label: "Security", value: "CMMC-compliant" },
+  { label: "Certification", value: "JCP Certified" },
+  { label: "CAGE", value: "11BV7" },
 ];
 
 const Hero = () => {
@@ -64,56 +53,55 @@ const Hero = () => {
               Discuss Program Fit
             </button>
           </div>
-
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
-            {[
-              { label: "Primary Focus", value: "Applied Research & Development" },
-              { label: "Delivery Model", value: "Product + Services" },
-              { label: "Contracting Fit", value: "Prime Teaming" },
-            ].map((item) => (
-              <div key={item.label} className="lift-card rounded-2xl border border-slate-200 bg-white/90 p-4 shadow-sm">
-                <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">{item.label}</p>
-                <p className="font-display mt-2 text-lg font-semibold text-slate-900">{item.value}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className="fade-up delay-1">
           <div className="panel-strong rounded-[2rem] p-5 sm:p-6">
             <div className="rounded-[1.5rem] border border-slate-200 bg-slate-950 p-6 text-white">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-burnt-orange-300">
-                Capability Profile
+                Why Ancile
               </p>
               <h2 className="font-display mt-3 text-3xl font-semibold">
-                Focused delivery for well-defined needs.
+                Qualified to contract, built to deliver.
               </h2>
               <p className="mt-4 text-sm leading-7 text-slate-300">
-                We support programs that need a sUAS detection product,
-                subcontract delivery, or applied AI — shaped by real deployment
-                constraints.
+                An SDVOSB set-aside partner with the certifications primes need
+                and the software experience the mission requires.
               </p>
+
+              <div className="mt-6 grid grid-cols-2 gap-3">
+                {credentials.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
+                  >
+                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                      {item.label}
+                    </p>
+                    <p className="mt-1 text-sm font-semibold text-white">{item.value}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className="mt-4 space-y-3">
-              {proofPoints.map((item) => (
-                <div
-                  key={item.title}
-                  className="lift-card rounded-[1.5rem] border border-slate-200 bg-white p-5"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="rounded-2xl bg-burnt-orange-50 p-3 text-burnt-orange-700">
-                      <item.icon className="h-5 w-5" />
-                    </div>
-                    <div>
-                      <p className="font-display text-lg font-semibold text-slate-900">
-                        {item.title}
-                      </p>
-                      <p className="mt-1 text-sm leading-7 text-slate-600">{item.copy}</p>
-                    </div>
-                  </div>
+            <div className="lift-card mt-4 rounded-[1.5rem] border border-slate-200 bg-white p-5">
+              <div className="flex items-start gap-4">
+                <div className="rounded-2xl bg-burnt-orange-50 p-3 text-burnt-orange-700">
+                  <Radar className="h-5 w-5" />
                 </div>
-              ))}
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-burnt-orange-700">
+                    Flagship Product
+                  </p>
+                  <p className="font-display mt-1 text-lg font-semibold text-slate-900">
+                    Passive sUAS detection
+                  </p>
+                  <p className="mt-1 text-sm leading-7 text-slate-600">
+                    Built with a Tier-1 defense partner. Field testing scheduled
+                    Q3 FY26.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
