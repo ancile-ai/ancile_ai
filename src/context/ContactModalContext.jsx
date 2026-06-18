@@ -198,9 +198,9 @@ export const ContactModalProvider = ({ children }) => {
                 </p>
 
                 <div className="mt-8 space-y-3 text-sm text-slate-300">
-                  <p>passive sUAS software</p>
+                  <p>Passive sUAS detection</p>
                   <p>Prime subcontract support</p>
-                  <p>Applied AI and operational integration</p>
+                  <p>Applied AI and integration</p>
                 </div>
               </div>
 
