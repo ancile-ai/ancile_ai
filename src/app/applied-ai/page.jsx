@@ -149,16 +149,16 @@ export default function AppliedAI() {
         </section>
 
         <section className="fade-up">
-          <div className="rounded-[2rem] border border-slate-800 bg-slate-900 p-8 text-white shadow-xl sm:p-10">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
             <div className="flex items-start gap-4">
-              <div className="rounded-2xl bg-white/10 p-3">
-                <Lock className="h-5 w-5 text-burnt-orange-300" />
+              <div className="rounded-2xl bg-burnt-orange-600 p-3 text-white">
+                <Lock className="h-5 w-5" />
               </div>
               <div>
-                <h2 className="font-display text-3xl sm:text-4xl">
+                <h2 className="font-display text-3xl text-slate-900 sm:text-4xl">
                   Private by default, open-weight when control demands it.
                 </h2>
-                <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-300">
+                <p className="mt-4 max-w-3xl text-lg leading-8 text-slate-600">
                   For sensitive missions we design for self-hosted and
                   open-weight deployment, so data and models stay inside the
                   boundary — and the R&D feeds directly back into the sUAS

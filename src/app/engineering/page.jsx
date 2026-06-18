@@ -126,10 +126,12 @@ export default function Engineering() {
         </section>
 
         <section id="scope" className="fade-up">
-          <div className="rounded-[2rem] border border-slate-800 bg-slate-900 p-8 text-center text-slate-100 shadow-xl sm:p-12">
-            <Radar className="mx-auto h-10 w-10 text-burnt-orange-300" />
-            <h2 className="font-display mt-5 text-3xl sm:text-4xl">Built for the field, not the demo</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-300">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
+            <div className="mx-auto inline-flex rounded-2xl bg-burnt-orange-600 p-3 text-white">
+              <Radar className="h-6 w-6" />
+            </div>
+            <h2 className="font-display mt-5 text-3xl text-slate-900 sm:text-4xl">Built for the field, not the demo</h2>
+            <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
               The product is shaped by deployment constraints — low signature,
               limited power, contested spectrum, and disconnected sites — so it
               performs where it is actually used, then transitions cleanly into a

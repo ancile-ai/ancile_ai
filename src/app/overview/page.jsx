@@ -163,16 +163,16 @@ export default function Overview() {
         </section>
 
         <section className="fade-up">
-          <div className="rounded-[2rem] border border-slate-800 bg-slate-900 p-8 text-white shadow-xl sm:p-10">
+          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm sm:p-10">
             <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
               <div className="max-w-3xl">
-                <p className="section-eyebrow border-white/15 bg-white/10 text-white">
+                <p className="section-eyebrow">
                   Why It Works
                 </p>
-                <h2 className="font-display mt-5 text-3xl sm:text-4xl">
+                <h2 className="font-display mt-5 text-3xl text-slate-900 sm:text-4xl">
                   Focus makes execution clearer.
                 </h2>
-                <p className="mt-4 text-lg leading-8 text-slate-300">
+                <p className="mt-4 text-lg leading-8 text-slate-600">
                   Our work is defined by deployment constraints, integration
                   dependencies, and environments where software has to perform —
                   not just pass a demo. A narrow scope is what lets us deliver in
