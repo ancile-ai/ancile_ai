@@ -32,6 +32,12 @@ const teamPoints = [
   "Focus on building software that can be integrated, fielded, and sustained",
 ];
 
+export const metadata = {
+  title: "About | Ancile AI",
+  description:
+    "Ancile AI is a service-disabled veteran-owned (SDVOSB) software company delivering passive sUAS detection, subcontract delivery, and applied AI for public sector, energy, and defense missions.",
+};
+
 export default function AboutPage() {
   return (
     <div className="page-shell min-h-screen bg-transparent">

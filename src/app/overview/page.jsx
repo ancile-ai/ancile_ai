@@ -70,6 +70,12 @@ const lifecycle = [
   },
 ];
 
+export const metadata = {
+  title: "Capabilities Overview | Ancile AI",
+  description:
+    "Three focused lanes — passive sUAS detection, subcontract delivery, and applied AI — run through one scope-build-sustain engagement model.",
+};
+
 export default function Overview() {
   return (
     <div className="page-shell min-h-screen bg-transparent">

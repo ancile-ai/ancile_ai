@@ -4,6 +4,12 @@ import PageHero from "../../components/PageHero";
 import CallToAction from "../../sections/CallToAction";
 import { Cpu, Settings, CheckCircle, Workflow, Radar } from "lucide-react";
 
+export const metadata = {
+  title: "Passive sUAS Detection | Ancile AI",
+  description:
+    "Ancile AI's passive sUAS product detects, localizes, and classifies small drones using multi-modal sensor fusion on COTS hardware, developed with a Tier-1 defense partner.",
+};
+
 export default function Engineering() {
   const passiveSuasFeatures = [
     "Passive LP/OP operation with no active emissions to detect or jam",

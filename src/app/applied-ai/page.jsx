@@ -69,6 +69,12 @@ const controls = [
   },
 ];
 
+export const metadata = {
+  title: "Applied AI & R&D | Ancile AI",
+  description:
+    "Agentic, edge, and physical AI for the mission — built with the governance, evaluations, and observability needed to field it responsibly.",
+};
+
 export default function AppliedAI() {
   return (
     <div className="page-shell min-h-screen bg-transparent">

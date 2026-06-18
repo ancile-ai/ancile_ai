@@ -89,6 +89,12 @@ const procurementCodes = [
   { label: "NAICS", value: "541511 · 541512 · 541519 · 518210" },
 ];
 
+export const metadata = {
+  title: "Subcontract Delivery | Ancile AI",
+  description:
+    "SDVOSB subcontract engineering, integration, and sustainment for prime-led public sector, energy, and defense programs. CMMC-compliant, JCP certified, Texas VetHUB-aligned.",
+};
+
 export default function Delivery() {
   return (
     <div className="page-shell min-h-screen bg-transparent">
