@@ -138,6 +138,27 @@ body {
     radial-gradient(46rem 34rem at 70% 96%, rgba(215, 85, 25, 0.08), transparent 62%);
 }
 
+/* Diagram motion: signal packets flowing along the fusion pipeline. */
+@keyframes flowDot {
+  0% { transform: translateX(0); opacity: 0; }
+  15% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { transform: translateX(96px); opacity: 0; }
+}
+
+.flow-dot {
+  animation: flowDot 1.8s linear infinite;
+}
+
+@keyframes corePulse {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.3; }
+}
+
+.core-pulse {
+  animation: corePulse 2.6s ease-in-out infinite;
+}
+
 .fade-up {
   animation: fadeUp 520ms ease both;
 }
@@ -200,6 +221,8 @@ body {
   .fade-up,
   .float-orb,
   .float-orb-delayed,
+  .flow-dot,
+  .core-pulse,
   .lift-card {
     animation: none;
     transition: none;

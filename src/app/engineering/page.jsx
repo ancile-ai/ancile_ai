@@ -105,6 +105,102 @@ export default function Engineering() {
           </div>
         </section>
 
+        <section id="architecture" className="fade-up">
+          <div className="mb-10 max-w-3xl">
+            <p className="section-eyebrow">System Architecture</p>
+            <h2 className="font-display mt-3 text-3xl text-slate-900 sm:text-4xl">
+              A modular fusion platform — not a fixed sensor stack.
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-slate-700">
+              The product is the fusion software. Passive sensors are modular
+              inputs — RF, EO/IR, and acoustic today, extensible tomorrow — and
+              the tracks it produces hand off to the systems you already operate.
+            </p>
+          </div>
+
+          <div className="lift-card rounded-[2rem] border border-slate-200 bg-white p-4 shadow-sm sm:p-8">
+            <div className="relative">
+              <div className="overflow-x-auto">
+              <svg
+                viewBox="0 0 1120 340"
+                className="h-auto w-full min-w-[820px]"
+                role="img"
+                aria-label="Modular passive sensor inputs (for example RF, electro-optical/infrared, and acoustic, plus additional modalities) feed an AI sensor-fusion software core that turns asynchronous signals into detection, localization, and classification tracks, which then integrate with existing C2 and operator systems. Fully passive, on COTS edge hardware."
+              >
+                <defs>
+                  <marker id="suasArrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z" fill="#d75519" />
+                  </marker>
+                  <marker id="suasArrowSlate" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                    <path d="M0 0 L10 5 L0 10 z" fill="#94a3b8" />
+                  </marker>
+                  <filter id="coreGlow" x="-40%" y="-40%" width="180%" height="180%">
+                    <feGaussianBlur stdDeviation="12" />
+                  </filter>
+                </defs>
+
+                {/* connectors — even gaps between every stage */}
+                <path d="M276 168 L 372 168" fill="none" stroke="#94a3b8" strokeWidth="2.5" markerEnd="url(#suasArrowSlate)" />
+                <path d="M598 168 L 694 168" fill="none" stroke="#d75519" strokeWidth="3" markerEnd="url(#suasArrow)" />
+                <path d="M884 168 L 980 168" fill="none" stroke="#94a3b8" strokeWidth="2.5" markerEnd="url(#suasArrowSlate)" />
+
+                {/* animated signal packets traveling along each stage */}
+                <circle className="flow-dot" cx="276" cy="168" r="4.5" fill="#d75519" />
+                <circle className="flow-dot" cx="598" cy="168" r="4.5" fill="#d75519" style={{ animationDelay: "0.6s" }} />
+                <circle className="flow-dot" cx="884" cy="168" r="4.5" fill="#d75519" style={{ animationDelay: "1.2s" }} />
+
+                {/* modular sensor input group */}
+                <rect x="40" y="48" width="236" height="240" rx="18" fill="#f8fafc" stroke="#e2e8f0" strokeWidth="1.5" />
+                <text x="62" y="86" fontSize="15" fontWeight="700" fill="#0f172a">Passive sensor inputs</text>
+                <text x="62" y="106" fontSize="11.5" fill="#64748b">modular · sensor-agnostic</text>
+                <g>
+                  <rect x="62" y="120" width="192" height="34" rx="10" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1.5" />
+                  <text x="76" y="142" fontSize="12" fill="#334155">RF — passive signals</text>
+                  <rect x="62" y="162" width="192" height="34" rx="10" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1.5" />
+                  <text x="76" y="184" fontSize="12" fill="#334155">EO / IR — optical &amp; thermal</text>
+                  <rect x="62" y="204" width="192" height="34" rx="10" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1.5" />
+                  <text x="76" y="226" fontSize="12" fill="#334155">Acoustic — audio signature</text>
+                  <rect x="62" y="246" width="192" height="32" rx="10" fill="none" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="4 4" />
+                  <text x="76" y="266" fontSize="11.5" fill="#94a3b8">+ additional modalities</text>
+                </g>
+
+                {/* fusion software core */}
+                <rect className="core-pulse" x="360" y="94" width="250" height="148" rx="26" fill="#e8762f" filter="url(#coreGlow)" />
+                <rect x="372" y="106" width="226" height="124" rx="20" fill="#fdf4ee" stroke="#d75519" strokeWidth="2.5" />
+                <text x="485" y="138" textAnchor="middle" fontSize="9.5" fontWeight="700" letterSpacing="1.2" fill="#d75519">THE SOFTWARE CORE</text>
+                <text x="485" y="166" textAnchor="middle" fontSize="20" fontWeight="700" fill="#b8460f">AI Sensor Fusion</text>
+                <text x="485" y="190" textAnchor="middle" fontSize="11.5" fill="#57534e">asynchronous correlation</text>
+                <text x="485" y="206" textAnchor="middle" fontSize="11.5" fill="#57534e">at the edge</text>
+
+                {/* track output */}
+                <rect x="694" y="106" width="190" height="124" rx="18" fill="#ffffff" stroke="#e2e8f0" strokeWidth="1.5" />
+                <text x="789" y="130" textAnchor="middle" fontSize="13" fontWeight="600" fill="#0f172a">Targeting-grade tracks</text>
+                <rect x="716" y="144" width="146" height="20" rx="10" fill="#fdf0e8" />
+                <text x="789" y="158" textAnchor="middle" fontSize="12" fontWeight="600" fill="#9a3412">Detect</text>
+                <rect x="716" y="170" width="146" height="20" rx="10" fill="#fdf0e8" />
+                <text x="789" y="184" textAnchor="middle" fontSize="12" fontWeight="600" fill="#9a3412">Localize</text>
+                <rect x="716" y="196" width="146" height="20" rx="10" fill="#fdf0e8" />
+                <text x="789" y="210" textAnchor="middle" fontSize="12" fontWeight="600" fill="#9a3412">Classify</text>
+
+                {/* downstream consumer */}
+                <rect x="980" y="122" width="140" height="92" rx="18" fill="#f1f5f9" stroke="#e2e8f0" strokeWidth="1.5" />
+                <text x="1050" y="158" textAnchor="middle" fontSize="13" fontWeight="600" fill="#0f172a">Existing C2 /</text>
+                <text x="1050" y="176" textAnchor="middle" fontSize="13" fontWeight="600" fill="#0f172a">operator systems</text>
+                <text x="1050" y="196" textAnchor="middle" fontSize="10" fill="#64748b">integration-ready</text>
+
+                {/* footer labels */}
+                <circle cx="46" cy="318" r="4" fill="#d75519" />
+                <text x="60" y="322" fontSize="12.5" fill="#475569">Fully passive — no active emissions</text>
+                <circle cx="600" cy="318" r="4" fill="#d75519" />
+                <text x="614" y="322" fontSize="12.5" fill="#475569">Runs on COTS edge hardware</text>
+              </svg>
+              </div>
+              <div className="pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent sm:hidden" />
+            </div>
+            <p className="mt-3 text-center text-xs text-slate-400 sm:hidden">Swipe to see the full flow →</p>
+          </div>
+        </section>
+
         <section id="teaming" className="fade-up">
           <div className="mb-10 max-w-3xl">
             <p className="section-eyebrow">Teaming Model</p>
