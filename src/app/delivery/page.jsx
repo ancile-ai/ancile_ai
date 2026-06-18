@@ -82,6 +82,13 @@ const credentials = [
   { label: "CAGE", value: "11BV7" },
 ];
 
+const procurementCodes = [
+  { label: "Set-Aside", value: "SDVOSB" },
+  { label: "CAGE Code", value: "11BV7" },
+  { label: "UEI", value: "Y465ERNPJ5M1" },
+  { label: "NAICS", value: "541511 · 541512 · 541519 · 518210" },
+];
+
 export default function Delivery() {
   return (
     <div className="page-shell min-h-screen bg-transparent">
@@ -132,6 +139,38 @@ export default function Delivery() {
                 </div>
               </article>
             ))}
+          </div>
+        </section>
+
+        <section className="fade-up">
+          <div className="rounded-[2rem] border border-slate-800 bg-slate-900 p-6 text-white shadow-xl sm:p-10">
+            <div className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+              <div className="max-w-md">
+                <p className="section-eyebrow border-white/15 bg-white/10 text-white">
+                  Capability Codes
+                </p>
+                <h2 className="font-display mt-5 text-2xl sm:text-3xl">
+                  Ready to drop into a solicitation.
+                </h2>
+                <p className="mt-4 text-sm leading-7 text-slate-300">
+                  Registration and set-aside details a contracting officer can
+                  reference directly.
+                </p>
+              </div>
+
+              <div className="grid w-full max-w-xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10">
+                {procurementCodes.map((item) => (
+                  <div key={item.label} className="bg-slate-900 p-5">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                      {item.label}
+                    </p>
+                    <p className="font-display mt-2 text-base font-semibold text-white">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
