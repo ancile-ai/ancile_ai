@@ -9,7 +9,7 @@ const proofCards = [
   {
     icon: Users,
     title: "Prime Teaming Support",
-    copy: "The model fits prime-led public sector and defense programs that need a veteran-owned technical delivery partner.",
+    copy: "The model fits prime-led public sector, energy, and defense programs that need a veteran-owned technical delivery partner.",
   },
   {
     icon: ShieldCheck,
@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
           <p className="section-copy mt-5 max-w-xl text-lg">
             Ancile AI combines a passive sUAS detection product, subcontract
             engineering and integration, and applied AI in one focused model
-            suited to public sector and defense programs.
+            suited to public sector, energy, and defense programs.
           </p>
 
           <div className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm">

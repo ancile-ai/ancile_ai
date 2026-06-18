@@ -24,7 +24,7 @@ const Footer = () => {
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-700">
               Service-disabled veteran-owned (SDVOSB) software company delivering
               passive sUAS detection, subcontract engineering and integration, and
-              applied AI for public sector and defense missions.
+              applied AI for public sector, energy, and defense missions.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

@@ -12,7 +12,7 @@ const proofPoints = [
   },
   {
     title: "Subcontract Delivery",
-    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector and defense programs.",
+    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector, energy, and defense programs.",
     icon: Wrench,
   },
   {
@@ -39,7 +39,7 @@ const Hero = () => {
           </p>
 
           <h1 className="section-title mt-6 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
-            Mission software and applied AI for public sector and defense.
+            Mission software and applied AI for public sector, energy, and defense.
           </h1>
 
           <p className="section-copy mt-6 max-w-2xl text-lg sm:text-xl">

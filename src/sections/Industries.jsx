@@ -12,7 +12,7 @@ const offerings = [
   {
     icon: Cpu,
     title: "Subcontract Delivery",
-    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector and defense programs.",
+    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector, energy, and defense programs.",
     bullets: ["Veteran-owned set-aside fit", "Integration support", "Rapid staffing"],
     href: "/delivery",
   },
