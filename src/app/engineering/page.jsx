@@ -44,7 +44,7 @@ export default function Engineering() {
     <div className="page-shell min-h-screen bg-transparent text-slate-900">
       <Header />
       <PageHero
-        eyebrow="Lane 1 — Product"
+        eyebrow="Product"
         title="Passive detection, localization, and classification of small drones."
         description="Ancile AI's passive sUAS product is a software stack built around multi-modal sensor fusion on COTS hardware — covert, persistent awareness at the edge, developed with a Tier-1 defense partner and scheduled for field testing in Q3 FY26."
       >

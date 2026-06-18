@@ -87,7 +87,7 @@ export default function Delivery() {
     <div className="page-shell min-h-screen bg-transparent">
       <Header />
       <PageHero
-        eyebrow="Lane 2 — Delivery"
+        eyebrow="Delivery"
         title="Subcontract engineering, integration, and sustainment for prime-led programs."
         description="A service-disabled veteran-owned (SDVOSB) delivery partner for primes that need trusted technical execution — scoped to software, integration, and the support that keeps systems running after fielding."
       >

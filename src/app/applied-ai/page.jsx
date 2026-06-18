@@ -74,7 +74,7 @@ export default function AppliedAI() {
     <div className="page-shell min-h-screen bg-transparent">
       <Header />
       <PageHero
-        eyebrow="Lane 3 — Applied AI & R&D"
+        eyebrow="Applied AI & R&D"
         title="Agentic, edge, and physical AI built to run in the real world."
         description="We move past the chatbot era into systems that plan and act, run at the tactical edge, and reason over real sensor data — with the governance, evals, and observability needed to field them responsibly."
       />
