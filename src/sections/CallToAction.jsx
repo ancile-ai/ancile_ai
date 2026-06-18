@@ -4,7 +4,10 @@ import Link from "next/link";
 import { ArrowRight, Shield, Workflow } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
 
-const CallToAction = () => {
+const CallToAction = ({
+  headline = "If the scope is real, the next step should be a technical conversation.",
+  subcopy = "Reach out if you're pursuing a partnership, or need a CMMC-compliant, SDVOSB subcontract partner with mission software experience.",
+}) => {
   const { openModal } = useContactModal();
 
   return (
@@ -21,10 +24,10 @@ const CallToAction = () => {
                   Program Engagement
                 </p>
                 <h2 className="font-display mt-5 max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl">
-                  If the scope is real, the next step should be a technical conversation.
+                  {headline}
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-                  Reach out if you&apos;re pursuing a partnership, or need a CMMC-compliant, SDVOSB subcontract partner with mission software experience.
+                  {subcopy}
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">

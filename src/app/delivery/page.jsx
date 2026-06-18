@@ -188,7 +188,10 @@ export default function Delivery() {
           </div>
         </section>
       </main>
-      <CallToAction />
+      <CallToAction
+        headline="Need an SDVOSB subcontractor who can actually deliver?"
+        subcopy="We staff fast and stay accountable through fielding and sustainment — for primes responding to public sector, energy, and defense work."
+      />
       <Footer />
     </div>
   );

@@ -169,7 +169,10 @@ export default function AppliedAI() {
           </div>
         </section>
       </main>
-      <CallToAction />
+      <CallToAction
+        headline="Have an agentic, edge, or physical-AI problem that has to ship?"
+        subcopy="We build the governance, evals, and observability that make these systems safe to field — not just demo."
+      />
       <Footer />
     </div>
   );

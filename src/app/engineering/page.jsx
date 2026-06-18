@@ -140,7 +140,10 @@ export default function Engineering() {
           </div>
         </section>
       </main>
-      <CallToAction />
+      <CallToAction
+        headline="Evaluating passive sUAS detection for your program?"
+        subcopy="Let's talk sensor modalities, SWaP, and how the software fits your concept of operations."
+      />
       <Footer />
     </div>
   );
