@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ExternalLink, Mail } from "lucide-react";
+import Logo from "./Logo";
 
 const capabilityLinks = [
   { href: "/overview", label: "Overview" },
@@ -15,12 +15,7 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="rounded-[2rem] border border-white/70 bg-white/80 p-8 shadow-sm">
-            <Image
-              src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg"
-              alt="Ancile AI"
-              width={176}
-              height={36}
-            />
+            <Logo markClassName="h-10 w-auto" wordmarkClassName="text-slate-900 text-2xl" />
             <p className="mt-5 max-w-md text-sm leading-7 text-slate-700">
               Service-disabled veteran-owned (SDVOSB) software company delivering
               passive sUAS detection, subcontract engineering and integration, and
@@ -105,7 +100,7 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 flex flex-col gap-3 border-t border-slate-200 pt-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
-          <p>© 2026 Ancile AI. All rights reserved.</p>
+          <p>© 2026 Ancile. All rights reserved.</p>
           <p>Mission software for sUAS detection, applied AI, and subcontract delivery.</p>
         </div>
       </div>

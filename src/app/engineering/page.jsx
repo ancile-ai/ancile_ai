@@ -1,13 +1,16 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import PageHero from "../../components/PageHero";
+import TrackConsole from "../../components/TrackConsole";
+import Reveal from "../../components/Reveal";
+import ShowcaseRow from "../../components/ShowcaseRow";
 import CallToAction from "../../sections/CallToAction";
 import { Cpu, Settings, CheckCircle, Workflow, Radar } from "lucide-react";
 
 export const metadata = {
-  title: "Passive sUAS Detection | Ancile AI",
+  title: "Passive sUAS Detection | Ancile",
   description:
-    "Ancile AI's passive sUAS product detects, localizes, and classifies small drones using multi-modal sensor fusion on COTS hardware, developed with a Tier-1 defense partner.",
+    "Ancile's passive sUAS product detects, localizes, and classifies small drones using multi-modal sensor fusion on COTS hardware, developed with a Tier-1 defense partner.",
 };
 
 export default function Engineering() {
@@ -22,7 +25,7 @@ export default function Engineering() {
   const partnerRoles = [
     {
       icon: Cpu,
-      title: "Ancile AI — Software Package",
+      title: "Ancile — Software Package",
       desc: "Fusion software, detection and classification models, data architecture, and the integration workflows that turn raw sensor feeds into usable tracks.",
       color: "bg-sky-50 text-sky-700 border-sky-100",
     },
@@ -52,7 +55,8 @@ export default function Engineering() {
       <PageHero
         eyebrow="Product"
         title="Passive detection, localization, and classification of small drones."
-        description="Ancile AI's passive sUAS product is a software stack built around multi-modal sensor fusion on COTS hardware — covert, persistent awareness at the edge, developed with a Tier-1 defense partner and scheduled for field testing in Q3 FY26."
+        description="Ancile's passive sUAS product is a software stack built around multi-modal sensor fusion on COTS hardware — covert, persistent awareness at the edge, developed with a Tier-1 defense partner and scheduled for field testing in Q3 FY26."
+        visual={<TrackConsole />}
       >
         <div className="fade-up delay-1 grid grid-cols-1 gap-4 sm:grid-cols-3">
           {quickStats.map((stat) => (
@@ -65,47 +69,44 @@ export default function Engineering() {
       </PageHero>
 
       <main className="mx-auto max-w-7xl space-y-20 px-4 py-16 sm:px-6 lg:px-8 lg:space-y-24 lg:py-24">
-        <section id="product" className="fade-up">
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-5">
-            <article className="lift-card rounded-[2rem] border border-slate-200 bg-white p-8 shadow-sm lg:col-span-3">
-              <h2 className="font-display text-2xl text-slate-900">How it works</h2>
-              <p className="mt-3 leading-relaxed text-slate-700">
-                The software correlates asynchronous sensor inputs into
-                targeting-grade tracks while staying low-observable and
-                power-conscious. It is built for rapid setup and practical
-                integration into the systems a team already fields.
-              </p>
-              <div className="mt-6 space-y-3">
-                {passiveSuasFeatures.map((feature) => (
-                  <div key={feature} className="flex items-start gap-3">
-                    <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-burnt-orange-600" />
-                    <p className="text-sm leading-6 text-slate-700">{feature}</p>
+        <section id="product">
+          <Reveal>
+            <ShowcaseRow
+              eyebrow="How it works"
+              title="Asynchronous sensor inputs, correlated into usable tracks."
+              copy="The software correlates asynchronous sensor inputs into targeting-grade tracks while staying low-observable and power-conscious. It is built for rapid setup and practical integration into the systems a team already fields."
+              bullets={passiveSuasFeatures}
+              visual={
+                <div className="panel-strong rounded-[2rem] p-6 sm:p-8">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-burnt-orange-700">
+                    System priorities
+                  </p>
+                  <div className="mt-5 space-y-3">
+                    {[
+                      { label: "Signature", value: "Passive LP/OP operation" },
+                      { label: "Architecture", value: "Modular and upgrade-ready" },
+                      { label: "Deployment", value: "COTS hardware baseline" },
+                    ].map((item) => (
+                      <div
+                        key={item.label}
+                        className="rounded-2xl border border-slate-200 bg-white p-4"
+                      >
+                        <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          {item.label}
+                        </p>
+                        <p className="font-display mt-1 text-base font-semibold text-slate-900">
+                          {item.value}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </article>
-
-            <aside className="lift-card rounded-[2rem] border border-slate-200 bg-slate-50 p-8 lg:col-span-2">
-              <h2 className="font-display text-2xl text-slate-900">System priorities</h2>
-              <div className="mt-5 space-y-4">
-                <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Signature</p>
-                  <p className="mt-1 text-base font-semibold text-slate-900">Passive LP/OP operation</p>
                 </div>
-                <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Architecture</p>
-                  <p className="mt-1 text-base font-semibold text-slate-900">Modular and upgrade-ready</p>
-                </div>
-                <div className="rounded-2xl border border-slate-200 bg-white p-4">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">Deployment</p>
-                  <p className="mt-1 text-base font-semibold text-slate-900">COTS hardware baseline</p>
-                </div>
-              </div>
-            </aside>
-          </div>
+              }
+            />
+          </Reveal>
         </section>
 
-        <section id="architecture" className="fade-up">
+        <section id="architecture">
           <div className="mb-10 max-w-3xl">
             <p className="section-eyebrow">System Architecture</p>
             <h2 className="font-display mt-3 text-3xl text-slate-900 sm:text-4xl">
@@ -201,7 +202,7 @@ export default function Engineering() {
           </div>
         </section>
 
-        <section id="teaming" className="fade-up">
+        <section id="teaming">
           <div className="mb-10 max-w-3xl">
             <p className="section-eyebrow">Teaming Model</p>
             <h2 className="font-display mt-3 text-3xl text-slate-900 sm:text-4xl">
@@ -214,34 +215,77 @@ export default function Engineering() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {partnerRoles.map((role) => (
-              <div key={role.title} className="lift-card rounded-2xl border border-slate-200 bg-white p-6">
-                <div className={`mb-4 inline-flex rounded-xl border p-3 ${role.color}`}>
-                  <role.icon className="h-5 w-5" />
+          <div className="grid grid-cols-1 gap-5 lg:grid-cols-5 lg:grid-rows-2">
+            <Reveal className="lg:col-span-3 lg:row-span-2">
+              <article className="lift-card flex h-full flex-col rounded-[2rem] border border-slate-200 bg-gradient-to-br from-[#fff7f1] via-white to-[#f6efe6] p-8 shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="inline-flex rounded-2xl bg-slate-900 p-3 text-white">
+                    <Cpu className="h-5 w-5" />
+                  </span>
+                  <span className="rounded-full border border-burnt-orange-200 bg-burnt-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-burnt-orange-700">
+                    Our scope
+                  </span>
                 </div>
-                <h3 className="font-display text-lg text-slate-900">{role.title}</h3>
-                <p className="mt-2 text-sm leading-6 text-slate-700">{role.desc}</p>
-              </div>
+                <h3 className="font-display mt-6 text-2xl font-semibold text-slate-900">
+                  {partnerRoles[0].title}
+                </h3>
+                <p className="mt-3 max-w-md leading-7 text-slate-600">
+                  {partnerRoles[0].desc}
+                </p>
+                <div className="mt-auto flex flex-wrap gap-2 pt-8">
+                  {["Fusion software", "Detection models", "Data architecture", "Integration"].map(
+                    (tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-slate-200 bg-white/80 px-3 py-1 text-xs font-medium text-slate-600"
+                      >
+                        {tag}
+                      </span>
+                    )
+                  )}
+                </div>
+              </article>
+            </Reveal>
+
+            {partnerRoles.slice(1).map((role, index) => (
+              <Reveal key={role.title} delay={120 + index * 90} className="lg:col-span-2">
+                <article className="lift-card flex h-full flex-col rounded-[2rem] border border-slate-200 bg-[#fcfbf8] p-7 shadow-sm">
+                  <div className={`inline-flex w-fit rounded-xl border p-3 ${role.color}`}>
+                    <role.icon className="h-5 w-5" />
+                  </div>
+                  <h3 className="font-display mt-5 text-lg font-semibold text-slate-900">
+                    {role.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">{role.desc}</p>
+                </article>
+              </Reveal>
             ))}
           </div>
         </section>
 
-        <section id="scope" className="fade-up">
-          <div className="rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-sm sm:p-12">
-            <div className="mx-auto inline-flex rounded-2xl bg-burnt-orange-600 p-3 text-white">
+      </main>
+
+      {/* Built for the field — dark cinematic band */}
+      <section id="scope" className="band-dark relative overflow-hidden border-y border-slate-800/60">
+        <div className="aurora-dark pointer-events-none absolute inset-0" />
+        <div className="soft-grid-dark pointer-events-none absolute inset-0 opacity-60" />
+        <div className="relative mx-auto max-w-4xl px-4 py-24 text-center sm:px-6 lg:px-8">
+          <Reveal>
+            <span className="mx-auto inline-flex rounded-2xl bg-white/10 p-3 text-burnt-orange-300">
               <Radar className="h-6 w-6" />
-            </div>
-            <h2 className="font-display mt-5 text-3xl text-slate-900 sm:text-4xl">Built for the field, not the demo</h2>
-            <p className="mx-auto mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
+            </span>
+            <h2 className="font-display mx-auto mt-6 max-w-3xl text-3xl font-semibold text-white sm:text-4xl lg:text-[2.7rem]">
+              Built for the field, not the demo.
+            </h2>
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
               The product is shaped by deployment constraints — low signature,
               limited power, contested spectrum, and disconnected sites — so it
               performs where it is actually used, then transitions cleanly into a
               partner program.
             </p>
-          </div>
-        </section>
-      </main>
+          </Reveal>
+        </div>
+      </section>
       <CallToAction
         headline="Evaluating passive sUAS detection for your program?"
         subcopy="Let's talk sensor modalities, SWaP, and how the software fits your concept of operations."

@@ -1,9 +1,10 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Hero from '../sections/Hero';
-import WhyChooseUs from '../sections/WhyChooseUs';
-import Process from '../sections/Process';
-import Industries from '../sections/Industries';
+import CapabilityLanes from '../sections/CapabilityLanes';
+import Flagship from '../sections/Flagship';
+import OperatingModel from '../sections/OperatingModel';
+import Differentiators from '../sections/Differentiators';
 import CallToAction from '../sections/CallToAction';
 
 export default function Home() {
@@ -11,9 +12,10 @@ export default function Home() {
     <div className="page-shell min-h-screen bg-transparent">
       <Header />
       <Hero />
-      <WhyChooseUs />
-      <Process />
-      <Industries />
+      <CapabilityLanes />
+      <Flagship />
+      <OperatingModel />
+      <Differentiators />
       <CallToAction />
       <Footer />
     </div>

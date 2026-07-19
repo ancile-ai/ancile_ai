@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Radar, Shield } from "lucide-react";
+import { ArrowRight, Shield } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
+import TrackConsole from "../components/TrackConsole";
 
 const credentials = [
   { label: "Status", value: "SDVOSB" },
@@ -20,90 +21,65 @@ const Hero = () => {
       <div className="aurora-wash pointer-events-none absolute inset-0" />
       <div className="grain-overlay" />
 
-      <div className="relative mx-auto grid min-h-[calc(100vh-5.5rem)] max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-20">
-        <div className="fade-up">
-          <p className="section-eyebrow">
-            <Shield className="h-4 w-4" />
-            SDVOSB • Mission Software & Applied AI
-          </p>
+      <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-16 sm:px-6 lg:px-8 lg:pt-20">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+          <div className="fade-up min-w-0">
+            <p className="section-eyebrow">
+              <Shield className="h-4 w-4" />
+              SDVOSB • Mission Software &amp; Applied AI
+            </p>
 
-          <h1 className="section-title mt-6 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-7xl">
-            Mission software and applied AI for public sector, energy, and defense.
-          </h1>
+            <h1 className="section-title mt-6 max-w-4xl text-5xl leading-[0.98] sm:text-6xl lg:text-[4.3rem]">
+              Mission software and <span className="text-gradient">applied AI</span> for public sector, energy, and defense.
+            </h1>
 
-          <p className="section-copy mt-6 max-w-2xl text-lg sm:text-xl">
-            Ancile AI is a service-disabled veteran-owned software company
-            working in three focused lanes: passive sUAS detection, subcontract
-            delivery, and applied AI.
-          </p>
+            <p className="section-copy mt-6 max-w-2xl text-lg sm:text-xl">
+              Ancile is a service-disabled veteran-owned software company
+              working in three focused lanes: passive sUAS detection, subcontract
+              delivery, and applied AI.
+            </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/overview"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
-            >
-              Explore Capabilities
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <button
-              type="button"
-              onClick={openModal}
-              className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700"
-            >
-              Discuss Program Fit
-            </button>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/overview"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-slate-800"
+              >
+                Explore Capabilities
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <button
+                type="button"
+                onClick={openModal}
+                className="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700"
+              >
+                Discuss Program Fit
+              </button>
+            </div>
+          </div>
+
+          <div className="fade-up delay-1 min-w-0">
+            <TrackConsole />
           </div>
         </div>
 
-        <div className="fade-up delay-1">
-          <div className="panel-strong rounded-[2rem] p-5 sm:p-6">
-            <div className="rounded-[1.5rem] border border-slate-200 bg-slate-950 p-6 text-white">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-burnt-orange-300">
-                Why Ancile
-              </p>
-              <h2 className="font-display mt-3 text-3xl font-semibold">
-                Qualified to contract, built to deliver.
-              </h2>
-              <p className="mt-4 text-sm leading-7 text-slate-300">
-                An SDVOSB set-aside partner with the certifications primes need
-                and the software experience the mission requires.
-              </p>
-
-              <div className="mt-6 grid grid-cols-2 gap-3">
-                {credentials.map((item) => (
-                  <div
-                    key={item.label}
-                    className="rounded-2xl border border-white/10 bg-white/5 p-4"
-                  >
-                    <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-                      {item.label}
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-white">{item.value}</p>
-                  </div>
-                ))}
+        {/* Trust strip — certifications as a credibility band. */}
+        <div className="fade-up delay-2 mt-14 flex flex-wrap items-center gap-x-8 gap-y-5 rounded-2xl border border-slate-200 bg-white/70 px-6 py-5 backdrop-blur">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">
+            Qualified to contract
+          </span>
+          <div className="hidden h-8 w-px bg-slate-200 sm:block" />
+          <dl className="flex flex-wrap items-center gap-x-8 gap-y-4">
+            {credentials.map((item) => (
+              <div key={item.label} className="flex flex-col">
+                <dt className="text-[0.7rem] font-semibold uppercase tracking-wider text-slate-400">
+                  {item.label}
+                </dt>
+                <dd className="font-display text-base font-semibold text-slate-900">
+                  {item.value}
+                </dd>
               </div>
-            </div>
-
-            <div className="lift-card mt-4 rounded-[1.5rem] border border-slate-200 bg-white p-5">
-              <div className="flex items-start gap-4">
-                <div className="rounded-2xl bg-burnt-orange-50 p-3 text-burnt-orange-700">
-                  <Radar className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-burnt-orange-700">
-                    Flagship Product
-                  </p>
-                  <p className="font-display mt-1 text-lg font-semibold text-slate-900">
-                    Passive sUAS detection
-                  </p>
-                  <p className="mt-1 text-sm leading-7 text-slate-600">
-                    Built with a Tier-1 defense partner. Field testing scheduled
-                    Q3 FY26.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+            ))}
+          </dl>
         </div>
       </div>
     </section>

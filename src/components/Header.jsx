@@ -3,9 +3,9 @@
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useContactModal } from "../context/ContactModalContext";
+import Logo from "./Logo";
 
 const capabilityLinks = [
   { href: "/overview", label: "Overview", desc: "Capability map and how we engage" },
@@ -67,14 +67,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg"
-            alt="Ancile AI"
-            width={160}
-            height={34}
-            priority
-          />
+        <Link href="/" className="flex items-center gap-3" aria-label="Ancile — home">
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-2 lg:flex">

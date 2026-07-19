@@ -10,7 +10,7 @@ export function generateCustomerConfirmationEmail(
       <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Thank you for contacting Ancile AI</title>
+        <title>Thank you for contacting Ancile</title>
       </head>
       <body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background-color: #fef3ed;">
         <table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #f5f7fa;">
@@ -25,7 +25,7 @@ export function generateCustomerConfirmationEmail(
                     <table border="0" cellpadding="0" cellspacing="0" width="100%">
                       <tr>
                         <td style="text-align: center;">
-                          <h1 style="color: #ffffff; font-size: 28px; font-weight: bold; margin: 0 0 8px 0; font-family: Arial, sans-serif; letter-spacing: -0.5px;">Ancile AI</h1>
+                          <h1 style="color: #ffffff; font-size: 28px; font-weight: bold; margin: 0 0 8px 0; font-family: Arial, sans-serif; letter-spacing: -0.5px;">Ancile</h1>
                           <p style="color: #ffffff; font-size: 15px; margin: 0; font-weight: 500; font-family: Arial, sans-serif; opacity: 0.95;">Consulting &amp; Solutions</p>
                         </td>
                       </tr>
@@ -42,7 +42,7 @@ export function generateCustomerConfirmationEmail(
                     
                     <!-- Message -->
                     <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0 0 25px 0; font-family: Arial, sans-serif;">
-                      Thanks for getting in touch with Ancile AI. We’re excited to learn more about ${
+                      Thanks for getting in touch with Ancile. We’re excited to learn more about ${
                         company ? `${company}'s` : "your"
                       } operational needs and how AI can help accelerate results.
                     </p>
@@ -120,7 +120,7 @@ export function generateCustomerConfirmationEmail(
                     <!-- Signature -->
                     <p style="color: #374151; font-size: 16px; margin: 0 0 12px 0; font-family: Arial, sans-serif;">
                       Sincerely,<br>
-                      <strong style="color: #d75519; font-size: 16px;">The Ancile AI Team</strong>
+                      <strong style="color: #d75519; font-size: 16px;">The Ancile Team</strong>
                     </p>
                     
                     <!-- Divider -->
@@ -322,7 +322,7 @@ export function generateContactEmail(
                     
                     <!-- System Info -->
                     <p style="color: #9ca3af; font-size: 11px; text-align: center; margin: 0; line-height: 1.3; font-family: Arial, sans-serif;">
-                      Ancile AI Contact Management System<br>
+                      Ancile Contact Management System<br>
                       This notification was automatically generated from your website contact form.
                     </p>
                     

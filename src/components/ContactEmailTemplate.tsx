@@ -70,7 +70,7 @@ export function ContactEmailTemplate({
             </p>
           </div>
           <p style={systemLabel}>
-            🔧 Ancile AI Contact System
+            🔧 Ancile Contact System
           </p>
         </div>
       </div>
@@ -86,7 +86,7 @@ interface CustomerConfirmationTemplateProps {
 export function CustomerConfirmationTemplate({ name, company }: CustomerConfirmationTemplateProps) {
   return (
     <div style={confirmationContainer}>
-      <h2 style={confirmationTitle}>Thanks for your interest in Ancile AI!</h2>
+      <h2 style={confirmationTitle}>Thanks for your interest in Ancile!</h2>
       <p style={confirmationText}>Hi {name},</p>
       <p style={confirmationText}>
         We&apos;ve received your message and we&apos;re excited to learn more about how we can help {company ? company : "your business"}.
@@ -103,7 +103,7 @@ export function CustomerConfirmationTemplate({ name, company }: CustomerConfirma
 
       <p style={signature}>
         Best regards,<br/>
-        <strong>The Ancile AI Team</strong>
+        <strong>The Ancile Team</strong>
       </p>
     </div>
   );
