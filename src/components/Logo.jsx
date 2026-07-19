@@ -49,8 +49,10 @@ export default function Logo({
   const wordmarkColor =
     wordmarkClassName ?? (tone === "dark" ? "text-white" : "text-slate-900");
 
+  // `flex w-fit` (not inline-flex) so the lockup never flows inline with an
+  // adjacent inline-flex element such as `.section-eyebrow`.
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className}`}>
+    <span className={`flex w-fit items-center gap-2.5 ${className}`}>
       <AncileMark className={markClassName} tone={tone} />
       {showWordmark ? (
         <span

@@ -14,7 +14,7 @@ export default function ShowcaseRow({
   footer,
 }) {
   return (
-    <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+    <div className="grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
       <div className={`min-w-0 ${reverse ? "lg:order-2" : ""}`}>
         {eyebrow ? <p className="section-eyebrow">{eyebrow}</p> : null}
         <h3 className="section-title mt-5 text-3xl sm:text-4xl">{title}</h3>

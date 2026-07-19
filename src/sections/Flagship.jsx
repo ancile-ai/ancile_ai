@@ -20,7 +20,7 @@ const Flagship = () => {
               "Integration-ready tracks for the C2 and operator systems you already field",
             ]}
             visual={
-              <div className="panel-strong rounded-[2rem] p-4 sm:p-6">
+              <div className="panel-strong rounded-[2rem] p-4 sm:p-5">
                 <FusionMini />
               </div>
             }
