@@ -150,7 +150,7 @@ export default function TrackConsole({ className = "" }) {
       </div>
 
       <p className="border-t border-white/5 px-5 py-2.5 text-center font-mono text-[10px] tracking-wide text-slate-500 sm:px-6">
-        Illustrative operator view — field testing scheduled Q3 FY26
+        Illustrative operator view — field testing scheduled Q4 FY26
       </p>
     </ConsoleFrame>
   );

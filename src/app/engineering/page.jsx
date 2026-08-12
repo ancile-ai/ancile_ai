@@ -31,8 +31,8 @@ export default function Engineering() {
     },
     {
       icon: Settings,
-      title: "Tier-1 Defense Supplier — Hardware",
-      desc: "Hardware design, power architecture, manufacturability, and platform interfaces for deployable node configurations.",
+      title: "Tier-1 Defense Partner — Hardware",
+      desc: "Hardware design, power architecture, full rate manufacturing, and platform interfaces for deployable node configurations.",
       color: "bg-emerald-50 text-emerald-700 border-emerald-100",
     },
     {
@@ -46,7 +46,7 @@ export default function Engineering() {
   const quickStats = [
     { label: "Mission", value: "sUAS Detection" },
     { label: "Signature", value: "Fully Passive" },
-    { label: "Maturity", value: "Field Test Q3 FY26" },
+    { label: "Maturity", value: "Field Test Q4 FY26" },
   ];
 
   return (

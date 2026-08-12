@@ -7,7 +7,7 @@ import TrackConsole from "../components/TrackConsole";
 
 const credentials = [
   { label: "Status", value: "SDVOSB" },
-  { label: "Security", value: "CMMC-compliant" },
+  { label: "Security", value: "CMMC-compliant - Level 2" },
   { label: "Certification", value: "JCP Certified" },
   { label: "CAGE", value: "11BV7" },
 ];

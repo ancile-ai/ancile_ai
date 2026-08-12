@@ -99,7 +99,7 @@ export default function AppliedAI() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Focus areas"
-              title="Three areas where applied AI is moving fastest in 2026."
+              title="Three areas where Ancile is moving fastest in 2026."
               copy="Each lane feeds the others — perception work sharpens the sUAS product, and edge constraints shape how we build agents."
             />
 

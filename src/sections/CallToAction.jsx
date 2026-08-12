@@ -104,9 +104,6 @@ const CallToAction = ({
                       <p className="font-display mt-1.5 text-base font-semibold text-white">
                         sales@ancile.io
                       </p>
-                      <p className="mt-1 text-sm leading-6 text-slate-300">
-                        Shared intake for program and teaming inquiries.
-                      </p>
                     </div>
                   </a>
                 </div>

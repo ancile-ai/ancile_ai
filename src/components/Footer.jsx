@@ -5,13 +5,14 @@ import Logo, { AncileMark } from "./Logo";
 const capabilityLinks = [
   { href: "/overview", label: "Overview" },
   { href: "/engineering", label: "Passive sUAS Detection" },
-  { href: "/delivery", label: "Subcontract Delivery" },
+  { href: "/support", label: "Subcontract Support" },
   { href: "/applied-ai", label: "Applied AI & R&D" },
 ];
 
 const companyLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/careers", label: "Careers" },
 ];
 
 const contracting = [

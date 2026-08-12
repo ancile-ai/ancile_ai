@@ -10,7 +10,7 @@ import Logo from "./Logo";
 const capabilityLinks = [
   { href: "/overview", icon: LayoutGrid, label: "Overview", desc: "Capability map and how we engage" },
   { href: "/engineering", icon: Radar, label: "Passive sUAS Detection", desc: "Low-signature small-drone detection software" },
-  { href: "/delivery", icon: Boxes, label: "Subcontract Delivery", desc: "Engineering, integration, and sustainment for primes" },
+  { href: "/support", icon: Boxes, label: "Subcontract Support", desc: "Engineering, integration, and sustainment for primes" },
   { href: "/applied-ai", icon: BrainCircuit, label: "Applied AI & R&D", desc: "Agentic, edge, and physical AI for the mission" },
 ];
 

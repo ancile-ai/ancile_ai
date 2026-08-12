@@ -94,7 +94,7 @@ const procurementCodes = [
 ];
 
 export const metadata = {
-  title: "Subcontract Delivery | Ancile",
+  title: "Subcontract Support | Ancile",
   description:
     "SDVOSB subcontract engineering, integration, and sustainment for prime-led public sector, energy, and defense programs. CMMC-compliant, JCP certified, Texas VetHUB-aligned.",
 };
@@ -105,7 +105,7 @@ export default function Delivery() {
       <Header />
       <PageHero
         eyebrow="Delivery"
-        title="Subcontract engineering, integration, and sustainment for prime-led programs."
+        title="Subcontract engineering, integration, and sustainment for your programs."
         description="A service-disabled veteran-owned (SDVOSB) delivery partner for primes that need trusted technical execution — scoped to software, integration, and the support that keeps systems running after fielding."
         visual={<DeliveryConsole />}
       >
@@ -132,7 +132,7 @@ export default function Delivery() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <SectionHeading
               eyebrow="Delivery tracks"
-              title="Three ways we plug into a prime team."
+              title="Three ways we plug into a your team."
               copy="We take a defined slice of the technical work, deliver it on the prime's cadence, and stay accountable through fielding and sustainment."
             />
 
@@ -147,7 +147,7 @@ export default function Delivery() {
                       <featuredTrack.icon className="h-5 w-5" />
                     </span>
                     <span className="rounded-full border border-burnt-orange-200 bg-burnt-orange-50 px-3 py-1 text-xs font-bold uppercase tracking-wider text-burnt-orange-700">
-                      Set-aside fit
+                      Subcontracting goal alignment
                     </span>
                   </div>
                   <h3 className="font-display relative mt-6 text-2xl font-semibold text-slate-900 sm:text-3xl">
@@ -289,11 +289,11 @@ export default function Delivery() {
                   <ShieldCheck className="h-6 w-6" />
                 </span>
                 <h2 className="font-display mt-6 text-3xl text-slate-900 sm:text-4xl">
-                  A low-risk subcontractor for compliance-driven work.
+                  A low-risk ready subcontractor for compliance-driven work.
                 </h2>
                 <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-slate-600">
                   SDVOSB status, CMMC compliance, and JCP certification let prime
-                  teams meet set-aside and security requirements without taking on
+                  teams meet subcontracting goals and security requirements without taking on
                   delivery risk.
                 </p>
                 <div className="mt-8 flex flex-wrap justify-center gap-2">

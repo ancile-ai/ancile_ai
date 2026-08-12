@@ -34,11 +34,11 @@ const secondaryLanes = [
   {
     icon: Boxes,
     motif: PipelineMotif,
-    title: "Subcontract Delivery",
+    title: "Subcontract Support",
     href: "/delivery",
-    copy: "SDVOSB subcontract engineering, integration, and sustainment for prime-led programs.",
+    copy: "SDVOSB subcontract engineering, integration, and sustainment for your programs.",
     bullets: [
-      "Texas VetHUB-aligned execution for set-aside requirements",
+      "Texas VetHUB-aligned execution for subcontracting requirements",
       "Secure cloud, edge, and disconnected delivery",
       "CMMC-compliant, JCP-certified",
     ],
@@ -67,7 +67,7 @@ const lifecycle = [
   {
     icon: Hammer,
     phase: "Build",
-    title: "Deliver a defined package.",
+    title: "Deliver a fieldable capability.",
     desc: "Execution focuses on shipping usable software with clear interfaces, ownership, and deployment intent across the three lanes — not demos that stall at the prototype.",
   },
   {
@@ -183,7 +183,7 @@ export default function Overview() {
           <div className="max-w-3xl">
             <p className="section-eyebrow">How we engage</p>
             <h2 className="font-display mt-5 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-[2.7rem]">
-              The same model runs across every lane.
+              The same model applies across every lane.
             </h2>
             <p className="mt-4 text-lg leading-8 text-slate-300">
               Strategy and sustainment aren&apos;t separate offerings — they&apos;re

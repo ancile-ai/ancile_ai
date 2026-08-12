@@ -8,7 +8,7 @@ const secondaryLanes = [
   {
     icon: Boxes,
     motif: PipelineMotif,
-    title: "Subcontract Delivery",
+    title: "Subcontract Support",
     copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector, energy, and defense programs.",
     href: "/delivery",
   },

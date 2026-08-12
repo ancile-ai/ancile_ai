@@ -198,7 +198,7 @@ export const ContactModalProvider = ({ children }) => {
                   <div className="mt-8 space-y-2.5">
                     {[
                       { icon: Radar, label: "Passive sUAS detection" },
-                      { icon: Boxes, label: "Prime subcontract support" },
+                      { icon: Boxes, label: "Subcontract support" },
                       { icon: BrainCircuit, label: "Applied AI and integration" },
                     ].map((item) => (
                       <div
