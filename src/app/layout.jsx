@@ -15,16 +15,11 @@ const bodyFont = Manrope({
 });
 
 export const metadata = {
-  title: "Ancile AI — Passive sUAS Detection, Subcontract Delivery, Applied AI",
+  title: "Ancile — Passive sUAS Detection, Subcontract Support, Applied AI",
   description:
     "Service-disabled veteran-owned (SDVOSB) software company delivering passive sUAS detection, subcontract engineering and integration, and applied AI for public sector, energy, and defense missions.",
   icons: {
-    icon: [
-      {
-        url: "/images/logo/ancile_logo_orange_white_circle_transparent.png",
-        sizes: "180x180",
-      },
-    ],
+    icon: [{ url: "/images/logo/ancile-mark.svg", type: "image/svg+xml" }],
   },
 };
 

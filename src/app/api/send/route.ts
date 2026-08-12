@@ -61,9 +61,9 @@ export async function POST(request: NextRequest): Promise<Response> {
 
     // Send customer confirmation email
     const { data: customerData, error: customerError } = await resend.emails.send({
-      from: "Ancile AI <noreply@ancile.io>",
+      from: "Ancile <noreply@ancile.io>",
       to: [data.email],
-      subject: "Thank you for your inquiry - Ancile AI",
+      subject: "Thank you for your inquiry - Ancile",
       html: generateCustomerConfirmationEmail(data.name, data.company),
     });
 
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest): Promise<Response> {
 
     // Send sales notification email
     const { data: salesData, error: salesError } = await resend.emails.send({
-      from: "Ancile AI Notifications <notifications@ancile.io>",
+      from: "Ancile Notifications <notifications@ancile.io>",
       to: ["sales@ancile.io"],
       subject: `🚨 New Business Inquiry: ${data.company || data.name}`,
       html: generateContactEmail(

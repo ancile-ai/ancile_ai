@@ -213,6 +213,139 @@ body {
   }
 }
 
+/* ============================================================
+   Showcase system — Linear-style product surfaces & motion.
+   Built on the existing burnt-orange + warm-slate tokens.
+   ============================================================ */
+
+/* Cinematic dark band: near-black canvas for high-drama sections. */
+.band-dark {
+  background:
+    radial-gradient(60rem 40rem at 12% -10%, rgba(215, 85, 25, 0.16), transparent 55%),
+    radial-gradient(52rem 40rem at 92% 0%, rgba(56, 189, 248, 0.12), transparent 55%),
+    linear-gradient(180deg, #0b0f1a, #080b13);
+  color: #e8ecf4;
+}
+
+.aurora-dark {
+  background-image:
+    radial-gradient(46rem 30rem at 16% 4%, rgba(215, 85, 25, 0.22), transparent 60%),
+    radial-gradient(40rem 32rem at 86% 14%, rgba(56, 189, 248, 0.14), transparent 58%),
+    radial-gradient(52rem 40rem at 62% 112%, rgba(215, 85, 25, 0.12), transparent 62%);
+}
+
+.soft-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(148, 163, 184, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.10) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+/* Accent gradient text — used once per view, on a single hero word. */
+.text-gradient {
+  background: linear-gradient(115deg, #d75519 0%, #f0913f 55%, #e86c25 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* The signature "operator console" — a product surface with window chrome. */
+.console-frame {
+  position: relative;
+  border-radius: 1.5rem;
+  background: linear-gradient(180deg, #0c1220 0%, #070a12 100%);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow:
+    0 50px 100px -40px rgba(6, 9, 16, 0.85),
+    0 1px 0 0 rgba(255, 255, 255, 0.05) inset;
+  overflow: hidden;
+}
+
+.console-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.console-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(28rem 18rem at 30% 0%, rgba(215, 85, 25, 0.18), transparent 60%);
+}
+
+/* Passive-detection scope: rotating conic beam over concentric range rings. */
+.radar-beam {
+  border-radius: 9999px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(215, 85, 25, 0) 0deg,
+    rgba(215, 85, 25, 0.32) 42deg,
+    rgba(215, 85, 25, 0) 66deg
+  );
+  animation: radarSweep 3.8s linear infinite;
+}
+
+@keyframes radarSweep {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.radar-ping {
+  transform-origin: center;
+  animation: radarPing 3s ease-out infinite;
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.35);
+    opacity: 0.55;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.7);
+    opacity: 0;
+  }
+}
+
+/* Live signal readout — animated equaliser bars. */
+.signal-bar {
+  transform-origin: bottom;
+  animation: signalBar 1.4s ease-in-out infinite;
+}
+
+@keyframes signalBar {
+  0%,
+  100% {
+    transform: scaleY(0.32);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+/* Scroll-triggered reveal (paired with the Reveal client component). */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 720ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 720ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -223,8 +356,17 @@ body {
   .float-orb-delayed,
   .flow-dot,
   .core-pulse,
-  .lift-card {
+  .lift-card,
+  .radar-beam,
+  .radar-ping,
+  .signal-bar {
     animation: none;
+    transition: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
     transition: none;
   }
 }

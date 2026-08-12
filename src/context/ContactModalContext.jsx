@@ -1,8 +1,8 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { ArrowRight, X } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, BrainCircuit, Boxes, Radar, X } from "lucide-react";
+import Logo from "../components/Logo";
 import { handleContactSubmission } from "../actions/contact";
 import { contactFormApiSchema as contactFormSchema } from "../lib/validation";
 
@@ -167,40 +167,49 @@ export const ContactModalProvider = ({ children }) => {
           />
 
           <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/40 bg-white shadow-2xl">
+            <button
+              type="button"
+              onClick={closeModal}
+              className="absolute right-4 top-4 z-20 rounded-full bg-slate-100 p-2 text-slate-500 transition hover:bg-slate-200 hover:text-slate-900"
+              aria-label="Close contact form"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
             <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
-              <div className="bg-slate-950 px-6 py-8 text-white sm:px-8">
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
-                  aria-label="Close contact form"
-                >
-                  <X className="h-5 w-5" />
-                </button>
+              <div className="band-dark relative overflow-hidden px-6 py-8 text-white sm:px-8">
+                <div className="aurora-dark pointer-events-none absolute inset-0" />
+                <div className="soft-grid-dark pointer-events-none absolute inset-0 opacity-50" />
 
-                <Image
-                  src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg"
-                  alt="Ancile AI"
-                  width={156}
-                  height={32}
-                  className="brightness-0 invert"
-                />
+                <div className="relative">
+                  <Logo tone="dark" markClassName="h-9 w-auto" />
 
-                <p className="section-eyebrow mt-8 border-white/20 bg-white/10 text-white">
-                  Contact
-                </p>
-                <h3 className="font-display mt-5 text-3xl font-semibold">
-                  Discuss program fit and technical scope.
-                </h3>
-                <p className="mt-4 text-sm leading-7 text-slate-300">
-                  Use this form for passive sUAS product discussions, subcontract
-                  engineering support, or operational AI delivery requirements.
-                </p>
+                  <p className="section-eyebrow mt-8 border-white/20 bg-white/10 text-white">
+                    Contact
+                  </p>
+                  <h3 className="font-display mt-5 text-3xl font-semibold">
+                    Discuss program fit and technical scope.
+                  </h3>
+                  <p className="mt-4 text-sm leading-7 text-slate-300">
+                    Use this form for passive sUAS product discussions, subcontract
+                    engineering support, or operational AI delivery requirements.
+                  </p>
 
-                <div className="mt-8 space-y-3 text-sm text-slate-300">
-                  <p>Passive sUAS detection</p>
-                  <p>Prime subcontract support</p>
-                  <p>Applied AI and integration</p>
+                  <div className="mt-8 space-y-2.5">
+                    {[
+                      { icon: Radar, label: "Passive sUAS detection" },
+                      { icon: Boxes, label: "Subcontract support" },
+                      { icon: BrainCircuit, label: "Applied AI and integration" },
+                    ].map((item) => (
+                      <div
+                        key={item.label}
+                        className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-2.5"
+                      >
+                        <item.icon className="h-4 w-4 flex-shrink-0 text-burnt-orange-300" />
+                        <span className="text-sm text-slate-200">{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
 

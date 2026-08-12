@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect, useEffectEvent, useRef, useState } from "react";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { BrainCircuit, Boxes, ChevronDown, LayoutGrid, Menu, Radar, X } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useContactModal } from "../context/ContactModalContext";
+import Logo from "./Logo";
 
 const capabilityLinks = [
-  { href: "/overview", label: "Overview", desc: "Capability map and how we engage" },
-  { href: "/engineering", label: "Passive sUAS Detection", desc: "Low-signature small-drone detection software" },
-  { href: "/delivery", label: "Subcontract Delivery", desc: "Engineering, integration, and sustainment for primes" },
-  { href: "/applied-ai", label: "Applied AI & R&D", desc: "Agentic, edge, and physical AI for the mission" },
+  { href: "/overview", icon: LayoutGrid, label: "Overview", desc: "Capability map and how we engage" },
+  { href: "/engineering", icon: Radar, label: "Passive sUAS Detection", desc: "Low-signature small-drone detection software" },
+  { href: "/support", icon: Boxes, label: "Subcontract Support", desc: "Engineering, integration, and sustainment for primes" },
+  { href: "/applied-ai", icon: BrainCircuit, label: "Applied AI & R&D", desc: "Agentic, edge, and physical AI for the mission" },
 ];
 
 const topLinks = [
@@ -67,14 +67,8 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/images/logo/ancile_company_name_logo_orange_color_transparant.svg"
-            alt="Ancile AI"
-            width={160}
-            height={34}
-            priority
-          />
+        <Link href="/" className="flex items-center gap-3" aria-label="Ancile — home">
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-2 lg:flex">
@@ -124,7 +118,7 @@ const Header = () => {
             </button>
 
             {isCapabilitiesOpen && (
-              <div className="absolute right-0 top-full w-[32rem] pt-3">
+              <div className="absolute right-0 top-full w-[38rem] pt-3">
                 <div className="rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl">
                   <div className="grid grid-cols-2 gap-2">
                     {capabilityLinks.map((item) => {
@@ -133,16 +127,29 @@ const Header = () => {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className={`rounded-2xl border px-4 py-4 transition ${
+                          className={`flex items-start gap-3 rounded-2xl border px-4 py-4 transition ${
                             active
                               ? "border-burnt-orange-200 bg-burnt-orange-50"
                               : "border-transparent hover:border-slate-200 hover:bg-slate-50"
                           }`}
                         >
-                          <p className="font-display text-base font-semibold text-slate-900">
-                            {item.label}
-                          </p>
-                          <p className="mt-1 text-sm leading-6 text-slate-600">{item.desc}</p>
+                          <span
+                            className={`mt-0.5 inline-flex flex-shrink-0 rounded-xl p-2 transition ${
+                              active
+                                ? "bg-burnt-orange-100 text-burnt-orange-700"
+                                : "bg-slate-100 text-slate-700"
+                            }`}
+                          >
+                            <item.icon className="h-4 w-4" />
+                          </span>
+                          <span className="min-w-0">
+                            <span className="font-display block text-base font-semibold text-slate-900">
+                              {item.label}
+                            </span>
+                            <span className="mt-1 block text-sm leading-6 text-slate-600">
+                              {item.desc}
+                            </span>
+                          </span>
                         </Link>
                       );
                     })}
@@ -206,14 +213,29 @@ const Header = () => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`block rounded-2xl px-4 py-3 transition ${
+                    className={`flex items-start gap-3 rounded-2xl px-4 py-3 transition ${
                       active
                         ? "bg-white text-slate-950 shadow-sm"
                         : "text-slate-700 hover:bg-white"
                     }`}
                   >
-                    <p className="font-display text-base font-semibold">{item.label}</p>
-                    <p className="mt-1 text-sm leading-6 text-slate-600">{item.desc}</p>
+                    <span
+                      className={`mt-0.5 inline-flex flex-shrink-0 rounded-xl p-2 ${
+                        active
+                          ? "bg-burnt-orange-100 text-burnt-orange-700"
+                          : "bg-slate-100 text-slate-700"
+                      }`}
+                    >
+                      <item.icon className="h-4 w-4" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="font-display block text-base font-semibold">
+                        {item.label}
+                      </span>
+                      <span className="mt-1 block text-sm leading-6 text-slate-600">
+                        {item.desc}
+                      </span>
+                    </span>
                   </Link>
                 );
               })}
