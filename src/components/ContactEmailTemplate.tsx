@@ -89,15 +89,15 @@ export function CustomerConfirmationTemplate({ name, company }: CustomerConfirma
       <h2 style={confirmationTitle}>Thanks for your interest in Ancile AI!</h2>
       <p style={confirmationText}>Hi {name},</p>
       <p style={confirmationText}>
-        We've received your message and we're excited to learn more about how we can help {company ? company : 'your business'}.
+        We&apos;ve received your message and we&apos;re excited to learn more about how we can help {company ? company : "your business"}.
       </p>
 
       <div style={nextStepsBox}>
         <p style={nextStepsTitle}><strong>What happens next?</strong></p>
         <ul style={nextStepsList}>
           <li style={nextStepsItem}>Our sales team will review your inquiry within 4 hours</li>
-          <li style={nextStepsItem}>We'll reach out via email or phone (if provided)</li>
-          <li style={nextStepsItem}>We'll schedule a demo tailored to your needs</li>
+          <li style={nextStepsItem}>We&apos;ll reach out via email or phone (if provided)</li>
+          <li style={nextStepsItem}>We&apos;ll schedule a demo tailored to your needs</li>
         </ul>
       </div>
 

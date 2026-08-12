@@ -1,29 +1,41 @@
-import { Inter } from 'next/font/google'
-import '../index.css'
-import { ContactModalProvider } from '../context/ContactModalContext'
+import { Space_Grotesk, Manrope } from "next/font/google";
+import "../index.css";
+import { ContactModalProvider } from "../context/ContactModalContext";
 
-const inter = Inter({ subsets: ['latin'] })
+const displayFont = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-display",
+});
+
+const bodyFont = Manrope({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
+});
 
 export const metadata = {
-  title: 'Ancile AI - Consulting & Solutions',
-  description: 'Veteran-founded AI consulting firm specializing in advanced logistics solutions, generative AI planning, and government-focused AI implementations.',
+  title: "Ancile AI — Passive sUAS Detection, Subcontract Delivery, Applied AI",
+  description:
+    "Service-disabled veteran-owned (SDVOSB) software company delivering passive sUAS detection, subcontract engineering and integration, and applied AI for public sector, energy, and defense missions.",
   icons: {
     icon: [
-      { url: '/images/logo/ancile_logo_orange_white_circle_transparent.png', sizes: '180x180' }
+      {
+        url: "/images/logo/ancile_logo_orange_white_circle_transparent.png",
+        sizes: "180x180",
+      },
     ],
   },
-}
+};
 
-export default function RootLayout({
-  children,
-}) {
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ContactModalProvider>
-          {children}
-        </ContactModalProvider>
+      <body
+        className={`${bodyFont.variable} ${displayFont.variable} ${bodyFont.className} bg-stone-50 text-slate-950 antialiased`}
+      >
+        <ContactModalProvider>{children}</ContactModalProvider>
       </body>
     </html>
-  )
+  );
 }

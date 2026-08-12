@@ -1,152 +1,87 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight, Cpu, LineChart, Shield } from "lucide-react";
 
-import React from "react";
-import {
-  Shield,
-  Globe,
-  Building,
-  Search,
-  AlertTriangle,
-  Target,
-  ArrowRight,
-} from "lucide-react";
-import { useState } from "react";
-
-const industries = [
+const offerings = [
   {
     icon: Shield,
-    title: "Real-Time ISR Analysis",
-    description:
-      "AI-powered intelligence, surveillance, and reconnaissance with automated threat detection and pattern recognition for enhanced situational awareness",
-    gradient: "bg-burnt-orange-600",
-    hoverColor: "hover:bg-burnt-orange-600",
-    features: [
-      "Automated Threat Detection",
-      "Pattern Recognition",
-      "Enhanced Situational Awareness",
-      "Multi-Modal Sensor Fusion",
-    ],
+    title: "Passive sUAS Detection",
+    copy: "A passive small-drone detection product — detection, localization, classification, and a low signature.",
+    bullets: ["Fully passive", "COTS baseline", "Upgrade-ready architecture"],
+    href: "/engineering",
   },
   {
-    icon: Globe,
-    title: "Multi-Domain Battle Management",
-    description:
-      "Integrated AI command and control systems for land, sea, air, space, and cyber domains with real-time battlefield decision support",
-    gradient: "bg-burnt-orange-600",
-    hoverColor: "hover:bg-burnt-orange-600",
-    features: [
-      "Cross-Domain Integration",
-      "Real-Time Decision Support",
-      "Automated Resource Allocation",
-      "Joint Force Coordination",
-    ],
+    icon: Cpu,
+    title: "Subcontract Delivery",
+    copy: "SDVOSB engineering, integration, and sustainment for prime-led public sector, energy, and defense programs.",
+    bullets: ["Veteran-owned set-aside fit", "Integration support", "Rapid staffing"],
+    href: "/delivery",
   },
   {
-    icon: Building,
-    title: "Predictive Logistics Optimization",
-    description:
-      "AI-driven supply chain management and predictive maintenance systems that optimize inventory, reduce costs, and prevent equipment failures",
-    gradient: "bg-burnt-orange-600",
-    hoverColor: "hover:bg-burnt-orange-600",
-    features: [
-      "Supply Chain Forecasting",
-      "Predictive Maintenance",
-      "Cost Reduction Analytics",
-      "Inventory Optimization",
-    ],
+    icon: LineChart,
+    title: "Applied AI & R&D",
+    copy: "Agentic, edge, and physical AI — prototyped, evaluated, and transitioned for the mission.",
+    bullets: ["Agentic workflows", "Edge inference", "Sensor fusion"],
+    href: "/applied-ai",
   },
 ];
 
 const Industries = () => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        {/* Pulsing orbs */}
-        <div className="absolute top-20 left-20 w-40 h-40 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse" />
-        <div
-          className="absolute top-40 right-32 w-32 h-32 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse"
-          style={{ animationDelay: "1s" }}
-        />
-        <div
-          className="absolute bottom-32 left-1/2 w-48 h-48 bg-burnt-orange-600/10 rounded-full blur-2xl animate-pulse"
-          style={{ animationDelay: "2s" }}
-        />
-
-        {/* Grid pattern */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill-opacity=%220.02%22 fill=%22%23ffffff%22%3E%3Cpath d=%22M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z%22%3E%3C/g%3E%3C/svg%3E')] bg-repeat"></div>
-        </div>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-20">
-          <div className="inline-flex items-center space-x-2 bg-white px-4 py-2 rounded-full border border-slate-200 mb-6">
-            <Target className="h-5 w-5 text-burnt-orange-600" />
-            <span className="text-sm font-medium text-slate-700">
-              Mission Areas
-            </span>
+    <section className="border-b border-slate-200 bg-white py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-3xl">
+            <p className="section-eyebrow">Offerings</p>
+            <h2 className="section-title mt-5 text-4xl sm:text-5xl">
+              Capability areas aligned to operational needs.
+            </h2>
+            <p className="section-copy mt-4 text-lg">
+              Ancile AI works in three complementary lanes: a passive sUAS
+              detection product, subcontract engineering and integration
+              delivery, and applied AI and R&D.
+            </p>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-8 text-gray-900 pb-2" style={{ paddingBottom: '4px' }}>
-            Critical Government Sectors
-          </h2>
-
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Specialized AI solutions for critical government missions and
-            operations, delivering mission impact at scale
-          </p>
+          <Link
+            href="/overview"
+            className="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-800 transition hover:border-burnt-orange-300 hover:text-burnt-orange-700"
+          >
+            View Capability Overview
+            <ArrowRight className="h-4 w-4" />
+          </Link>
         </div>
 
-        {/* Industries Grid */}
-        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-8">
-          {industries.map((industry, index) => (
-            <div
-              key={index}
-              className={`group relative bg-white/60 backdrop-blur-xl rounded-2xl p-6 text-center hover:bg-white/80 hover:shadow-2xl transition-all duration-500 border border-white/20 transform hover:-translate-y-2 min-h-[360px] flex flex-col ${
-                hoveredIndex === index ? "scale-105" : ""
-              }`}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
+        <div className="grid gap-6 lg:grid-cols-3">
+          {offerings.map((offering) => (
+            <article
+              key={offering.title}
+              className="lift-card rounded-[2rem] border border-slate-200 bg-[#fcfbf8] p-6 shadow-sm"
             >
-              {/* Hover Glow Effect */}
-              <div
-                className={`absolute inset-0 bg-burnt-orange-600 opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl blur-xl`}
-              />
-
-              {/* Icon */}
-              <div
-                className={`relative mb-6 mx-auto w-fit p-4 bg-burnt-orange-600 hover:bg-burnt-orange-600 rounded-xl shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110`}
-              >
-                <industry.icon className="h-8 w-8 text-white" />
+              <div className="inline-flex rounded-2xl bg-slate-900 p-3 text-white">
+                <offering.icon className="h-5 w-5" />
               </div>
-
-              {/* Title */}
-              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-burnt-orange-600 group-hover:scale-105 transition-all duration-300">
-                {industry.title}
+              <h3 className="font-display mt-5 text-2xl font-semibold text-slate-900">
+                {offering.title}
               </h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600">{offering.copy}</p>
 
-              {/* Description */}
-              <p className="text-gray-700 text-sm leading-relaxed mb-6 group-hover:text-slate-800 transition-colors">
-                {industry.description}
-              </p>
-
-              {/* Features List */}
-              <div className="space-y-2 mt-auto">
-                {industry.features.map((feature, featureIndex) => (
-                  <div
-                    key={featureIndex}
-                    className="flex items-center justify-center space-x-2"
-                  >
-                    <div className={`w-1.5 h-1.5 bg-burnt-orange-600 rounded-full`}></div>
-                    <span className="text-xs text-gray-600">{feature}</span>
+              <div className="mt-6 space-y-2">
+                {offering.bullets.map((bullet) => (
+                  <div key={bullet} className="flex items-center gap-3 text-sm text-slate-700">
+                    <span className="h-2 w-2 rounded-full bg-burnt-orange-600" />
+                    {bullet}
                   </div>
                 ))}
               </div>
-            </div>
+
+              <Link
+                href={offering.href}
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-burnt-orange-700 transition hover:text-burnt-orange-800"
+              >
+                Learn more
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
           ))}
         </div>
       </div>
