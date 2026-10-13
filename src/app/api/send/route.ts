@@ -3,7 +3,8 @@ import { Resend } from "resend";
 import { contactFormApiSchema } from "../../../lib/validation";
 import { generateCustomerConfirmationEmail, generateContactEmail } from "../../../lib/emails";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Created per request so `next build` does not require the secret at build time.
+const getResend = () => new Resend(process.env.RESEND_API_KEY);
 
 interface ContactFormData {
   name: string;
@@ -58,6 +59,8 @@ export async function POST(request: NextRequest): Promise<Response> {
         { status: 400 }
       );
     }
+
+    const resend = getResend();
 
     // Send customer confirmation email
     const { data: customerData, error: customerError } = await resend.emails.send({

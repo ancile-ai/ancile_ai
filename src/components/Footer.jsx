@@ -24,7 +24,7 @@ const contracting = [
 
 const Footer = () => {
   return (
-    <footer className="band-dark relative overflow-hidden border-t border-slate-800/60">
+    <footer aria-label="Site footer" className="band-dark relative overflow-hidden border-t border-slate-800/60">
       <div className="aurora-dark pointer-events-none absolute inset-0 opacity-70" />
       <div className="soft-grid-dark pointer-events-none absolute inset-0 opacity-50" />
       <AncileMark
@@ -48,23 +48,23 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/ancile-ai/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-burnt-orange-500/40 hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-burnt-orange-500/40 hover:bg-white/10"
               >
-                <ExternalLink className="h-4 w-4 text-burnt-orange-300" />
-                LinkedIn
+                <ExternalLink className="h-4 w-4 text-burnt-orange-300" aria-hidden="true" />
+                LinkedIn<span className="sr-only"> (opens in a new tab)</span>
               </a>
               <a
                 href="mailto:sales@ancile.io"
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-burnt-orange-500/40 hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-md border border-white/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-200 transition hover:border-burnt-orange-500/40 hover:bg-white/10"
               >
-                <Mail className="h-4 w-4 text-burnt-orange-300" />
+                <Mail className="h-4 w-4 text-burnt-orange-300" aria-hidden="true" />
                 sales@ancile.io
               </a>
             </div>
           </div>
 
           {/* Capabilities */}
-          <div className="min-w-0">
+          <nav aria-label="Capabilities" className="min-w-0">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
               Capabilities
             </p>
@@ -79,10 +79,10 @@ const Footer = () => {
                 </Link>
               ))}
             </div>
-          </div>
+          </nav>
 
           {/* Company */}
-          <div className="min-w-0">
+          <nav aria-label="Company" className="min-w-0">
             <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">
               Company
             </p>
@@ -101,10 +101,10 @@ const Footer = () => {
                 className="inline-flex items-center gap-2 text-sm text-slate-400 transition hover:text-white"
               >
                 Contact
-                <ExternalLink className="h-3.5 w-3.5" />
+                <Mail className="h-3.5 w-3.5" aria-hidden="true" />
               </a>
             </div>
-          </div>
+          </nav>
 
           {/* Contracting */}
           <div className="min-w-0">
@@ -115,7 +115,7 @@ const Footer = () => {
               {contracting.map((item) => (
                 <div
                   key={item.label}
-                  className="rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3"
+                  className="rounded-md border border-white/10 bg-white/[0.04] px-4 py-3"
                 >
                   <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.18em] text-burnt-orange-300">
                     {item.label}

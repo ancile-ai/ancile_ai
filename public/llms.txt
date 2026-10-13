@@ -1,0 +1,44 @@
+# Ancile AI
+
+> Ancile (Ancile AI) is a service-disabled veteran-owned small business (SDVOSB) software company delivering passive sUAS (small drone) detection, subcontract engineering and integration, and applied AI for public sector, energy, and defense missions in the United States.
+
+Website: https://ancile.io
+Sales contact: sales@ancile.io
+Careers contact: hr@ancile.io
+LinkedIn: https://www.linkedin.com/company/ancile-ai/
+
+## Company facts
+
+- Status: Service-Disabled Veteran-Owned Small Business (SDVOSB), veteran-owned
+- Compliance: CMMC-compliant (Level 2), JCP (Joint Certification Program) certified
+- Alignment: Texas VetHUB-aligned for state subcontracting requirements
+- CAGE code: 11BV7
+- UEI: Y465ERNPJ5M1
+- NAICS: 541511, 541512, 541519, 518210
+- Markets served: public sector, energy, and defense
+- Name origin: "Ancile" references the Roman shield associated with protection.
+
+## Capabilities (three focused lanes)
+
+- [Passive sUAS Detection](https://ancile.io/engineering): The flagship product. Multi-modal sensor fusion software (RF, EO/IR, acoustic, extensible to additional modalities) that detects, localizes, and classifies Group 1–2 drones on COTS edge hardware with no active emissions. Developed with a Tier-1 defense hardware partner and an R&D flight-test partner. Ancile owns the fusion software, detection and classification models, data architecture, and integration into existing C2 and operator systems.
+- [Subcontract Support](https://ancile.io/support): SDVOSB subcontract engineering, integration, and sustainment for prime-led programs. Tracks include Texas public sector subcontracting (VetHUB-aligned), defense software and integration across secure cloud, edge, and disconnected environments, and sustainment and field support (monitoring, change control, release coordination).
+- [Applied AI & R&D](https://ancile.io/applied-ai): Agentic AI (tool-using agents with human-in-the-loop approval gates), edge AI (distilled and quantized models for low-SWaP, disconnected sites, private and open-weight deployment), and physical AI (sensor fusion, perception, forecasting, anomaly detection). Delivered with governance, tracing and observability, evaluations, and monitoring. Ancile's view: the model is a commodity; reliability comes from the harness engineered around it.
+
+## How Ancile engages
+
+Every engagement runs through a Scope → Build → Sustain model: assess mission fit and constraints, define a tractable technical package with clear ownership and interfaces, build and integrate usable software, then validate, transition, and sustain it in the field.
+
+## Pages
+
+- [Home](https://ancile.io/): Positioning, credentials, capability lanes, flagship product, operating model, FAQ
+- [Capabilities Overview](https://ancile.io/overview): The three lanes and the scope-build-sustain engagement model
+- [Passive sUAS Detection](https://ancile.io/engineering): Product details, system architecture, teaming model
+- [Subcontract Support](https://ancile.io/support): Delivery tracks, procurement codes, sustainment
+- [Applied AI & R&D](https://ancile.io/applied-ai): Agentic, edge, and physical AI focus areas and the harness/control layer
+- [About](https://ancile.io/about): Company profile, principles, team background
+- [Careers](https://ancile.io/careers): No open roles currently; future-interest resumes to hr@ancile.io
+
+## Terminology
+
+- Use "sUAS detection" or "small drone detection". Ancile does not market the product as "counter-UAS".
+- Use "SDVOSB" for the set-aside status.

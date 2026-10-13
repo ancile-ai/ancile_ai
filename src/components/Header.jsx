@@ -42,6 +42,21 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!isMenuOpen && !isCapabilitiesOpen) {
+      return undefined;
+    }
+
+    const onKeyDown = (event) => {
+      if (event.key === "Escape" && !event.defaultPrevented) {
+        closeNavigationMenus();
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isMenuOpen, isCapabilitiesOpen]);
+
   const capabilitiesActive = capabilityLinks.some((item) =>
     pathname.startsWith(item.href)
   );
@@ -67,18 +82,18 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/85 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-3" aria-label="Ancile — home">
+        <Link href="/" className="flex items-center gap-3 rounded-lg" aria-label="Ancile — home">
           <Logo />
         </Link>
 
-        <nav className="hidden items-center gap-2 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-2 lg:flex">
           {topLinks.map((link) => {
             const active = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                className={`rounded-md px-4 py-2 text-sm font-semibold transition ${
                   active
                     ? "bg-slate-900 text-white"
                     : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
@@ -93,6 +108,12 @@ const Header = () => {
             className="relative"
             onMouseEnter={openCapabilities}
             onMouseLeave={closeCapabilitiesWithDelay}
+            onFocus={openCapabilities}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) {
+                closeCapabilitiesWithDelay();
+              }
+            }}
           >
             <button
               type="button"
@@ -103,23 +124,25 @@ const Header = () => {
                   openCapabilities();
                 }
               }}
-              className={`flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
+              className={`flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition ${
                 capabilitiesActive || isCapabilitiesOpen
                   ? "bg-slate-900 text-white"
                   : "text-slate-700 hover:bg-slate-100 hover:text-slate-950"
               }`}
               aria-expanded={isCapabilitiesOpen}
               aria-haspopup="true"
+              aria-controls="capabilities-menu"
             >
               Capabilities
               <ChevronDown
+                aria-hidden="true"
                 className={`h-4 w-4 transition ${isCapabilitiesOpen ? "rotate-180" : ""}`}
               />
             </button>
 
             {isCapabilitiesOpen && (
-              <div className="absolute right-0 top-full w-[38rem] pt-3">
-                <div className="rounded-3xl border border-slate-200 bg-white p-3 shadow-2xl">
+              <div id="capabilities-menu" className="absolute right-0 top-full w-[38rem] pt-3">
+                <div className="rounded-xl border border-slate-200 bg-white p-3 shadow-2xl">
                   <div className="grid grid-cols-2 gap-2">
                     {capabilityLinks.map((item) => {
                       const active = pathname.startsWith(item.href);
@@ -127,14 +150,14 @@ const Header = () => {
                         <Link
                           key={item.href}
                           href={item.href}
-                          className={`flex items-start gap-3 rounded-2xl border px-4 py-4 transition ${
+                          className={`flex items-start gap-3 rounded-lg border px-4 py-4 transition ${
                             active
                               ? "border-burnt-orange-200 bg-burnt-orange-50"
                               : "border-transparent hover:border-slate-200 hover:bg-slate-50"
                           }`}
                         >
                           <span
-                            className={`mt-0.5 inline-flex flex-shrink-0 rounded-xl p-2 transition ${
+                            className={`mt-0.5 inline-flex flex-shrink-0 rounded-md p-2 transition ${
                               active
                                 ? "bg-burnt-orange-100 text-burnt-orange-700"
                                 : "bg-slate-100 text-slate-700"
@@ -164,7 +187,7 @@ const Header = () => {
           <button
             type="button"
             onClick={openModal}
-            className="rounded-full bg-burnt-orange-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-burnt-orange-600/20 transition hover:bg-burnt-orange-700"
+            className="rounded-md bg-burnt-orange-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-burnt-orange-700"
           >
             Get in Touch
           </button>
@@ -172,17 +195,22 @@ const Header = () => {
 
         <button
           type="button"
-          className="inline-flex rounded-full border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-100 lg:hidden"
+          className="inline-flex rounded-md border border-slate-200 p-2 text-slate-700 transition hover:bg-slate-100 lg:hidden"
           onClick={() => setIsMenuOpen((value) => !value)}
-          aria-label="Toggle navigation"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
         >
-          {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          {isMenuOpen ? <X className="h-5 w-5" aria-hidden="true" /> : <Menu className="h-5 w-5" aria-hidden="true" />}
         </button>
       </div>
 
       {isMenuOpen && (
-        <div className="border-t border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-xl sm:px-6 lg:hidden">
+        <nav
+          id="mobile-menu"
+          aria-label="Mobile"
+          className="border-t border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-xl sm:px-6 lg:hidden"
+        >
           <div className="space-y-2">
             {topLinks.map((link) => {
               const active = pathname === link.href;
@@ -190,7 +218,7 @@ const Header = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition ${
+                  className={`block rounded-lg px-4 py-3 text-sm font-semibold transition ${
                     active
                       ? "bg-slate-900 text-white"
                       : "bg-slate-50 text-slate-700 hover:bg-slate-100"
@@ -202,7 +230,7 @@ const Header = () => {
             })}
           </div>
 
-          <div className="mt-4 rounded-3xl border border-slate-200 bg-slate-50 p-3">
+          <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-3">
             <p className="px-2 pb-2 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
               Capabilities
             </p>
@@ -213,14 +241,14 @@ const Header = () => {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`flex items-start gap-3 rounded-2xl px-4 py-3 transition ${
+                    className={`flex items-start gap-3 rounded-lg px-4 py-3 transition ${
                       active
                         ? "bg-white text-slate-950 shadow-sm"
                         : "text-slate-700 hover:bg-white"
                     }`}
                   >
                     <span
-                      className={`mt-0.5 inline-flex flex-shrink-0 rounded-xl p-2 ${
+                      className={`mt-0.5 inline-flex flex-shrink-0 rounded-md p-2 ${
                         active
                           ? "bg-burnt-orange-100 text-burnt-orange-700"
                           : "bg-slate-100 text-slate-700"
@@ -245,11 +273,11 @@ const Header = () => {
           <button
             type="button"
             onClick={openModal}
-            className="mt-4 w-full rounded-full bg-burnt-orange-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-burnt-orange-700"
+            className="mt-4 w-full rounded-md bg-burnt-orange-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-burnt-orange-700"
           >
             Get in Touch
           </button>
-        </div>
+        </nav>
       )}
     </header>
   );

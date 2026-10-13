@@ -21,7 +21,7 @@ export default function Reveal({
     const el = ref.current;
     if (!el) return;
     if (typeof IntersectionObserver === "undefined") {
-      setVisible(true);
+      el.classList.add("is-visible");
       return;
     }
     const observer = new IntersectionObserver(

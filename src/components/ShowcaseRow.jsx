@@ -1,5 +1,3 @@
-import { Check } from "lucide-react";
-
 /**
  * Alternating feature row: supporting visual on one side, copy on the other.
  * `reverse` flips the order so a page can zig-zag down the screen.
@@ -23,9 +21,7 @@ export default function ShowcaseRow({
           <ul className="mt-7 space-y-3">
             {bullets.map((bullet) => (
               <li key={bullet} className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-burnt-orange-50 text-burnt-orange-700">
-                  <Check className="h-3.5 w-3.5" strokeWidth={3} />
-                </span>
+                <span className="mt-[0.55rem] h-1.5 w-1.5 flex-shrink-0 bg-burnt-orange-600" aria-hidden="true" />
                 <span className="text-[0.95rem] leading-6 text-slate-700">{bullet}</span>
               </li>
             ))}

@@ -5,18 +5,22 @@ import CapabilityLanes from '../sections/CapabilityLanes';
 import Flagship from '../sections/Flagship';
 import OperatingModel from '../sections/OperatingModel';
 import Differentiators from '../sections/Differentiators';
+import FAQ from '../sections/FAQ';
 import CallToAction from '../sections/CallToAction';
 
 export default function Home() {
   return (
     <div className="page-shell min-h-screen bg-transparent">
       <Header />
-      <Hero />
-      <CapabilityLanes />
-      <Flagship />
-      <OperatingModel />
-      <Differentiators />
-      <CallToAction />
+      <main id="main-content">
+        <Hero />
+        <CapabilityLanes />
+        <Flagship />
+        <OperatingModel />
+        <Differentiators />
+        <FAQ />
+        <CallToAction />
+      </main>
       <Footer />
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { ArrowRight, BrainCircuit, Boxes, Radar, X } from "lucide-react";
 import Logo from "../components/Logo";
 import { handleContactSubmission } from "../actions/contact";
@@ -15,24 +15,56 @@ export const ContactModalProvider = ({ children }) => {
   const [validationErrors, setValidationErrors] = useState({});
   const [phoneValue, setPhoneValue] = useState("");
   const [phoneError, setPhoneError] = useState("");
+  const dialogRef = useRef(null);
+  const firstFieldRef = useRef(null);
+  const openerRef = useRef(null);
 
   useEffect(() => {
     if (!isModalOpen) {
       return undefined;
     }
 
+    // Remember what opened the dialog so focus can return there on close.
+    openerRef.current = document.activeElement;
+    firstFieldRef.current?.focus();
+
     const onKeyDown = (event) => {
       if (event.key === "Escape") {
+        // Consume the key so menus behind the dialog stay as they were.
+        event.preventDefault();
+        event.stopPropagation();
         closeModal();
+        return;
+      }
+
+      // Keep Tab cycling inside the dialog.
+      if (event.key === "Tab" && dialogRef.current) {
+        const focusable = dialogRef.current.querySelectorAll(
+          "button:not([disabled]), input:not([disabled]), textarea:not([disabled]), a[href]"
+        );
+        if (focusable.length === 0) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
       }
     };
 
     document.body.style.overflow = "hidden";
-    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("keydown", onKeyDown, true);
 
     return () => {
       document.body.style.overflow = "";
-      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("keydown", onKeyDown, true);
+      const opener = openerRef.current;
+      if (opener && typeof opener.focus === "function") {
+        opener.focus();
+      }
     };
   }, [isModalOpen]);
 
@@ -166,14 +198,21 @@ export const ContactModalProvider = ({ children }) => {
             aria-hidden="true"
           />
 
-          <div className="relative z-10 w-full max-w-2xl overflow-hidden rounded-[2rem] border border-white/40 bg-white shadow-2xl">
+          <div
+            ref={dialogRef}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-dialog-title"
+            aria-describedby="contact-dialog-description"
+            className="relative z-10 max-h-[calc(100vh-2rem)] w-full max-w-2xl overflow-y-auto rounded-xl border border-white/40 bg-white shadow-2xl"
+          >
             <button
               type="button"
               onClick={closeModal}
-              className="absolute right-4 top-4 z-20 rounded-full bg-slate-100 p-2 text-slate-500 transition hover:bg-slate-200 hover:text-slate-900"
+              className="absolute right-4 top-4 z-20 rounded-md bg-slate-100 p-2 text-slate-500 transition hover:bg-slate-200 hover:text-slate-900"
               aria-label="Close contact form"
             >
-              <X className="h-5 w-5" />
+              <X className="h-5 w-5" aria-hidden="true" />
             </button>
 
             <div className="grid gap-0 md:grid-cols-[0.9fr_1.1fr]">
@@ -184,13 +223,13 @@ export const ContactModalProvider = ({ children }) => {
                 <div className="relative">
                   <Logo tone="dark" markClassName="h-9 w-auto" />
 
-                  <p className="section-eyebrow mt-8 border-white/20 bg-white/10 text-white">
+                  <p className="section-eyebrow mt-8 text-burnt-orange-300">
                     Contact
                   </p>
-                  <h3 className="font-display mt-5 text-3xl font-semibold">
+                  <h2 id="contact-dialog-title" className="font-display mt-5 text-3xl font-semibold">
                     Discuss program fit and technical scope.
-                  </h3>
-                  <p className="mt-4 text-sm leading-7 text-slate-300">
+                  </h2>
+                  <p id="contact-dialog-description" className="mt-4 text-sm leading-7 text-slate-300">
                     Use this form for passive sUAS product discussions, subcontract
                     engineering support, or operational AI delivery requirements.
                   </p>
@@ -203,7 +242,7 @@ export const ContactModalProvider = ({ children }) => {
                     ].map((item) => (
                       <div
                         key={item.label}
-                        className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-2.5"
+                        className="flex items-center gap-3 rounded-md border border-white/10 bg-white/5 px-3 py-2.5"
                       >
                         <item.icon className="h-4 w-4 flex-shrink-0 text-burnt-orange-300" />
                         <span className="text-sm text-slate-200">{item.label}</span>
@@ -229,13 +268,17 @@ export const ContactModalProvider = ({ children }) => {
                     type="text"
                     id="name"
                     name="name"
+                    ref={firstFieldRef}
+                    autoComplete="name"
                     required
-                    className={`w-full rounded-2xl border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
+                    aria-invalid={Boolean(validationErrors.name)}
+                    aria-describedby={validationErrors.name ? "name-error" : undefined}
+                    className={`w-full rounded-lg border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
                       validationErrors.name ? "border-red-300" : "border-slate-200"
                     }`}
                     placeholder="Your full name"
                   />
-                  {validationErrors.name && <p className="mt-1 text-sm text-red-600">{validationErrors.name}</p>}
+                  {validationErrors.name && <p id="name-error" className="mt-1 text-sm text-red-600">{validationErrors.name}</p>}
                 </div>
 
                 <div>
@@ -246,13 +289,17 @@ export const ContactModalProvider = ({ children }) => {
                     type="email"
                     id="email"
                     name="email"
+                    autoComplete="email"
+                    inputMode="email"
                     required
-                    className={`w-full rounded-2xl border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
+                    aria-invalid={Boolean(validationErrors.email)}
+                    aria-describedby={validationErrors.email ? "email-error" : undefined}
+                    className={`w-full rounded-lg border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
                       validationErrors.email ? "border-red-300" : "border-slate-200"
                     }`}
                     placeholder="name@company.com"
                   />
-                  {validationErrors.email && <p className="mt-1 text-sm text-red-600">{validationErrors.email}</p>}
+                  {validationErrors.email && <p id="email-error" className="mt-1 text-sm text-red-600">{validationErrors.email}</p>}
                 </div>
 
                 <div>
@@ -263,13 +310,16 @@ export const ContactModalProvider = ({ children }) => {
                     type="text"
                     id="company"
                     name="company"
+                    autoComplete="organization"
                     required
-                    className={`w-full rounded-2xl border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
+                    aria-invalid={Boolean(validationErrors.company)}
+                    aria-describedby={validationErrors.company ? "company-error" : undefined}
+                    className={`w-full rounded-lg border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
                       validationErrors.company ? "border-red-300" : "border-slate-200"
                     }`}
                     placeholder="Organization or prime contractor"
                   />
-                  {validationErrors.company && <p className="mt-1 text-sm text-red-600">{validationErrors.company}</p>}
+                  {validationErrors.company && <p id="company-error" className="mt-1 text-sm text-red-600">{validationErrors.company}</p>}
                 </div>
 
                 <div>
@@ -282,14 +332,18 @@ export const ContactModalProvider = ({ children }) => {
                     name="phone"
                     value={phoneValue}
                     onChange={handlePhoneChange}
-                    className={`w-full rounded-2xl border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
+                    autoComplete="tel"
+                    inputMode="tel"
+                    aria-invalid={Boolean(phoneError || validationErrors.phone)}
+                    aria-describedby={phoneError || validationErrors.phone ? "phone-error" : undefined}
+                    className={`w-full rounded-lg border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
                       phoneError || validationErrors.phone ? "border-red-300" : "border-slate-200"
                     }`}
                     placeholder="+1 (555) 123-4567"
                   />
-                  {phoneError && <p className="mt-1 text-sm text-red-600">{phoneError}</p>}
+                  {phoneError && <p id="phone-error" className="mt-1 text-sm text-red-600">{phoneError}</p>}
                   {validationErrors.phone && !phoneError && (
-                    <p className="mt-1 text-sm text-red-600">{validationErrors.phone}</p>
+                    <p id="phone-error" className="mt-1 text-sm text-red-600">{validationErrors.phone}</p>
                   )}
                 </div>
 
@@ -302,22 +356,28 @@ export const ContactModalProvider = ({ children }) => {
                     name="message"
                     rows={5}
                     required
-                    className={`w-full resize-none rounded-2xl border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
+                    aria-invalid={Boolean(validationErrors.message)}
+                    aria-describedby={validationErrors.message ? "message-error" : undefined}
+                    className={`w-full resize-none rounded-lg border px-4 py-3 text-slate-900 outline-none transition focus:border-burnt-orange-400 focus:ring-2 focus:ring-burnt-orange-100 ${
                       validationErrors.message ? "border-red-300" : "border-slate-200"
                     }`}
                     placeholder="Describe the program need, timeline, and where you need support."
                   />
-                  {validationErrors.message && <p className="mt-1 text-sm text-red-600">{validationErrors.message}</p>}
+                  {validationErrors.message && <p id="message-error" className="mt-1 text-sm text-red-600">{validationErrors.message}</p>}
                 </div>
 
                 {submitStatus === "success" && (
-                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
+                  <div role="status" className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
                     Inquiry sent. We will follow up shortly.
                   </div>
                 )}
                 {submitStatus === "error" && (
-                  <div className="rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
-                    Submission failed. Try again or email `sales@ancile.io`.
+                  <div role="alert" className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+                    Submission failed. Try again or email{" "}
+                    <a href="mailto:sales@ancile.io" className="font-semibold underline">
+                      sales@ancile.io
+                    </a>
+                    .
                   </div>
                 )}
 
@@ -326,17 +386,17 @@ export const ContactModalProvider = ({ children }) => {
                     type="button"
                     onClick={closeModal}
                     disabled={isSubmitting}
-                    className="w-full rounded-full border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="w-full rounded-md border border-slate-200 px-5 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     Cancel
                   </button>
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-burnt-orange-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-burnt-orange-700 disabled:cursor-not-allowed disabled:opacity-60"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-burnt-orange-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-burnt-orange-700 disabled:cursor-not-allowed disabled:opacity-60"
                   >
                     {isSubmitting ? "Sending..." : "Send Inquiry"}
-                    {!isSubmitting && <ArrowRight className="h-4 w-4" />}
+                    {!isSubmitting && <ArrowRight className="h-4 w-4" aria-hidden="true" />}
                   </button>
                 </div>
               </form>

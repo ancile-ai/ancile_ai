@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Mail, Shield, Workflow } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useContactModal } from "../context/ContactModalContext";
 import { AncileMark } from "../components/Logo";
 import Reveal from "../components/Reveal";
@@ -16,7 +16,7 @@ const CallToAction = ({
     <section className="bg-white py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Reveal>
-          <div className="band-dark relative overflow-hidden rounded-[2.5rem] border border-slate-800/60 shadow-2xl">
+          <div className="band-dark relative overflow-hidden rounded-xl border border-slate-800/60 shadow-2xl">
             <div className="aurora-dark pointer-events-none absolute inset-0" />
             <div className="soft-grid-dark pointer-events-none absolute inset-0 opacity-50" />
             <AncileMark
@@ -26,7 +26,7 @@ const CallToAction = ({
 
             <div className="relative grid gap-0 lg:grid-cols-[1.1fr_0.9fr]">
               <div className="px-6 py-12 sm:px-10 sm:py-14">
-                <p className="section-eyebrow border-white/15 bg-white/10 text-white">
+                <p className="section-eyebrow text-burnt-orange-300">
                   Program engagement
                 </p>
                 <h2 className="font-display mt-6 max-w-2xl text-4xl font-semibold leading-[1.08] text-white sm:text-5xl">
@@ -40,14 +40,14 @@ const CallToAction = ({
                   <button
                     type="button"
                     onClick={openModal}
-                    className="inline-flex items-center justify-center gap-2 rounded-full bg-burnt-orange-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-burnt-orange-900/40 transition hover:bg-burnt-orange-700"
+                    className="inline-flex items-center justify-center gap-2 rounded-md bg-burnt-orange-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-burnt-orange-700"
                   >
                     Contact Ancile
                     <ArrowRight className="h-4 w-4" />
                   </button>
                   <Link
                     href="/about"
-                    className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                    className="inline-flex items-center justify-center rounded-md border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
                   >
                     Review company profile
                   </Link>
@@ -56,11 +56,8 @@ const CallToAction = ({
 
               <div className="border-t border-white/10 bg-white/[0.03] px-6 py-12 sm:px-10 lg:border-l lg:border-t-0">
                 <div className="space-y-4">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-5">
                     <div className="flex items-start gap-4">
-                      <span className="rounded-xl bg-white/10 p-2.5 text-burnt-orange-300">
-                        <Shield className="h-5 w-5" />
-                      </span>
                       <div>
                         <p className="font-display text-base font-semibold text-white">
                           Best fit
@@ -73,11 +70,8 @@ const CallToAction = ({
                     </div>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                  <div className="rounded-lg border border-white/10 bg-white/5 p-5">
                     <div className="flex items-start gap-4">
-                      <span className="rounded-xl bg-white/10 p-2.5 text-burnt-orange-300">
-                        <Workflow className="h-5 w-5" />
-                      </span>
                       <div>
                         <p className="font-display text-base font-semibold text-white">
                           Discussion topics
@@ -92,11 +86,8 @@ const CallToAction = ({
 
                   <a
                     href="mailto:sales@ancile.io"
-                    className="group flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 transition hover:border-burnt-orange-500/40 hover:bg-white/[0.08]"
+                    className="group flex items-start gap-4 rounded-lg border border-white/10 bg-white/5 p-5 transition hover:border-burnt-orange-500/40 hover:bg-white/[0.08]"
                   >
-                    <span className="rounded-xl bg-white/10 p-2.5 text-burnt-orange-300">
-                      <Mail className="h-5 w-5" />
-                    </span>
                     <div>
                       <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-burnt-orange-300">
                         Contact
