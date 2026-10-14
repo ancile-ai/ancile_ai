@@ -82,6 +82,8 @@ export const metadata = {
   formatDetection: { email: false, address: false, telephone: false },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    // Bing Webmaster Tools site ownership (must stay after verification).
+    other: { "msvalidate.01": "82E43FF969ABECA06FF37C0AB2E6F4F5" },
   },
 };
 
